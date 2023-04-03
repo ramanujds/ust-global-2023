@@ -79,3 +79,22 @@ class Program{
 
 ```
 
+### Day 1 Retrospective
+-------------------
+#### What did we learn?
+-------------
+* What is Java?
+* Why Java?
+* How to write Java Program
+* How to compile and run java code
+
+#### Any challenges?
+--------------
+* Software setup issues
+* Network Connection issues
+
+#### What is there for tomorrow?
+-----------------------------
+* Variables and Data Type
+
+
