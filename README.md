@@ -2,52 +2,64 @@
 
 ## Day 1
 
-```text
 
-M1 - Java + SQL + GIT
-M2 - Web(Client Side)
+
+### M1 - Java + SQL + GIT
+### M2 - Web(Client Side)
    - HTML CSS JS Bootstrap Angular
-M3 - Web(Server Side)
+### M3 - Web(Server Side)
    - Java EE, Spring, Microservices, Docker
-M4 - Cloud and Deployment
+### M4 - Cloud and Deployment
    - AWS, Kubernetes, CICD, DevOps
-M5 - Project
+### M5 - Project
+### M6 - Advanced Concepts (Cloud, DevOps, Testing)
+
+What is Java?
+----------------
 Java - Object Oriented Programming Language
 
-JDK
-JAVAC - Java Compiler
-Runtime Libraries
-JVM - Java Virtual Machine
+Java Dev Setup
+-----------------
+- JDK
+- JAVAC - Java Compiler
+- Runtime Libraries
+- JVM - Java Virtual Machine
 
 Writing our 1st Java Program
 -----------------------------
 
+```java
 class Program{
   public static void main(String []args){
 	System.out.println("UST Global");
   }
 }
 
+```
 
-Program.java
 
-javac Program.java -> Compile
+- Program.java
 
-Program.class -> Byte code
+- javac Program.java -> Compile
 
-java Program -> Executing the code
+- Program.class -> Byte code
 
-Program 1:
+- java Program -> Executing the code
 
+- Program 1:
+
+```java
 class Program{
   public static void main(String []args){
 	String companyName = "UST Global";
 	System.out.println(companyName);
   }
 }
+```
 
-Program 2 :
+- Program 2 :
 
+```java
 class Program{
   public static void main(String []args){
     String message = "Hello everyone";
@@ -57,25 +69,23 @@ class Program{
 }
 // Hello everyone, welcome to UST Global
 
+```
 
 How to store numbers:
 -------------------------
 
-Integer : int 
+- Integer : int 
 
 
-Program 3:
+- Program 3:
 
+```java
 class Program{
   public static void main(String []args){
     	int num = 10;
 	System.out.println(num);
   }
 }
-
-
-
-
 
 ```
 
@@ -96,7 +106,7 @@ class Program{
 #### What is there for tomorrow?
 -----------------------------
 * Variables and Data Type
-
+* SDLC and Program Flow
 
 ### Day 2 Standup :
 #### What did we complete yesterday?
@@ -122,25 +132,25 @@ class Program{
 ---------------------
 Primary Types:
 ---------------
-```text
-Numeric 	- int
+
+- Numeric - int
 	    	  - short
 		      - byte
-		    - long
-Decimal 	- float
+		      - long
+- Decimal - float
 		      - double
-character- char
-boolean  - boolean (true/false)
+- Character- char
+- Boolean  - boolean (true/false)
 
-```
+- What is the difference between float and double?
+
 Secondary/Referrence Types :
 --------------------------------
-```text
-class
-object
-arrays
-String
-```
+
+* class
+* object
+* arrays
+* String
 
 * What is typecasting?
 * Where do we need it?
