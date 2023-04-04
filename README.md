@@ -98,3 +98,92 @@ class Program{
 * Variables and Data Type
 
 
+### Day 2 Standup :
+#### What did we complete yesterday?
+
+
+#### What are we going to do today?
+ - Understand the Software Development Lifecycle
+ - Understand the difference between Waterfall and Agile Model
+ - Understand the basic program flow
+
+#### Dev Tools Setup
+-----------------
+* JDK-11 - Done
+* Git - Done
+* Spring Tools - Done
+* VS Code - Done
+* Node JS - Done
+* Postman - Done
+* MySQL - Done
+
+
+#### Data Types in Java
+---------------------
+Primary Types:
+---------------
+```text
+Numeric 	- int
+	    	  - short
+		      - byte
+		    - long
+Decimal 	- float
+		      - double
+character- char
+boolean  - boolean (true/false)
+
+```
+Secondary/Referrence Types :
+--------------------------------
+```text
+class
+object
+arrays
+String
+```
+
+* What is typecasting?
+* Where do we need it?
+
+How to read input from user
+---------------------------
+
+* Import Scanner from util package
+
+```java
+import java.util.Scanner;
+```
+* Create an object of Scanner
+```java
+Scanner scan = new Scanner(System.in);
+```
+* To read integer :
+```java
+int num1 = scan.nextInt();
+```
+* To read float :
+```java
+float num1 = scan.nextFloat();
+```
+
+* To read double :
+```java
+float num1 = scan.nextDouble();
+```
+* To read String :
+```java
+String name = scan.nextLine();
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
