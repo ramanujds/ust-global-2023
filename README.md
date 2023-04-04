@@ -185,6 +185,32 @@ float num1 = scan.nextDouble();
 String name = scan.nextLine();
 ```
 
+### Day 2 Retrospective
+-----------------------
+#### What did we learn today?
+------------------------
+* SDLC
+* Waterfall vs Agile
+* Algorithms and Flowchart
+* Java variables and data-type
+* typecasting
+* How to read input from the user
+
+#### What did we like?
+* we are able to write code
+* we are able to run code
+
+#### Any challenges?
+--------------
+
+
+#### What is there for tomorrow?
+-----------------------------
+* GIT
+* Cotrol flow/ decission making in Java
+
+
+
 
 
 
