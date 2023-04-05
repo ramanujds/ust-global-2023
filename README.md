@@ -291,14 +291,14 @@ How commit new changes?
 ------------------------
 
 1. Add all the changes to stagging 
-```bash git add . ```
+``` git add . ```
 1. Commit the changes
-```bash git commit -m "a suitable message" ```
+``` git commit -m "a suitable message" ```
 <b> NB: Commit will save all the changes to local repository </b>
 
 1. Update/Push the commit to remote 
-```bash git push```
+``` git push```
 
-<b> NB: To see the status of the repository we can use </b> ```bash git status ```
+<b> NB: To see the status of the repository we can use </b> ``` git status ```
 
 
