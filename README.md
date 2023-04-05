@@ -281,7 +281,7 @@ How to clone a repository?
 1. Clone SSH
  (_ Copy the link_) 
 1. Open Termainal/CMD inside your desired folder
-<b> Few important points</b> 
+* <b> Few important points</b> 
 * copy the private-key in the desired folder
 * Also add the private key on your on that desired folder using terminal/git-bash
 * Hints - repeat the eval and ssh-add commands
@@ -312,8 +312,8 @@ Steps for completing the Exercises/Assignments
 -----------------------------------
 1. Go to the respective exercise/assignment repo
 1. Fork the repo
-1. Clone the <b>forked</b> repo on your local machine (* Hints - Follow the previous steps)
-  <b> NB. Don't clone a repository inside another repository </b>
+1. Clone the <b>forked</b> repo on your local machine (Hints - Follow the previous steps)
+* <b> NB. Don't clone a repository inside another repository </b>
 
 1. Modify/Complete the exercise
 1. Commit and Push
