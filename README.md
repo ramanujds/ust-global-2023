@@ -1,5 +1,10 @@
 # Class Room Notes and Examples
 
+### Daily Retrospective : 
+https://tinyurl.com/4ntwj57m
+
+
+
 ## Day 1
 
 
