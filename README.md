@@ -281,11 +281,11 @@ How to clone a repository?
 1. Clone SSH
  (_ Copy the link_) 
 1. Open Termainal/CMD inside your desired folder
-<b> 
+<b> Few important points</b> 
 * copy the private-key in the desired folder
 * Also add the private key on your on that desired folder using terminal/git-bash
-** Hints - repeat the eval and ssh-add commands
-</b>
+* Hints - repeat the eval and ssh-add commands
+
 1. Type ``` git clone <repo-link> ```
 
 
@@ -296,7 +296,7 @@ How commit new changes?
 ``` git add . ```
 1. Commit the changes
 ``` git commit -m "a suitable message" ```
-<b> NB: Commit will save all the changes to local repository </b>
+* <b> NB: Commit will save all the changes to local repository </b>
 
 1. Update/Push the commit to remote 
 ``` git push```
