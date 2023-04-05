@@ -227,7 +227,7 @@ GIT and GitLab
 
 - What is GitLab?
 
-- Online source code repository
+- Online source code repository (remote repository)
 
 - Git has repositories
 - We can save our changes to the repository using <b>git commit</b>
@@ -237,8 +237,16 @@ GIT and GitLab
 
 
 
+Few GitLab alternatives
+------------------------
 
+* GitHub
+* BitBucket
+* AWS CodeCommit
 
+What is forking?
+-----------------
+Making your own copy of a remote repository
 
 
 
