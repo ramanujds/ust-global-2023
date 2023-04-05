@@ -248,7 +248,31 @@ What is forking?
 -----------------
 Making your own copy of a remote repository
 
+Setting up the SSH key access
+-------------------------------
 
+Profile -> Preferences -> SSH Keys
+
+* Open Terminal/CMD
+* Type ```bash ssh-keygen -t rsa -b 2048 -C "<email>" ```
+
+* Enter file in which to save the key
+
+* Enter passphrase
+- keep it blank
+* Enter same passphrase again
+- keep it blank
+* Go to the location where keys are saved
+* Open the .pub key file using notepad
+* Copy the content
+* Paste it to the Key section on GitLab
+* Add the key
+* Also add the private key on your local machine using terminal
+```bash 
+eval $(ssh-agent -s)
+ssh-add <key-file-name>
+
+```
 
 
 
