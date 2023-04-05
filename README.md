@@ -273,6 +273,17 @@ eval $(ssh-agent -s)
 ssh-add <key-file-name>
 
 ```
+How to clone a repository?
+--------------------------
 
+* Go to the repository
+* Click on Clone
+* Clone SSH
+- Copy the link 
+* Open Termainal/CMD inside your desired folder
+** copy the private-key in the desired folder
+* Also add the private key on your on that desired folder using terminal/git-bash
+** Hints - repeat the eval and ssh-add commands
+* Type ```bash git clone <repo-link> ```
 
 
