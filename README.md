@@ -210,9 +210,30 @@ String name = scan.nextLine();
 * Cotrol flow/ decission making in Java
 
 
+### Day 3 Standup
+------------------
+
+#### What did we complete yesterday?
 
 
+#### What are we going to do today?
 
+GIT and GitLab
+--------------
+
+- What is git?
+
+- Version Control System
+
+- What is GitLab?
+
+- Online source code repository
+
+- Git has repositories
+- We can save our changes to the repository using <b>git commit</b>
+- we can push the code to repote repository using <b>git push</b>
+- we can clone/make a copy of the remote repository on out local system using <b>git clone</b>
+- we can pull the changes from remote repository using <b>git pull</b>
 
 
 
