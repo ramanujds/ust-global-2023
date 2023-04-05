@@ -364,6 +364,28 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 
 
 
+#### Operators in Java
+
+- **Arithmetic Operator**
+ + - * / %
+- **Relational Operator**
+ < <= > >= == !=
+- **Logical Operator**
+- && - AND 
+- || - OR 
+- ! - NOT
+- **Bitwise Operator**
+- & - Bitwise AND 
+- | - Bitwise OR
+- **Assignment Operator**
+- =
+- **Arithmetic Assignment Operator**
+- += -= *= /= %=
+- **Increment/Decrement Operator**
+- ++ --
+
+
+
 
 
 
