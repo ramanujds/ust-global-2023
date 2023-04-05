@@ -1,7 +1,7 @@
 # Class Room Notes and Examples
 
 ### Daily Retrospective : 
-https://tinyurl.com/4ntwj57m
+[Daily Retrospective Link](https://docs.google.com/spreadsheets/d/1DgLWccxLu-BuvyqDJ_PL5fd0zRw89hK3RPiH1JZooW4/edit?usp=sharing)
 
 
 
