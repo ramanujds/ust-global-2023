@@ -322,3 +322,73 @@ Steps for completing the Exercises/Assignments
 
 1. Modify/Complete the exercise
 1. Commit and Push
+
+
+
+Conditional evaluation in Java
+------------------------------
+* if-else
+* switch
+* conditional operator
+
+How to use if-else in java?
+---------------------------
+```
+if(condition){
+	statements
+	...
+}
+else{
+	statements
+	...
+}
+
+```
+
+- Exercise 8:-
+Write an algorithm for accepting a character and then display whether it is a vowel or a constant.
+
+- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise8.java
+
+- Exercise 9:-
+Write an algorithm for accepting three numbers and display the highest number among the three numbers.
+
+- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise9.java
+
+- Exercise 10:-
+Write an algorithm for accepting the age of user and if the age is valid, check whether the user is a kid, a teenager, an adult or a senior citizen.
+
+- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise10.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
