@@ -301,4 +301,17 @@ How commit new changes?
 
 <b> NB: To see the status of the repository we can use </b> ``` git status ```
 
+How to get all the changes from remote to local?
+-------------------------------------------------
 
+``` git pull ```
+
+Steps for completing the Exercises/Assignments
+-----------------------------------
+1. Go to the respective exercise/assignment repo
+1. Fork the repo
+1. Clone the <b>forked</b> repo on your local machine (* Hints - Follow the previous steps)
+  <b> NB. Don't clone a repository inside another repository </b>
+
+1. Modify/Complete the exercise
+1. Commit and Push
