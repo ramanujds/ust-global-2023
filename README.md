@@ -281,11 +281,11 @@ How to clone a repository?
 1. Clone SSH
  (_ Copy the link_) 
 1. Open Termainal/CMD inside your desired folder
-<p> 
+<b> 
 * copy the private-key in the desired folder
 * Also add the private key on your on that desired folder using terminal/git-bash
 ** Hints - repeat the eval and ssh-add commands
-</p>
+</b>
 1. Type ``` git clone <repo-link> ```
 
 
