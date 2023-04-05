@@ -367,9 +367,11 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 #### Operators in Java
 
 - **Arithmetic Operator**
- + - * / %
+
+>  + - * / %
+
 - **Relational Operator**
- < <= > >= == !=
+> < <= > >= == !=
 - **Logical Operator**
 - && - AND 
 - || - OR 
@@ -387,8 +389,57 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 
 
 
+##### FizzBuzz Program
+
+- Read an input
+- if number is divisible by 3 Print Fizz
+- if number is divisible by 5 Print Buzz
+- if number is divisible by both 3 & 5 Print FizzBuzz
+- otherwise print the number
+
+**Sample Output**
+
+- Input : 6
+- Output : Fizz
+- Input : 15
+- Output : FizzBuzz
+- Input : 4
+- Output : 4
 
 
+### Day 3 Retrospective
+
+**What did we learn today?**
+
+- **Git:**
+- How to setup git for clone, commit and push
+- Creating ssh keys
+- How to complete exercises on stackroute platform?
+
+
+- **Java :**
+- **Conditional evaluation in Java**
+- if else
+- switch
+- conditional operator statement
+
+- Different Operators in java
+- Completed multiple programs
+
+**What went well?**
+
+- **Able to write code and execute**
+- **Able to understand the concepts**
+
+
+**Any challenges?**
+- gitlab is not accessible through UST Networks
+
+**What are we going to learn tomorrow?**
+
+- switch
+- conditional operator statement
+- Looping
 
 
 
