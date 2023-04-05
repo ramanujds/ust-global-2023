@@ -211,8 +211,9 @@ String name = scan.nextLine();
 
 #### What is there for tomorrow?
 -----------------------------
-* GIT
-* Cotrol flow/ decission making in Java
+- [ ] GIT
+- [ ] Cotrol flow/ decission making in Java
+
 
 
 ### Day 3 Standup
@@ -345,20 +346,20 @@ else{
 
 ```
 
-- Exercise 8:-
+** Exercise 8: **
 Write an algorithm for accepting a character and then display whether it is a vowel or a constant.
 
-- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise8.java
+**Solution** : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise8.java
 
-- Exercise 9:-
+** Exercise 9:**
 Write an algorithm for accepting three numbers and display the highest number among the three numbers.
 
-- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise9.java
+**Solution **: https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise9.java
 
-- Exercise 10:-
+**Exercise 10:**
 Write an algorithm for accepting the age of user and if the age is valid, check whether the user is a kid, a teenager, an adult or a senior citizen.
 
-- Solution : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise10.java
+**Solution** : https://gitlab-ust.stackroute.in/ramanujds9/ust-b2-classroom-repo/-/blob/master/java-basics/Exercise10.java
 
 
 
