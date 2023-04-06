@@ -445,21 +445,38 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 
 ```text
 
-Display message based on the day.
+switch statement :
+-----------------------
+**Syntax**
+
+```
+switch(variable){
+	case value1:
+		statement;
+		break;
+	case value2:
+		statement;
+		break;
+	...
+	...
+	default:
+		statement;
+		break;
+}
+```
+Conditional operator statement
 --------------------------------
-int day;
+**Syntax**
 
-day = 1
-message = "Monday - its time to start the week"
-day = 2
-message = "Tuesday - ...."
-..
-..
-day = 6
-message = "Saturday - Enjoy your weekend"
-day = 7
-message = "Sunday - Plan for the upcoming week"
-
+```
+output = expression ? value if true : value if false
+```
+```java
+	int num1, num2;
+	num1 = 20;
+	num2 = 10;
+	int largest = num1>num2 ? num1 : num2;
+	System.out.println(largest);
 ```
 
 
