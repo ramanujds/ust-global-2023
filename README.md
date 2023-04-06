@@ -443,6 +443,24 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 
 
 
+```text
+
+Display message based on the day.
+--------------------------------
+int day;
+
+day = 1
+message = "Monday - its time to start the week"
+day = 2
+message = "Tuesday - ...."
+..
+..
+day = 6
+message = "Saturday - Enjoy your weekend"
+day = 7
+message = "Sunday - Plan for the upcoming week"
+
+```
 
 
 
