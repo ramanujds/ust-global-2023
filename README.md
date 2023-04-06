@@ -443,7 +443,6 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 
 
 
-```text
 
 switch statement :
 -----------------------
@@ -463,14 +462,15 @@ switch(variable){
 		statement;
 		break;
 }
+
+```
 ```
 Conditional operator statement
 --------------------------------
 **Syntax**
 
-```
 output = expression ? value if true : value if false
-```
+
 ```java
 	int num1, num2;
 	num1 = 20;
