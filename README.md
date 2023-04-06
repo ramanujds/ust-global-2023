@@ -448,7 +448,8 @@ switch statement :
 -----------------------
 **Syntax**
 
-```
+```java
+
 switch(variable){
 	case value1:
 		statement;
@@ -463,7 +464,6 @@ switch(variable){
 		break;
 }
 
-```
 ```
 Conditional operator statement
 --------------------------------
