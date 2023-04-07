@@ -3,6 +3,10 @@
 ### Daily Retrospective : 
 [Daily Retrospective Link](https://docs.google.com/spreadsheets/d/1DgLWccxLu-BuvyqDJ_PL5fd0zRw89hK3RPiH1JZooW4/edit?usp=sharing)
 
+### 4ls
+
+[4Ls Link](https://ramanuj.atlassian.net/wiki/spaces/~5d61372ffaa9600c3609ae97/pages/33219/UST+Java+B2+4LS)
+
 ## Important Links
 
 * Core Java - Overview, First Java Program, Variables, Datatypes, Literals, Operators, Expressions and Conditional Statements.		https://www.geeksforgeeks.org/java-programming-basics/
