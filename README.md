@@ -587,7 +587,53 @@ for(int count=10 ; count<5 ; count++){
 
 
 
+``` text
 
+
+Strings in Java
+------------------
+
+String str = "karan";
+String str2 = "rohit";
+String str3 = "Rohit";
+String email = "rohit12@yahoo.com";
+
+- How to check the equality of two strings :
+
+ str.equals(str2)  -> false
+ str2.equals(str3) -> false
+ str2.equalsIgnoreCase(str3) -> true
+
+- How to compare two Strings?
+ String str1 = "karan abc";
+ String str2 = "karan";
+ int difference = str1.compareTo(str2);
+
+- How to get the length of a string?
+
+	str1.length();
+
+- How to get the character at a position?
+	str1.charAt(3)  ->  a
+
+- How to get the position of a character?
+
+	str1.indexOf("n") -> 4
+	str1.indexOf("a") -> 1
+	
+- How to check whether a string contains another string?	
+
+	String line = "hello karan, how are you doing?"
+
+	line.contains("karan")   -> true
+
+	line.indexOf("rahul")  -> -1
+
+
+
+
+
+```
 
 
 
