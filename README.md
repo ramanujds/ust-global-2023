@@ -442,6 +442,19 @@ Write an algorithm for accepting the age of user and if the age is valid, check 
 - Looping
 
 
+### Day 4
+
+What did we complete yesterday?
+
+if-else
+
+What are we going to learn today?
+
+switch
+conditional operator
+looping
+
+----------
 
 
 switch statement :
@@ -464,6 +477,8 @@ switch(variable){
 		break;
 }
 
+
+
 ```
 Conditional operator statement
 --------------------------------
@@ -478,6 +493,95 @@ output = expression ? value if true : value if false
 	int largest = num1>num2 ? num1 : num2;
 	System.out.println(largest);
 ```
+
+Display message based on the day.
+--------------------------------
+int day;
+
+day = 1
+message = "Monday - its time to start the week"
+day = 2
+message = "Tuesday - ...."
+..
+..
+day = 6
+message = "Saturday - Enjoy your weekend"
+day = 7
+message = "Sunday - Plan for the upcoming week"
+
+
+
+
+
+Looping
+--------
+while
+do-while
+for
+
+Print the message "Welcome to UST Global" 5 times
+
+while(condition){
+	statement;
+	...
+ }
+
+
+do-while loop :
+------------------
+do{
+	statements;
+	....
+}while(condition)
+
+
+while - entry-controlled
+do-while - exit-controlled
+
+
+for loop
+-----------
+
+for(initialization ; condition ; increment/decrement){
+	statements;
+	...
+}
+
+
+for(int count=10 ; count<5 ; count++){
+	System.out.println("Welcome to UST Global");
+}
+
+
+
+
+
+
+### Day 4 Retrospective
+
+#### What did we learn today?
+- Conditional evaluation with switch statement
+- using ternary/conditional operator
+- loops
+- understand the need for loops
+- explored different types of loops
+- the use of break and continue
+- 10+ Problems related to looping and conditional statements are Done
+
+#### What went well?
+
+- Shoutout to Alphons for completing the tasks quickly
+- Shoutout to Shafna for completing the tasks quickly
+- Shoutout to Amal for completing the tasks quickly
+
+#### Any challenges?
+
+- No issues
+
+#### What is there for tomorrow?
+
+- arrays
+- String
 
 
 
