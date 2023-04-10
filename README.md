@@ -601,12 +601,50 @@ for(int count=10 ; count<5 ; count++){
 - arrays
 - String
 
+----------
+
+### Day 5:
+
+Arrays
+--------
+
+- collection of values
+
+- How to define an array?
+
+data-type []array-name = new data-type[size];
+
+int []numbers;
+numbers = new int[5];
+
+* new keyword is used for dynamic allocation
+
+int x = 5;
 
 
 
 
-``` text
+int []data = {10,15,20,30};
 
+data.length; returns the length of the array
+
+Printing an array : 
+
+```java
+
+for(int index=0; index<nums.length; index++)
+			System.out.println(nums[index]);
+
+
+```
+
+
+### How to work with Multi-Dimensional Array
+--------------------------------------------
+
+2D Array -> Matrix
+
+int [][]matrix = new int[3][3];
 
 Strings in Java
 ------------------
@@ -648,10 +686,6 @@ String email = "rohit12@yahoo.com";
 	line.indexOf("rahul")  -> -1
 
 
-
-
-
-```
 
 #### Complete the first four challenges -- https://www.hackerrank.com/domains/java
 
