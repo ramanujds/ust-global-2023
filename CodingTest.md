@@ -1,4 +1,3 @@
-
 ### Answer the following
 
 ```text
@@ -76,7 +75,7 @@ public class Test {
 }
 1. Compile error
 2. Exception at runtime
-Y3. Gives output: 0
+3. Gives output: 0
 4. Gives output: 1
 
 
