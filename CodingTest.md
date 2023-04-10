@@ -25,7 +25,7 @@ Q. 2
 For the code :
 public class Test
 {
-   int age=25;
+   static int age=25;
 
    Test() {
    }
