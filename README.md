@@ -725,6 +725,131 @@ String email = "rohit12@yahoo.com";
 
 
 
+StringBuilder and StringBuffer
+------------------------------
+Strings cannot be modified
+StringBuffer and StringBuilder are mutable
+
+How to create StringBuilder?
+----------------------------
+
+StringBuilder sbd = new StringBuilder("hello");
+StringBuffer sbr = new StringBuffer("welcome");
+
+- StringBuffer vs StringBuilder
+ StringBuffer is Thread-Safe
+ StringBuilder methods are asynchronous 
+
+- Reversing a given String
+- replace an word with another word
+String str = "hello everyone, how are you? Everyone should complete the task"
+Replace everyone with folks
+
+str=str.replace("everyone","folks");
+
+
+str.split(" ") -> will create an array of strings containing all the words in str separated by space
+
+str.split(",") -> will create an array of strings containing all the words in str separated by comma
+
+trim() -> removes all the trailing spaces
+
+What are we going to learn today?
+----------------------------------
+classes
+methods
+objects 
+
+find the minimum of two numbers
+
+int findMin(int num1, int num2){
+
+}
+
+find the average of 3 numbers
+
+double findAverage(int num1, int num2, int num3){
+	
+}
+
+- Print string in uppercase
+
+  void printString(String str){
+	System.out.println(str.toUpperCase());
+   }
+
+
+-- Sort an array
+
+static int[] sort(int []arr){
+...
+}
+
+
+-----------
+method - > self contained block of statement
+
+return-type method-name(arguments)
+
+class - data(fields) + methods
+
+class is a user-defined type
+
+
+class Employee{
+	int employeeId;
+	String employeeName;
+	String email;
+
+	public printEmployee(){
+		System.out.println("ID : "+	employeeId);
+		System.out.println("Name : "+employeeName);
+		System.out.println("Email : "+email);
+	}
+}
+	
+int x;
+Employee e1 = new Employee();
+Employee e2 = new Employee();
+
+
+What is a Constructor?
+
+- is a special type of method is used for initializing the fields
+
+- it has the same name as the class
+
+- it invokes automatically when we create an object
+
+
+### Day 6 Retrospective
+------------------------
+
+What did we learn today?
+
+- String vs StringBuffer/StringBuilder
+- Using methods in Java.
+- What is a class in java
+- What are objects.
+- How to create objects in Java
+- Significance of static keyword in java 
+
+What went well?
+
+- We have gone through multiple examples to understand the concept of classes and objects
+
+Any challenges?
+
+- New concepts.. Need more practice and hands-ons
+
+What is there for tomorrow?
+
+- understand the use of this keyword
+- explore different features of OOP
+- Understand encapsulation
+- Access modifiers 
+
+
 
 
 
