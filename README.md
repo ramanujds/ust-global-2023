@@ -795,6 +795,7 @@ class - data(fields) + methods
 
 class is a user-defined type
 
+```java
 
 class Employee{
 	int employeeId;
@@ -808,12 +809,15 @@ class Employee{
 	}
 }
 	
-int x;
+```
+
+```java
 Employee e1 = new Employee();
 Employee e2 = new Employee();
+```
 
 
-What is a Constructor?
+<b>What is a Constructor?</b>
 
 - is a special type of method is used for initializing the fields
 
