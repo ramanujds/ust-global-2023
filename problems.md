@@ -66,6 +66,10 @@ class StudentMarksCalcImpl{
 
     public static void main(String []args){
 
+        String stream;
+        // Read stream value from user and marks for different subjects based on the stream selected
+
+        // Display the total marks
         
 
     }
