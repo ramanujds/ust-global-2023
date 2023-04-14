@@ -1,35 +1,77 @@
-## Practice Statement: Bookstore
+## Practice Statement: Score of Students
 
+**The total marks of all the students of grade 12, irrespective of the stream opted by them has to be calculated. The subjects vary depending on their choice of stream.**
+
+**For example**
+
+- A student who has opted for the medical stream will get marks for math, physics, chemistry and biology
+- A student who has opted for the non medical stream will get marks for math, physics and chemistry 
+- A student who has chosen the commerce stream will get marks for business studies, finance and accounts
+
+
+**Write a program with overloaded methods that will help calculate marks of the different streams of Grade 12 students.**
+
+--Boilerplate--
 
 ```java
-class Book {
-    int isbnNo;
-    String bookName;
-    String author;
-    String genre;
-    float price;
+public class StudentMarks {
 
-    // Declare required constructors
-
-    // create a method to print book details
-
-}
+    /* adding 4 integer values.*/
 
 
+    public int calculateMarks(int physics, int chemistry, int maths) {
 
-public class BookStoreImpl {
-    public static void main(String[] args) {
-    
-        
-        
+
+        return -1;
+    }
+
+    /* adding 3 integer values.*/
+    public int calculateMarks(int physics, int chemistry, int maths, int bio) {
+
+
+        return -1;
+    }
+
+    /* adding 4 double values.*/
+    public double calculateMarks(double physics, double chemistry, double maths, double bio) {
+
+
+        return -1;
+    }
+
+    /* static method adding 5 float values.*/
+    public static float calculateMarks(float maths, float bio, float physics, float chemistry, float lang) {
+
+
+        return -1;
+    }
+
+
+    /* adding 4 float values with order changed.*/
+    public float calculateMarks(float maths, float bio, float physics, float chemistry) {
+
+
+
+        return -1;
     }
 
 }
 
 
-
 ```
 
+```java
 
-#### Task1 : Create 3 books with different properties and print them
-#### Task2 : Find the cheapest book from the 3 books and print the details
+class StudentMarksCalcImpl{
+
+    public static void main(String []args){
+
+        
+
+    }
+
+
+}
+
+
+```
