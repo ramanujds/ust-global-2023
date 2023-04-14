@@ -5,10 +5,17 @@ public class Car {
 	private String color;
 	private String regNo;
 	
-	
 	public Car() {
 	}
 	
+	public Car(String model, String color) {
+		this.model = model;
+		this.color = color;
+	}
+	
+	public Car(String model) {
+		this.model = model;
+	}
 	
 	public Car(String model, String color, String regNo) {
 		this.model = model;
