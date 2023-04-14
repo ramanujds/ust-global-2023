@@ -1,3 +1,9 @@
+### Practice Problem on Encapsulation
+
+https://stackbooks-ust.stackroute.in/course/Programming-using-Core-Java/encapsulation-exercise
+
+
+
 ## Practice Statement: Score of Students
 
 **The total marks of all the students of grade 12, irrespective of the stream opted by them has to be calculated. The subjects vary depending on their choice of stream.**
