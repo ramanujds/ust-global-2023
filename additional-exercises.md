@@ -2,6 +2,7 @@
 
 - Exercise 1: Create a method which accepts an integer array, reverse the numbers in the array and  returns the resulting array in sorted order 
 - Exercise 2: Create a class containing a method to create the mirror image of a String. The method should  return the two Strings separated with a pipe(|) symbol . 
+-
 <b>Output - Hello | olleH</b>
 - Exercise 3: Create a method which accepts an integer array and removes all the duplicates in the array.  Return the resulting array in descending order 
 
