@@ -875,6 +875,7 @@ What is there for tomorrow?
 Write the definitions of these classes and a client program (your choice!) showing them in use.
 
 
+
 Day 11 Retrospective
 ---------------------
 What did we learn today?
@@ -898,6 +899,12 @@ What is there for tomorrow?
 - abstract classes
 - interfaces
 - final keyword
+
+Any task for tomorrow?
+-----------------------
+- Complete all the problems mentioned on additional-exercises of GitLab.
+
+- explore instance of operator
 
 
 
