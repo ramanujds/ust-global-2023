@@ -875,6 +875,31 @@ What is there for tomorrow?
 Write the definitions of these classes and a client program (your choice!) showing them in use.
 
 
+Day 11 Retrospective
+---------------------
+What did we learn today?
+-----------------------
+- Inheritance
+- Method overriding
+- use of super keyword
+- use of protected access modifier
+
+What went well?
+------------------------
+- Able to write code related to inheritance
+
+What needs to be improved?
+------------------------
+- More practice on logical problem solving
+
+What is there for tomorrow?
+--------------------------
+
+- abstract classes
+- interfaces
+- final keyword
+
+
 
 
 
