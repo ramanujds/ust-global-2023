@@ -4,10 +4,14 @@ public class PhoneApp {
 
 	public static void main(String[] args) {
 		
-		Phone myPhone = new Phone();
+		
 		AirtelSim airtel = new AirtelSim();
-		Sim sim = new Sim();
-		myPhone.insertSim(sim);
+		JioSim jio = new JioSim();
+		
+		
+		Phone myPhone = new Phone();
+		
+		myPhone.insertSim(airtel);
 		myPhone.makeACall();
 
 	}

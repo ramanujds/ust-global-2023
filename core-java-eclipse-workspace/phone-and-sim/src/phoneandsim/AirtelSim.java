@@ -1,6 +1,6 @@
 package phoneandsim;
 
-public class AirtelSim {
+public class AirtelSim implements Sim, Sim5G {
 
 	public void call(){
 		System.out.println("Making a call using Airtel...");
@@ -8,5 +8,11 @@ public class AirtelSim {
 	public void sendSms(){
 		System.out.println("Sending a text using Airtel...");
 	}
+	
+	
+	public void browse() {
+		
+	}
+	
 	
 }
