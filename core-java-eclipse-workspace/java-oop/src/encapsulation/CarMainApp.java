@@ -6,7 +6,8 @@ public class CarMainApp {
 		
 		Car myCar = new Car("Audi Q3","Red","KL032456");
 		
-		myCar.showCarInfo();
+		// myCar.showCarInfo();
+		System.out.println(myCar);
 		
 	}
 }

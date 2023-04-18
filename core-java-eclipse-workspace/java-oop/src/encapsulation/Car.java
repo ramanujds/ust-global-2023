@@ -57,4 +57,11 @@ public class Car {
 		System.out.println("Rg No : "+regNo);
 	}
 
+
+	public String toString() {
+		return "Car [model=" + model + ", color=" + color + ", regNo=" + regNo + "]";
+	}
+	
+	
+
 }
