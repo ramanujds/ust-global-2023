@@ -6,9 +6,10 @@ public class ThrowingException {
 	
 	static int age;
 	static String name;
+	static Scanner scan;
 	
 	public static void readUserDetails() throws Exception {
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		System.out.println("Enter name and age : ");
 		name = scan.nextLine();
 		age = scan.nextInt();
@@ -27,6 +28,10 @@ public class ThrowingException {
 		}
 		catch (Exception e) {
 			System.err.println(e);
+		}
+		finally {
+			System.out.println("Closing resources..");
+			scan.close();
 		}
 		
 		
