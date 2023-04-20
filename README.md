@@ -910,6 +910,143 @@ Any task for tomorrow?
 - explore instance of operator
 
 
+final keyword in java
+------------------------
+
+- final variables are treated as constants and the value of the variable cannot be changed
+
+- final methods cannot be overridden 
+
+- final class cannot be inherited 
+
+
+
+Abstraction in Java
+---------------------
+Abstraction can be achieved in two ways -
+
+1. Using abstract classes
+2. Using interfaces
+
+
+
+
+
+
+
+
+Has A 
+------
+
+class Phone{
+	Sim sim;
+	makeACall(){
+		sim.call();
+	}
+
+}
+
+class Sim{
+	call(){
+		...
+	}
+	sendSms(){
+		...
+	}
+
+
+
+
+
+
+
+
+
+Printer
+
+Some Printers are Scanner too
+
+HpPrinter - can only print
+CanonPrinter - can print and scan
+
+We need a printer object which can be initialised with either of the different printer available
+
+
+Exception Handling
+
+try - write the code that can lead to some exception
+
+catch - write what to be done if the exception occurred
+
+finally - a code block to be executed irrespective of whether or not the exception occurred 
+
+
+Exception are of two types - 
+------------------------------
+Checked Exception - Compile-Time exception
+Unchecked Exception - Runtime Exception
+
+
+ArrayIndexOutOfBoundsException
+
+
+All checked exception extends the Exception class directly
+examples - FileNotFoundException, SQLException, IOException, ClassNotFoundException
+
+All unchecked exception extends the RuntimeException class
+examples - ArithmeticException,ArrayIndexOutOfBoundsException, NullPointerException, InputMismatchException, NumberFormatException 
+
+How to catch more than one exceptions?
+
+
+How to throw and exception conditionally? 
+
+
+Throw vs Throws
+
+
+- with throw we can generate an exception
+
+- syntax : throw new Exception-class-name(message)
+
+- example : throw new InvalidAgeException("Invalid Age")
+
+- with throws we declare an exception (checked-exception)
+
+- syntax : method-name() throws Exception-Type
+
+- example : public void readAge() throws InvalidAgeException
+
+
+
+
+
+Collection Framework
+--------------------
+
+- provides a set interfaces and classes
+
+- 3 types
+ - List - collection(index based, allows duplicates)
+	- ArrayList
+	- LinkedList
+	- Vector
+ - Queue
+	- First-In-First-Out Data Structure
+	- Allows duplicates
+		- PriorityQueue
+		- LinkedList  
+ - Set
+	- collection of unique elements(hash based)
+	- HashSet
+	- TreeSet
+
+Generic Types -
+	- Generic types defines the type of data that a collection should have
+	- we mention generic types using <> diamond braces  
+
+
+
 
 
 
