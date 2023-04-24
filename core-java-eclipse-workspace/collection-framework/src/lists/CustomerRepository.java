@@ -12,7 +12,12 @@ public class CustomerRepository {
 
 	// create a method to add a new customer
 
-	public void addCustomer(Customer c) {
+	public void addCustomer(Customer c) throws DuplicateCustomerException {
+		for(Customer cust:customers) {
+			if(cust.getId()==c.getId()) {
+				throw new DuplicateCustomerException("Customer with id:"+c.getId()+" already present");
+			}
+		}
 		customers.add(c);
 	}
 
@@ -22,7 +27,7 @@ public class CustomerRepository {
 		return customers;
 	}
 
-	public Customer getCustomerByName(String name) {
+	public Customer getCustomerByName(String name) throws CustomerNotFoundException {
 
 		for (Customer c : customers) {
 			if (c.getName().equalsIgnoreCase(name)) {
@@ -30,7 +35,8 @@ public class CustomerRepository {
 			}
 		}
 
-		return null;
+		throw new CustomerNotFoundException("Customer with Name: "+name+" Not Found");
+		
 	}
 
 	public Customer getCustomerById(int id) {

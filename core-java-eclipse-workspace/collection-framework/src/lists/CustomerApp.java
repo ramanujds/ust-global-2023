@@ -15,13 +15,25 @@ public class CustomerApp {
 		Customer c4 = new Customer(104, "Rohit", "rohit@yahoo.com");
 		Customer c5 = new Customer(104, "Rohit", "rohit@yahoo.com");
 		// Adding a new customer
+		try {
 		repo.addCustomer(c1);
 		repo.addCustomer(c2);
 		repo.addCustomer(c3);
 		repo.addCustomer(c4);
 		repo.addCustomer(c5);
+		}
+		catch (Exception e) {
+			System.err.println(e.getMessage());
+		}
 		
 		// Getting all the customer
+		
+		try {
+			Customer cu = repo.getCustomerByName("anil");
+		} catch (CustomerNotFoundException e) {
+			
+			System.err.println(e.getMessage());
+		}
 		
 		Set<Customer> customers = repo.getAllCustomer();
 		
