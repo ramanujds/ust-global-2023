@@ -1058,6 +1058,9 @@ How to sort a List of Customer?
 
 - override the compareTo() method
 
+#### Example :
+
+```java
 class Customer implements Comparable<Customer>{
 	
 	....
@@ -1068,7 +1071,7 @@ class Customer implements Comparable<Customer>{
 	}	
 	
 }
-
+```
 
 
 - create an exception DuplicateCustomerException and throw it when you try to add the customer with same id
@@ -1076,7 +1079,7 @@ class Customer implements Comparable<Customer>{
 
 
 
-Layered Architecture 
+### Layered Architecture
 
 
 - we divide different classes an interfaces as per their purpose
