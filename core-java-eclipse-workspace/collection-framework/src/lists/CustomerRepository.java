@@ -1,11 +1,14 @@
 package lists;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CustomerRepository {
 
-	List<Customer> customers = new ArrayList<>();
+	Set<Customer> customers = new HashSet<>();
 
 	// create a method to add a new customer
 
@@ -15,7 +18,7 @@ public class CustomerRepository {
 
 	// create a method to get all the customer
 
-	public List<Customer> getAllCustomer() {
+	public Set<Customer> getAllCustomer() {
 		return customers;
 	}
 

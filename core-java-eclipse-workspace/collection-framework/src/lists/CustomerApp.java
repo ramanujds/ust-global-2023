@@ -1,6 +1,6 @@
 package lists;
 
-import java.util.List;
+import java.util.Set;
 
 public class CustomerApp {
 
@@ -13,15 +13,17 @@ public class CustomerApp {
 		Customer c2 = new Customer(102, "Biraj", "biraj@yahoo.com");
 		Customer c3 = new Customer(103, "Harsh", "harsh@yahoo.com");
 		Customer c4 = new Customer(104, "Rohit", "rohit@yahoo.com");
+		Customer c5 = new Customer(104, "Rohit", "rohit@yahoo.com");
 		// Adding a new customer
 		repo.addCustomer(c1);
 		repo.addCustomer(c2);
 		repo.addCustomer(c3);
 		repo.addCustomer(c4);
+		repo.addCustomer(c5);
 		
 		// Getting all the customer
 		
-		List<Customer> customers = repo.getAllCustomer();
+		Set<Customer> customers = repo.getAllCustomer();
 		
 		// Display all the customers
 		
