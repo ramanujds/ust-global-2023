@@ -1046,6 +1046,46 @@ Generic Types -
 	- we mention generic types using <> diamond braces  
 
 
+How to sort a collection?
+-------------------------
+
+Collections.sort(list)
+
+How to sort a List of Customer?
+-------------------------------
+
+- implement the Comparable interface
+
+- override the compareTo() method
+
+class Customer implements Comparable<Customer>{
+	
+	....
+	
+	public int compareTo(Customer c) {
+		
+		....
+	}	
+	
+}
+
+
+
+- create an exception DuplicateCustomerException and throw it when you try to add the customer with same id
+
+
+
+
+Layered Architecture 
+
+
+- we divide different classes an interfaces as per their purpose
+
+- ui layer
+- business layer / service layer
+- repository layer/DAO Layer/Persistence Layer
+- model/entity layer
+
 
 
 
