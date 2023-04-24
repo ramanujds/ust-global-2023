@@ -1,16 +1,20 @@
 package com.customerapp.repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.customerapp.model.Customer;
 
 public class CustomerRepoImpl implements CustomerRepo {
 
+	static List<Customer> customerDb = new ArrayList<>();
 	
 	@Override
 	public Customer addCustomer(Customer c) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		customerDb.add(c);
+		return c;
+		
 	}
 
 	@Override

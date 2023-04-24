@@ -8,9 +8,10 @@ import com.customerapp.repository.CustomerRepoImpl;
 
 public class CustomerServiceImpl implements CustomerService{
 
+	CustomerRepo repo = new CustomerRepoImpl();
+	
 	@Override
 	public Customer addCustomer(Customer c) {
-		CustomerRepo repo = new CustomerRepoImpl();
 		// logic to validate customer data
 		return repo.addCustomer(c);
 	}
