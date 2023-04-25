@@ -1,5 +1,6 @@
 package com.customerapp.ui;
 
+import java.util.List;
 import java.util.Scanner;
 
 import com.customerapp.model.Customer;
@@ -30,6 +31,14 @@ public class CustomerAppUi {
 	public static void searchCustomer() {
 
 	}
+	
+	public static void dispalyAllCustomer() {
+		List<Customer> customers = service.getAllCustomers();
+		for(Customer c:customers) {
+			System.out.println(c);
+		}
+		
+	}
 
 	public static void main(String[] args) {
 		while (true) {
@@ -44,6 +53,9 @@ public class CustomerAppUi {
 				break;
 			case 2:
 				searchCustomer();
+				break;
+			case 5:
+				dispalyAllCustomer();
 				break;
 			case 0:
 				System.out.println("Bye.....");

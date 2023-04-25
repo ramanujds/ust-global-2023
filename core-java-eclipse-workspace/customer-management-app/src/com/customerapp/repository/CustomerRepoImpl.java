@@ -37,8 +37,7 @@ public class CustomerRepoImpl implements CustomerRepo {
 
 	@Override
 	public List<Customer> getAllCustomers() {
-		// TODO Auto-generated method stub
-		return null;
+		return customerDb;
 	}
 
 	
