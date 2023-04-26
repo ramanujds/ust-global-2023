@@ -1,0 +1,58 @@
+
+Map 	-> consists of key value pair
+	-> Keys are unique
+
+	Map<K,V> map = new HashMap<>()
+
+	Map<Integer, String> myMap = new HashMap<>()
+
+
+
+Software Testing	
+----------------
+
+- Unit Testing
+- Integration Testing
+- End-to-End Testing
+
+- JUnit - Java Library for writing unit tests
+
+
+- Lifecycle hooks 
+
+- BeforeAll
+- BeforeEach
+- AfterEach
+- AfterAll
+
+
+
+
+
+Reading a file
+- FileInputStream - Byte Oriented
+- FileReader - Character Oriented
+
+
+Writing objects to file
+------------------------
+Serialization 
+
+Reading object from file
+------------------------
+De-serialization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
