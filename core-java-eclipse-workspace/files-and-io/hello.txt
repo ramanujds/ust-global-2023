@@ -1,0 +1,3 @@
+Hello everyone how are you?
+We are exploring files and i/o in Java
+It's fun to read data from a file

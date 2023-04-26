@@ -1,43 +1,53 @@
 package com.customerapp.repository;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.customerapp.model.Customer;
 
 public class CustomerRepoImpl implements CustomerRepo {
 
-	static List<Customer> customerDb = new ArrayList<>();
+//	static List<Customer> customerDb = new ArrayList<>();
+	
+	Map<Integer, Customer> customerDb = new HashMap<>();
 	
 	@Override
 	public Customer addCustomer(Customer c) {
 		
-		customerDb.add(c);
+		customerDb.put(c.getId(), c);
 		return c;
 		
 	}
 
 	@Override
 	public Customer getCustomerById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return customerDb.get(id);
 	}
 
 	@Override
 	public Customer getCustomerByName(String name) {
-		// TODO Auto-generated method stub
+		
+		for(Customer c:customerDb.values()) {
+			if(c.getName().equalsIgnoreCase(name)) {
+				return c;
+			}
+		}
 		return null;
 	}
 
 	@Override
 	public void deleteCustomer(int id) {
-		// TODO Auto-generated method stub
+		
+		customerDb.remove(id);
 		
 	}
 
 	@Override
 	public List<Customer> getAllCustomers() {
-		return customerDb;
+		return new ArrayList<>(customerDb.values());
 	}
 
 	

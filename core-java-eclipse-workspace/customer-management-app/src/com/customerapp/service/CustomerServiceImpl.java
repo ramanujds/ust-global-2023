@@ -19,7 +19,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer getCustomerById(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.getCustomerById(id);
 	}
 
 	@Override
@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService{
 
 	@Override
 	public void deleteCustomer(int id) {
-		// TODO Auto-generated method stub
+		repo.deleteCustomer(id);
 		
 	}
 
