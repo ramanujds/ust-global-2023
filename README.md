@@ -1,5 +1,9 @@
 # Class Room Notes and Examples
 
+
+#### MySQL Installation Guide
+https://dev.mysql.com/doc/refman/8.0/en/windows-install-archive.html
+
 ### Daily Retrospective : 
 [Daily Retrospective Link](https://docs.google.com/spreadsheets/d/1DgLWccxLu-BuvyqDJ_PL5fd0zRw89hK3RPiH1JZooW4/edit?usp=sharing)
 
