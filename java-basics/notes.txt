@@ -42,6 +42,54 @@ Reading object from file
 ------------------------
 De-serialization
 
+Database Management System
+---------------------------
+ER Model
+Entity Relationship Diagram
+
+Entity - is an object of interest
+Attribute - Defines various properties of an entity
+Relationship - Defines the relationship between different entities
+
+Trainee
+
+Trainer
+
+
+
+1001		Suraj	suraj@yahoo.com		65000  2020-04-27
+1002		Mohit	mohit@gmail.com		52000  2021-04-20
+1003		Gaurav	gaurav@yahoo.com		55000  2020-10-15
+1004		Harsh	harsh@gmail.com		68000  2019-02-10
+1005		Javed	javed@yahoo.com		85000  2015-05-20
+
+
+Types of SQL Commands
+---------------------
+- DDL
+	- CREATE : creating new table or database
+	- ALTER : changing the table structure
+	- DROP : delete the table
+	- TRUNCATE : clear all the data
+
+- DML
+	- INSERT
+	- UPDATE
+	- DELETE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
