@@ -118,4 +118,31 @@ select emp_id,emp_name,salary from employee;
 
 -- Grouping Data
 
+-- Exercises
+
+-- Find all the salesman
+
+-- find the analysts earning more than 60000
+
+-- update the salary of each employee by 15%
+
+-- increase salary of each clerk by 2000 Rs
+
+-- add a new coulmn dept with data-type numeric(3)
+
+-- insert data for dept coulumn for each employee.
+
+-- (3 Depts - 10,20,30)
+
+-- find all the employees belonging to dept 10
+
+-- find the analysts is dept 20
+
+-- find all the employees who are either clerk or analyst
+
+-- sort the employees based on dept no asc and salary desc
+
+
+
+
 
