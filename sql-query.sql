@@ -13,6 +13,13 @@ use ust_db;
 						email varchar(50),
 						salary numeric(10,2));
                         
+create table employee(emp_id numeric(5) primary key,
+						emp_name varchar(50),
+						email varchar(50),
+                        job varchar(30),
+						salary numeric(10,2),
+                        hiredate date);
+                        
 -- How to see all the tables in a database
 show tables;
 
@@ -53,3 +60,62 @@ update employee set hiredate='2020-04-27' where emp_id=1001;
 
 -- how to delete a record
 delete from employee where emp_id=1001;
+
+-- viewing all the data
+select * from employee;
+
+insert into employee values(1001,'Suraj',
+						'suraj@yahoo.com','Clerk',65000,'2020-04-27');
+insert into employee values(1002,'Mohit','mohit@gmail.com','Salesname',52000 , '2021-04-20');
+insert into employee values(1003,'Gaurav','gaurav@yahoo.com','Analyst',55000, '2020-10-15');                        
+insert into employee values(1004,'Harsh','harsh@gmail.com','Clerk',68000 ,'2019-02-10');
+insert into employee values(1005,'Javed','javed@yahoo.com','Manager',85000 ,'2015-05-20');
+insert into employee values(2001,'Priyanka','priyanka@yahoo.com','Analyst',75000 ,'2018-05-20');
+insert into employee values(2002,'Karan','karan@yahoo.com','Analyst',72000 ,'2019-10-20');
+
+-- find an employee by ID
+
+select * from employee where emp_id=1002;
+
+-- find an employee by name
+
+-- find employees based on salary
+
+-- find an employee with salary between 60k to 70k
+
+select * from employee where salary>=60000 AND salary<=70000;
+
+select * from employee where salary between 60000 and 70000;
+
+-- show the details of the employees with employee id 1002, 1005, 1003 
+
+select * from employee where emp_id=1001 OR emp_id=1003 OR emp_id=1005;
+
+select * from employee where emp_id IN(1001,1005,1003);
+
+-- Find the unique jobs available in the employee table
+
+select distinct job from employee;
+
+-- Find the annual salary of each employee
+
+select emp_name,salary, salary*12 as "annual salary" from employee;
+
+
+
+-- Ordering/Sorting data
+
+select * from employee order by salary asc;
+
+select * from employee order by salary desc;
+
+
+-- display the employee id, name and salary
+
+select emp_id,emp_name,salary from employee;
+
+-- Adding 
+
+-- Grouping Data
+
+
