@@ -1,8 +1,8 @@
 Create a list of employees. 
 -----------------------
 	1. Find all the employees having salary more than 40000 
-	1. Increase the salary of employees by 10% where salary is more than 50000
-	1. Create an Exception InvalidInputException which should be thrown with proper message when id, name or salary is not valid.
+	2. Increase the salary of employees by 10% where salary is more than 50000
+	3. Create an Exception InvalidInputException which should be thrown with proper message when id, name or salary is not valid.
 	
 	- (Rules –
 		- Id should be a 5 digit positive no
