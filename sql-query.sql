@@ -65,15 +65,17 @@ delete from employee where emp_id=1001;
 select * from employee;
 
 insert into employee values(1001,'Suraj',
-						'suraj@yahoo.com','Clerk',65000,'2020-04-27');
-insert into employee values(1002,'Mohit','mohit@gmail.com','Salesname',52000 , '2021-04-20');
-insert into employee values(1003,'Gaurav','gaurav@yahoo.com','Analyst',55000, '2020-10-15');                        
-insert into employee values(1004,'Harsh','harsh@gmail.com','Clerk',68000 ,'2019-02-10');
-insert into employee values(1005,'Javed','javed@yahoo.com','Manager',85000 ,'2015-05-20');
-insert into employee values(2001,'Priyanka','priyanka@yahoo.com','Analyst',75000 ,'2018-05-20');
-insert into employee values(2002,'Karan','karan@yahoo.com','Analyst',72000 ,'2019-10-20');
+						'suraj@yahoo.com','Clerk',65000,'2020-04-27',10);
+insert into employee values(1002,'Mohit','mohit@gmail.com','Salesname',52000 , '2021-04-20',20);
+insert into employee values(1003,'Gaurav','gaurav@yahoo.com','Analyst',55000, '2020-10-15',10);                        
+insert into employee values(1004,'Harsh','harsh@gmail.com','Clerk',68000 ,'2019-02-10',30);
+insert into employee values(1005,'Javed','javed@yahoo.com','Manager',85000 ,'2015-05-20',20);
+insert into employee values(2001,'Priyanka','priyanka@yahoo.com','Analyst',75000 ,'2018-05-20',30);
+insert into employee values(2002,'Karan','karan@yahoo.com','Analyst',72000 ,'2019-10-20',10);
 
 -- find an employee by ID
+
+truncate table employee;
 
 select * from employee where emp_id=1002;
 
@@ -107,6 +109,7 @@ select emp_name,salary, salary*12 as "annual salary" from employee;
 
 select * from employee order by salary asc;
 
+
 select * from employee order by salary desc;
 
 
@@ -122,27 +125,147 @@ select emp_id,emp_name,salary from employee;
 
 -- Find all the salesman
 
+select * from employee where job = 'salesman';
+
 -- find the analysts earning more than 60000
+
+select * from employee where job='Analyst' and salary>60000;
 
 -- update the salary of each employee by 15%
 
+update employee set salary=salary*1.15;
+
 -- increase salary of each clerk by 2000 Rs
 
--- add a new coulmn dept with data-type numeric(3)
+update employee set salary =salary+2000 where job ='clerk';
 
+-- add a new coulmn dept with data-type numeric(3)
+alter table employee add dept numeric (3);
 -- insert data for dept coulumn for each employee.
 
--- (3 Depts - 10,20,30)
+-- (3 Depts - 10,20,30)update employee set dept=20 where emp_id in(1002,2002);
+update employee set dept=10 where emp_id in(1001,1004,2001);
+update employee set dept=20 where emp_id in(1002,2002);
+update employee set dept=30 where emp_id in(1003,1005);
+
 
 -- find all the employees belonging to dept 10
+select * from employee where dept=10;
 
 -- find the analysts is dept 20
 
+select * from employee where job='analyst' and dept=20;
+
 -- find all the employees who are either clerk or analyst
+
+select * from employee where job='clerk' or job='analyst';
 
 -- sort the employees based on dept no asc and salary desc
 
+select * from employee order by dept ASC ,salary DESC;
+
+select * from employee;
+
+-- Grouping functions --
+
+-- sum
+-- avg
+-- count
+-- max
+-- min
+
+select avg(salary) as 'average salary' from employee;
+
+-- find the total employee count
+
+select count(*) as 'total employees' from employee;
+
+-- find the total salary in employee table
+
+select sum(salary) as 'total salary' from employee;
+
+-- Find total no of employees in each dept
+
+select dept, count(*) as 'total employees' from employee group by dept;
+
+-- Find the average salaries based on job
+
+select job,avg(salary) as 'average salary' from employee group by job;
+
+-- Find the max,min,avg salaries and total employee count based on job;
+
+select job,avg(salary) as 'average salary',
+					max(salary) as 'max salary', 
+					min(salary) as 'min salary',
+                    count(*) as 'total employees'
+					from employee group by job;
+
+-- find the average salary of dept no 20
+
+select dept,avg(salary) as 'average sal' from employee where dept=20;
+
+-- find the dept with more than 3 employees
+
+select dept,count(*) as 'total employee' 
+		from employee group by dept having count(*)>=3;
+        
+-- Date Functions
+
+-- find the year of joining of each employee
+
+select emp_name, extract(year from hiredate) 
+				as 'joining year' from employee;
+                
+
+-- find the total experience of each employee --
+
+select emp_name, round(datediff(curdate(),hiredate)/365,0) as 'Years' ,
+		floor(mod(datediff(now(),hiredate),365)/30) as 'months'
+		from employee;
+        
+select emp_name, 
+		extract(year from now()) - 
+			extract(year from hiredate)
+			as 'Total Exp.' from employee order by 2 desc;
+
+-- Wildcards (like)
+
+-- Find all the employees using gmail mails
+-- Find employees join in 2020
+-- Find employees name starts with P or J
+-- Find employees joined in the month of January
+-- Find employees joind in the first half of the year
+
+-- Joins
+
+-- Crate a table dept with
+
+-- dept		deptname	location
+-- 10		IT			Bangalore
+-- 20		Accounts	Trivandrum
+-- 30	    Sales		Chennai
+-- 40		Mangement	Kolkata
 
 
+create table Department (dept numeric (3) , dept_name varchar (50),
+location varchar (20));
+show tables;
+insert into Department values
+			(10, 'IT', 'Bangalore'), 
+            (20, 'Accounts', 'Trivandrum'), 
+            (30, 'Sales', 'Chennai'), 
+            (40, 'Management' , 'Kolkata');
+            
+select * from Department;
 
+-- find all the employees with dept details
+
+select emp_id,emp_name,e.dept,dept_name,location 
+		from employee e join Department d on 
+        e.dept = d.dept;
+        
+-- find all the employees wrking in Trivandrum
+-- display the dept information along with employee count
+-- find the dept with no employees
+-- find the dept with highest employees
 
