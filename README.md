@@ -1104,7 +1104,7 @@ class Customer implements Comparable<Customer>{
 - model/entity layer
 
 
-![image] (https://ibb.co/wBhpJqL)
+![image](https://ibb.co/wBhpJqL)
 
 
 
@@ -1160,7 +1160,6 @@ Trainer
 
 | emp_id | emp_name | email | job | salary | hiredate |
 | ------ | ------ | ------ | ------ | ------ | ------ |
-
 | 1001 | Suraj | suraj@yahoo.com | Clerk | 65000 | 2020-04-27 |
 | 1002 | Mohit | mohit@gmail.com | Salesman	| 52000 | 2021-04-20 |
 | 1003 | Gaurav | gaurav@yahoo.com | Analyst | 55000 | 2020-10-15 |
@@ -1168,6 +1167,7 @@ Trainer
 | 1005 | Javed | javed@yahoo.com | Manager | 85000 | 2015-05-20 |
 | 2001 | Priyanka | priyanka@yahoo.com | Analyst | 75000 | 2018-05-20 |
 | 2002 | Karan | karan@yahoo.com | Analyst | 72000 | 2019-10-20 |
+
 
 
 
