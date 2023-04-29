@@ -1105,7 +1105,7 @@ class Customer implements Comparable<Customer>{
 - model/entity layer
 
 
-![click here to see more](https://ibb.co/wBhpJqL][img]https://i.ibb.co/PFG1TyY/Image-24-04-23-at-5-57-PM.jpg)
+![click here to see more](https://i.ibb.co/PFG1TyY/Image-24-04-23-at-5-57-PM.jpg)
 
 
 
