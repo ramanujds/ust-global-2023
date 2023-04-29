@@ -1105,7 +1105,7 @@ class Customer implements Comparable<Customer>{
 - model/entity layer
 
 
-![click here to see more](https://data-flair.training/blogs/wp-content/uploads/sites/2/2018/03/hierarchy-of-collection-framework-in-java.webp)
+![click here to see more](https://ibb.co/wBhpJqL][img]https://i.ibb.co/PFG1TyY/Image-24-04-23-at-5-57-PM.jpg)
 
 
 
