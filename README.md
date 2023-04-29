@@ -1081,8 +1081,9 @@ class Customer implements Comparable<Customer>{
 - create an exception DuplicateCustomerException and throw it when you try to add the customer with same id
 
 
-Map 	-> consists of key value pair
-		-> Keys are unique
+##### Map 	
+- consists of key value pair
+- Keys are unique
 
 ```java
 
@@ -1103,7 +1104,7 @@ Map 	-> consists of key value pair
 - model/entity layer
 
 
-![Image](https://ibb.co/wBhpJqL)
+![image] (https://ibb.co/wBhpJqL)
 
 
 
@@ -1158,15 +1159,17 @@ Trainer
 --Employee Table--
 
 | emp_id | emp_name | email | job | salary | hiredate |
-| ------ | ------ |
+| ------ | ------ | ------ | ------ | ------ | ------ |
 
-|1001|		Suraj		|suraj@yahoo.com	|Clerk		|65000  |2020-04-27|
-|1002|		Mohit		|mohit@gmail.com	|Salesman	|52000  |2021-04-20|
-|1003|		|Gaurav		|gaurav@yahoo.com|	Analyst	|55000  |2020-10-15|
-|1004|		Harsh		|harsh@gmail.com	|Clerk		|68000  |2019-02-10|
-|1005|		Javed		|javed@yahoo.com	|Manager	|85000  |2015-05-20|
-|2001		|Priyanka	|priyanka@yahoo.com	|Analyst	|75000|  2018-05-20|
-|2002		|Karan		|karan@yahoo.com	|Analyst	|72000  |2019-10-20|
+| 1001 | Suraj | suraj@yahoo.com | Clerk | 65000 | 2020-04-27 |
+| 1002 | Mohit | mohit@gmail.com | Salesman	| 52000 | 2021-04-20 |
+| 1003 | Gaurav | gaurav@yahoo.com | Analyst | 55000 | 2020-10-15 |
+| 1004 | Harsh | harsh@gmail.com | Clerk |68000 | 2019-02-10 |
+| 1005 | Javed | javed@yahoo.com | Manager | 85000 | 2015-05-20 |
+| 2001 | Priyanka | priyanka@yahoo.com | Analyst | 75000 | 2018-05-20 |
+| 2002 | Karan | karan@yahoo.com | Analyst | 72000 | 2019-10-20 |
+
+
 
 
 Types of SQL Commands
