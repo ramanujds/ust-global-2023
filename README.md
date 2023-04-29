@@ -1046,9 +1046,12 @@ Collection Framework
 	- HashSet
 	- TreeSet
 
-Generic Types -
+#### Generic Types
 	- Generic types defines the type of data that a collection should have
 	- we mention generic types using <> diamond braces  
+
+
+![click here to see more](https://data-flair.training/blogs/wp-content/uploads/sites/2/2018/03/hierarchy-of-collection-framework-in-java.webp)
 
 
 How to sort a collection?
