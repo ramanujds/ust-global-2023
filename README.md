@@ -1081,7 +1081,16 @@ class Customer implements Comparable<Customer>{
 - create an exception DuplicateCustomerException and throw it when you try to add the customer with same id
 
 
+Map 	-> consists of key value pair
+		-> Keys are unique
 
+```java
+
+	Map<K,V> map = new HashMap<>()
+
+	Map<Integer, String> myMap = new HashMap<>()
+
+```
 
 ### Layered Architecture
 
@@ -1097,5 +1106,80 @@ class Customer implements Comparable<Customer>{
 ![Image](https://drive.google.com/file/d/1q7p2oQaq1RHJ26Ia_rydByw7lgl0RYRy/view?usp=drivesdk)
 
 
+
+
+Software Testing	
+----------------
+
+- Unit Testing
+- Integration Testing
+- End-to-End Testing
+
+- JUnit - Java Library for writing unit tests
+
+
+- Lifecycle hooks 
+
+- BeforeAll
+- BeforeEach
+- AfterEach
+- AfterAll
+
+
+
+
+
+Reading a file
+- FileInputStream - Byte Oriented
+- FileReader - Character Oriented
+
+
+Writing objects to file
+------------------------
+Serialization 
+
+Reading object from file
+------------------------
+De-serialization
+
+Database Management System
+---------------------------
+ER Model
+Entity Relationship Diagram
+
+Entity - is an object of interest
+Attribute - Defines various properties of an entity
+Relationship - Defines the relationship between different entities
+
+Trainee
+
+Trainer
+
+
+
+1001		Suraj		suraj@yahoo.com	Clerk		65000  2020-04-27
+1002		Mohit		mohit@gmail.com	Salesman	52000  2021-04-20
+1003		Gaurav		gaurav@yahoo.com	Analyst	55000  2020-10-15
+1004		Harsh		harsh@gmail.com	Clerk		68000  2019-02-10
+1005		Javed		javed@yahoo.com	Manager	85000  2015-05-20
+2001		Priyanka	priyanka@yahoo.com	Analyst	75000  2018-05-20
+2002		Karan		karan@yahoo.com	Analyst	72000  2019-10-20
+
+
+Types of SQL Commands
+---------------------
+- DDL
+	- CREATE : creating new table or database
+	- ALTER : changing the table structure
+	- DROP : delete the table
+	- TRUNCATE : clear all the data
+
+- DML
+	- INSERT
+	- UPDATE
+	- DELETE
+
+- DQL
+	- SELECT
 
 
