@@ -236,7 +236,7 @@ select emp_name,
 -- Find employees joined in the month of January
 -- Find employees joind in the first half of the year
 
--- Joins
+
 
 -- Crate a table dept with
 
@@ -250,7 +250,7 @@ select emp_name,
 create table Department (dept numeric (3) , dept_name varchar (50),
 location varchar (20));
 show tables;
-insert into Department values
+insert into department values
 			(10, 'IT', 'Bangalore'), 
             (20, 'Accounts', 'Trivandrum'), 
             (30, 'Sales', 'Chennai'), 
@@ -258,14 +258,141 @@ insert into Department values
             
 select * from Department;
 
+-- Joins
+
+-- Inner Join 
+-- selects all the common data from two tables
+
 -- find all the employees with dept details
 
 select emp_id,emp_name,e.dept,dept_name,location 
 		from employee e join Department d on 
         e.dept = d.dept;
+
+-- Outer Join
+-- Left Join
+
+-- find all the employees with dept details
+
+
+select emp_id,emp_name,d.dept,dept_name,location 
+		from employee e left join department d on 
+        e.dept = d.dept;
+
+
+
+-- Right Join
+
+select emp_id,emp_name,d.dept,dept_name,location 
+		from employee e right join department d on 
+        e.dept = d.dept;
+-- Full Join
+
+
+        
+        
+        
         
 -- find all the employees wrking in Trivandrum
 -- display the dept information along with employee count
+
+select d.dept, d.dept_name, count(e.dept) as 'Total Emps'
+				from department d left join employee e 
+                on d.dept=e.dept group by d.dept;
+
 -- find the dept with no employees
+
+select d.dept,dept_name,location 
+		from employee e right join department d on 
+        e.dept = d.dept where e.emp_id is null;
+
 -- find the dept with highest employees
+
+select d.dept, d.dept_name, count(e.dept) as 'Total Emps'
+				from department d left join employee e 
+                on d.dept=e.dept group by d.dept 
+                order by 3 desc LIMIT 1;
+
+-- Aplying constraints --
+
+-- NOT NULL
+-- UNIQUE
+-- PRIMARY KEY
+-- FOREIGN KEY
+
+
+
+drop table Department;
+
+create table department(dept numeric (3) PRIMARY KEY,
+						dept_name varchar (50) UNIQUE NOT NULL,
+						location varchar (20));
+
+select * from department;
+
+-- FOREIGN KEY
+
+alter table employee add constraint 
+		fk_dept foreign key(dept) 
+			references department(dept);
+
+
+insert into employee values(2005,'Umesh',
+						'umesh@yahoo.com','Clerk',
+							65000,'2020-04-27',80);
+                            
+
+-- Sub-query
+-- (Nested Query)
+
+select dept from department where location='Trivandrum';                            
+
+select * from employee where dept=
+	(select dept from department where location='Trivandrum');
+    
+    
+
+-- DCL --
+
+-- GRANT
+-- REVOKE
+
+-- TCL --    
+
+-- commit
+
+set autocommit=false;
+
+use ust_db;
+
+select * from department;
+
+-- savepoint
+savepoint p1;
+
+delete from department where dept=10;
+
+-- rollback    
+
+rollback to p1;
+
+-- The End --
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
