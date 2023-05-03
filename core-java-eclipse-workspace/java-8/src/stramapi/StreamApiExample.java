@@ -16,7 +16,34 @@ import java.util.List;
 
 
 public class StreamApiExample {
-	
+	// Find all the even numbers
+	static List<Integer> findAllEven(List<Integer> a) {
+		List<Integer> evenArr = new ArrayList<>();
+		for (int i = 0; i < a.size(); i++) {
+			if (a.get(i) % 2 == 0) {
+				evenArr.add(a.get(i));
+			}
+		}
+		return evenArr;
+	}
+	// Multiply the even numbers by 3
+	static List<Integer> multiplyEven(List<Integer> a) {
+		List<Integer> mulArr = new ArrayList<>();
+		for (int i = 0; i < a.size(); i++) {
+			int num = a.get(i) * 3;
+			mulArr.add(num);
+		}
+		return mulArr;
+	}
+	// Add the numbers after multiplication
+	static int add(List<Integer> a) {
+		int sum = 0;
+		for (int i = 0; i < a.size(); i++) {
+			sum = sum + a.get(i);
+		}
+		return sum;
+	}
+
 	public static void main(String[] args) {
 		
 		List<Integer> arr = List.of(3, 6, 5, 4, 2, 7);

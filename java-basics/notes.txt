@@ -15,3 +15,23 @@ What is a functional interface?
 An interface consisting of a single abstract method.
 
 Lambda expressions are the implementation of functional interfaces.
+
+
+Date and Time related classes
+-------------------------------
+LocalDate - Represents Date (yyyy-MM-dd)
+2023-05-03
+LocalTime - Represents Time (hh:mm:ss)
+11:40:20
+LocalDateTime - Represents both Date and Time (yyyy-MM-ddThh:mm:ss)
+2023-05-03T11:40:20
+
+
+
+
+
+
+
+
+
+

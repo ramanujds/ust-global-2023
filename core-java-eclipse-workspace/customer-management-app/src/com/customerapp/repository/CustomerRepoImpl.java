@@ -30,12 +30,12 @@ public class CustomerRepoImpl implements CustomerRepo {
 	@Override
 	public Customer getCustomerByName(String name) {
 		
-		for(Customer c:customerDb.values()) {
-			if(c.getName().equalsIgnoreCase(name)) {
-				return c;
-			}
-		}
-		return null;
+		Customer customer = customerDb.values().stream()
+					.filter(c->c.getName().equalsIgnoreCase(name))
+					.findFirst()
+					.get();
+		
+		return customer;
 	}
 
 	@Override
