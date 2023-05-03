@@ -31,11 +31,12 @@ https://stackbooks-ust.stackroute.in/course/Programming-using-Core-Java/maps-exe
 
 https://gitlab-ust.stackroute.in/stack_java_cycle5_exercises/exercise-bt-lambdaexpression-predicatefunctionalinterface
 
-* Submit it by Thursday
+* Submit it by Wednesday
 
-* Submit by Thursday
+
 https://gitlab-ust.stackroute.in/stack_java_cycle5_exercises/exercise-bt-lambdaexpression-comparator
 
+* Submit by Wednesday
 
 
 
