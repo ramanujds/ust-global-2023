@@ -33,6 +33,8 @@ https://gitlab-ust.stackroute.in/stack_java_cycle5_exercises/exercise-bt-lambdae
 
 * Submit it by Thursday
 
+* Submit by Thursday
+https://gitlab-ust.stackroute.in/stack_java_cycle5_exercises/exercise-bt-lambdaexpression-comparator
 
 
 
