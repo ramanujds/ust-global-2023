@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">customer-app-mvn</a> &gt; <a href="index.source.html" class="el_package">com.customerapp.service</a> &gt; <span class="el_source">CustomerServiceImpl.java</span></div><h1>CustomerServiceImpl.java</h1><pre class="source lang-java linenums">package com.customerapp.service;
+
+import java.util.List;
+
+import com.customerapp.model.Customer;
+import com.customerapp.repository.CustomerRepo;
+import com.customerapp.repository.CustomerRepoImpl;
+
+<span class="fc" id="L9">public class CustomerServiceImpl implements CustomerService{</span>
+
+<span class="fc" id="L11">	CustomerRepo repo = new CustomerRepoImpl();</span>
+	
+	@Override
+	public Customer addCustomer(Customer c) {
+		// logic to validate customer data
+<span class="nc" id="L16">		return repo.addCustomer(c);</span>
+	}
+
+	@Override
+	public Customer getCustomerById(int id) {
+		// TODO Auto-generated method stub
+<span class="fc" id="L22">		return repo.getCustomerById(id);</span>
+	}
+
+	@Override
+	public Customer getCustomerByName(String name) {
+		// TODO Auto-generated method stub
+<span class="nc" id="L28">		return null;</span>
+	}
+
+	@Override
+	public void deleteCustomer(int id) {
+<span class="nc" id="L33">		repo.deleteCustomer(id);</span>
+		
+<span class="nc" id="L35">	}</span>
+
+	@Override
+	public List&lt;Customer&gt; getAllCustomers() {
+<span class="nc" id="L39">		return repo.getAllCustomers();</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

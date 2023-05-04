@@ -1,0 +1,6 @@
+com/customerapp/repository/CustomerRepo.class
+com/customerapp/ui/CustomerAppUi.class
+com/customerapp/repository/CustomerRepoImpl.class
+com/customerapp/model/Customer.class
+com/customerapp/service/CustomerService.class
+com/customerapp/service/CustomerServiceImpl.class

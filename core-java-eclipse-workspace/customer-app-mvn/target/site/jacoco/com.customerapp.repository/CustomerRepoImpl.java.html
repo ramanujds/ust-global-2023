@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CustomerRepoImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">customer-app-mvn</a> &gt; <a href="index.source.html" class="el_package">com.customerapp.repository</a> &gt; <span class="el_source">CustomerRepoImpl.java</span></div><h1>CustomerRepoImpl.java</h1><pre class="source lang-java linenums">package com.customerapp.repository;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import com.customerapp.model.Customer;
+
+<span class="fc" id="L10">public class CustomerRepoImpl implements CustomerRepo {</span>
+
+//	static List&lt;Customer&gt; customerDb = new ArrayList&lt;&gt;();
+	
+<span class="fc" id="L14">	Map&lt;Integer, Customer&gt; customerDb = new HashMap&lt;&gt;();</span>
+	
+	@Override
+	public Customer addCustomer(Customer c) {
+		
+<span class="nc" id="L19">		customerDb.put(c.getId(), c);</span>
+<span class="nc" id="L20">		return c;</span>
+		
+	}
+
+	@Override
+	public Customer getCustomerById(int id) {
+		
+<span class="fc" id="L27">		return customerDb.get(id);</span>
+	}
+
+	@Override
+	public Customer getCustomerByName(String name) {
+		
+<span class="nc" id="L33">		Customer customer = customerDb.values().stream()</span>
+<span class="nc" id="L34">					.filter(c-&gt;c.getName().equalsIgnoreCase(name))</span>
+<span class="nc" id="L35">					.findFirst()</span>
+<span class="nc" id="L36">					.get();</span>
+		
+<span class="nc" id="L38">		return customer;</span>
+	}
+
+	@Override
+	public void deleteCustomer(int id) {
+		
+<span class="nc" id="L44">		customerDb.remove(id);</span>
+		
+<span class="nc" id="L46">	}</span>
+
+	@Override
+	public List&lt;Customer&gt; getAllCustomers() {
+<span class="nc" id="L50">		return new ArrayList&lt;&gt;(customerDb.values());</span>
+	}
+
+	
+	
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
