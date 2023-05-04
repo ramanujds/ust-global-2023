@@ -1,6 +1,8 @@
 # Class Room Notes and Examples
 
+#### Maven Download
 
+https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
 
 #### MySQL Installation Guide
 https://dev.mysql.com/doc/refman/8.0/en/windows-install-archive.html
