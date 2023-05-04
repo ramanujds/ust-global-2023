@@ -4,6 +4,10 @@
 
 https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
 
+#### SonarQube Download
+
+https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+
 #### MySQL Installation Guide
 https://dev.mysql.com/doc/refman/8.0/en/windows-install-archive.html
 
