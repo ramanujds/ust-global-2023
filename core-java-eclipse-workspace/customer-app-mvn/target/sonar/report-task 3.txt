@@ -2,5 +2,5 @@ projectKey=com.ust.app:customer-app-mvn
 serverUrl=http://localhost:9000
 serverVersion=9.9.0.65466
 dashboardUrl=http://localhost:9000/dashboard?id=com.ust.app%3Acustomer-app-mvn
-ceTaskId=AYfmgwA1ic9fwydDm6ks
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYfmgwA1ic9fwydDm6ks
+ceTaskId=AYfmfD9fic9fwydDm6kr
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYfmfD9fic9fwydDm6kr
