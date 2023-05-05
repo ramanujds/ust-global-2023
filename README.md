@@ -1199,60 +1199,30 @@ Types of SQL Commands
 	- SELECT
 
 
-Use SonarQube
+Code Quality Check
+----------------------
+SonarQube
+Download From
 ----------------
+Version compatible with JDK 11 :
+-------------------------------
+https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+
+
+Steps :
+--------
+
+1. Download SonarQube
 
 1. Extract and Run StartSonar.bat
 
 1. Visit localhost:9000 and change the security settings
 
-1. Add the following dependency to your maven project
+![image](https://i.ibb.co/mCy9stc/sonar-s1.png)
 
-```xml
 
-	<dependency>
-	<groupId>org.sonarsource.scanner.maven</groupId>
-  		<artifactId>sonar-maven-plugin</artifactId>
-    	<version>3.6.0.1398</version>
-	</dependency>
+Run your project as Maven Build with goal
+clean verify sonar:sonar
 
-```
-
-1. Add global maven settings
-	
-	```text
-	
-	~ .m2/settings.xml
-	
-	```
-
-1. Copy and Paste the following -
-
-```xml
-
-<settings>
-    <pluginGroups>
-        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
-    </pluginGroups>
-    <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <!-- Optional URL to server. Default value is http://localhost:9000 -->
-                <sonar.host.url>
-                  http://localhost:9000
-                </sonar.host.url>
-            </properties>
-        </profile>
-     </profiles>
-</settings>
-
-```
-
-1. Run your project as Maven Build with goal clean verify sonar:sonar
-
-1. Visit localhost:9000
+Visit localhost:9000
 
