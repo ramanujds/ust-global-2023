@@ -1361,15 +1361,23 @@ str = "abaac";
 
 
 [0-9]{10} -> a 10 digit number
+
 [0-9]{8,10} -> a digit with 8 to 10 numbers
+
 [0-9]{,10} -> max 10
+
 [0-9]{10,} -> min 10
  
 \w == [a-zA-Z0-9]
+
 \d == [0-9]
+
 \s == white-space
+
 \W == non character
+
 \D == non-digit
+
 \S == no space
 
 
@@ -1386,7 +1394,7 @@ String password -> "^(?=.*\\d)(?=.*[@#$])[a-zA-Z0-9@#$]{6,20}$";
 ```
 **Explanation:**
 
-```text
+
 
 ^ - the start of the string
 
@@ -1399,4 +1407,4 @@ String password -> "^(?=.*\\d)(?=.*[@#$])[a-zA-Z0-9@#$]{6,20}$";
 
 $ -> the end of the string
 
-```
+
