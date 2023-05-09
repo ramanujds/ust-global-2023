@@ -69,3 +69,8 @@ https://www.hackerrank.com/domains/java
 
     Total number of palindromes: 2
 
+
+### Write Java Code for the following design(Class Diagram)
+----------------------------------
+
+![image](https://online.visual-paradigm.com/repository/images/bbe479b2-ff43-49ea-93e1-6920690be2a5/class-diagram-design/atm-system-class-diagrams.png)
