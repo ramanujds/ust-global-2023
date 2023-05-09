@@ -1408,3 +1408,50 @@ String password -> "^(?=.*\\d)(?=.*[@#$])[a-zA-Z0-9@#$]{6,20}$";
 $ -> the end of the string
 
 
+## UML Important points
+
+#### Class Diagram
+
+Decomposition
+---------------
+Association
+--------------
+Where both the object can exists individually 
+- Flight and Passengers
+- Fridge and Fruits
+
+Aggregation
+-------------
+It a Has-A relationship where one object is dependent on the other
+- Flight and Crew-Member
+
+Composition
+--------------
+It is a strong Has-a relationship where both objects are dependent on each other and no one can exists individually 
+- Person and Brain
+- Car and Engine
+- Employee and Salary
+
+
+Generalisation
+-----------------
+Inheritance
+
+Animal
+- - color
+- - size
+- + speak()
+
+Cat extends Animal
++ speak(){
+ 
+}
+
+Dog extends Animal
++ speak(){
+  Sysout("Bark..")
+}
+
+
+
+
