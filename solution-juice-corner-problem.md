@@ -1,5 +1,27 @@
 
 
+class Juice
+
+- define the class according to the above specifications
+
+class Shop
+
+- define data members according to the above specifications
+
+-Implement the below methods for this class:
+
+-String newFlavour(Juice j):
+
+Write a code to add the new flavour to the menu list after validating the below criteria:
+
+Check if there exists a juice in the list with the same flavour(ignoring case). If there is the same flavour present already then return "Flavour already enrolled".
+If the time for preparation of the juice is greater than 30 minutes then return a message "Time taking".
+If all the above specifications are fulfilled, add the given juice to the menu and return "New juice in the house".
+-int orderJuice(String query):
+
+The query string contains a comma(,) separated items with flavour and size. Return the bill after calculating the sum.
+The string can be like: "Orange 1, Pineapple 2".
+Suppose the cost of orange juice is 70 and the cost of pineapple is 100 then the bill amount is 100*2 + 70 = 270. Return 270 as a result. (The flavour and number are separated by a space)
 
 
 ```java
