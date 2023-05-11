@@ -78,7 +78,7 @@ https://www.hackerrank.com/domains/java
 
 ### Problems on arrays
 
-```
+```text
 
 Problem 1: Given an array of integers, find the two elements that sum up to a given target value. Store all of them in a map and display.
 
