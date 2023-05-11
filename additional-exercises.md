@@ -76,20 +76,20 @@ https://www.hackerrank.com/domains/java
 ![image](https://online.visual-paradigm.com/repository/images/bbe479b2-ff43-49ea-93e1-6920690be2a5/class-diagram-design/atm-system-class-diagrams.png)
 
 
-### Problems on arrays
+## Problems on arrays
 
 
 
-##### Problem 1: 
+#### Problem 1: 
 Given an array of integers, find the two elements that sum up to a given target value. Store all of them in a map and display.
 
-##### Problem 2: 
+#### Problem 2: 
 Write a Java program that accepts two arrays of integers as input and returns a new array that contains the elements that are common to both input arrays.
 
 
 
 
-##### Problem 3:
+#### Problem 3:
 ```text
 Write a Java program that accepts two arrays of integers as input: one array contains positive integers and the other array contains negative integers. The program should then find the pair of integers (one positive and one negative) that have the smallest absolute difference. If multiple pairs have the same smallest absolute difference, the program should return all of them.
 
@@ -125,7 +125,7 @@ To solve this problem, you can iterate through one of the arrays and check if ea
 ```
 
 
-##### Problem 5:
+#### Problem 5:
 
 ```text
 Write a Java program that accepts two arrays of integers as input, arr1 and arr2, where arr1 represents the scores of students in a class and arr2 represents the cutoff scores for different grades (e.g., A, B, C, D). The program should then output the number of students who received each grade.
