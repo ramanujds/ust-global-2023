@@ -1,0 +1,31 @@
+Problem Statement:
+
+You are required to write a Java program that implements a simple library management system. The system should allow librarians to add, search, and remove books from the library, and also allow library users to borrow and return books.
+
+Your program should contain the following classes:
+
+Book: A class that represents a book in the library. Each book should have a unique identifier, title, author name, and availability status (i.e., whether the book is available for borrowing or not).
+
+Library: A class that represents the library. This class should have methods to add, search, and remove books from the library. It should also have a method to display all the books in the library.
+
+User: A class that represents a library user. Each user should have a unique identifier, name, and a list of books they have borrowed from the library.
+
+LibraryManagementSystem: A class that acts as the main driver of the library management system. This class should contain a main method that allows users to interact with the system by selecting options from a menu. The menu should contain options to add, search, and remove books from the library, as well as options to borrow and return books.
+
+Your program should meet the following requirements:
+
+Each book should have a unique identifier that is automatically assigned when the book is added to the library.
+
+Users should be able to borrow a book if it is available and return a book they have borrowed.
+
+Users should not be able to borrow more than three books at a time.
+
+The program should handle errors gracefully and display meaningful error messages to the user.
+
+The program should be well-documented, with clear comments explaining each class and method.
+
+The program should be designed in an object-oriented manner, with proper encapsulation and abstraction.
+
+The program should be implemented using Java 8 or later.
+
+You can choose to implement additional features if you wish, as long as you meet the above requirements. Good luck!

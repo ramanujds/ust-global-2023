@@ -5,10 +5,11 @@ import java.util.List;
 import com.customerapp.model.Customer;
 import com.customerapp.repository.CustomerRepo;
 import com.customerapp.repository.CustomerRepoImpl;
+import com.customerapp.repository.CustomerRepoJdbcImpl;
 
 public class CustomerServiceImpl implements CustomerService{
 
-	CustomerRepo repo = new CustomerRepoImpl();
+	CustomerRepo repo = new CustomerRepoJdbcImpl();
 	
 	@Override
 	public Customer addCustomer(Customer c) {

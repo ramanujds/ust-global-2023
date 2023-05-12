@@ -16,6 +16,7 @@ public class StreamFilter {
 		// filter(Predicate)
 		// boolean test(arg)
 		// i -> i%20==0
+		
 
 		numStream.filter(i -> i % 20 == 0).forEach(i -> System.out.println(i));
 
@@ -24,8 +25,9 @@ public class StreamFilter {
 		// Print all the names start with R
 
 		names.stream().filter(s -> s.startsWith("R"))
+						.map(String::toUpperCase)
 						.filter(s -> s.length() >= 5)
-						.forEach(s -> System.out.println(s));
+						.forEach(System.out::println);
 
 		// Print all the names Having more than 5 chars
 //
