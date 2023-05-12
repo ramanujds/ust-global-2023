@@ -1524,4 +1524,12 @@ Dependency Inversion Principle
 The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes instead of concrete classes and functions.
 
 
-
+## How to insert a row in a database using JDBC
+----------------------------
+Steps:
+------
+1. Add the database driver
+2. Create a connection
+3. Create a statement
+4. Execute statement
+5. Display output
