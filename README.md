@@ -1454,4 +1454,9 @@ Dog extends Animal
 
 
 
+#### SOLID Principle
+
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+
+
 
