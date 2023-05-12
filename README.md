@@ -1458,5 +1458,70 @@ Dog extends Animal
 
 https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
 
+SOLID Principle
+---------------
+
+Single Responsibility Principle
+---------------------
+The Single Responsibility Principle states that a class should do one thing and therefore it should have only a single reason to change.
+
+For example in our Customer-Management-App we divided our classes into multiple layers and every class has a single responsibility, eg. CustomerRepository class does Database related task only and CustomerService class does service and business related task only.
+
+
+
+Open-Closed Principle
+---------------
+Open-Closed Principle requires that classes should be open for extension and closed to modification.
+
+Eg. currently we are storing the customers to HashMap, if we want to change our storage to a database then we should not modify the existing Class rather we should extend a new class and write code to database operation.
+
+
+Liskov Substitution Principle
+------------------------------
+Liskov Substitution Principle states that subclasses should be substitutable for their base classes.
+
+for example the sort method in Collections class requires a List and it can be substituted by ArrayList, LinkedList or any other subclasses of List.
+
+
+Collections.sort(List items)
+
+
+Interface Segregation Principle
+-------------------------------
+Segregation means keeping things separated, and the Interface Segregation Principle is about separating the interfaces.
+
+```java
+
+interface Printer{
+ void print();
+}
+
+interface Scanner{
+ void scan();
+}
+
+class HPPrinter implements Printer,Scanner{
+	public void print(){
+	
+	}
+	public void scan(){
+	
+	}
+}
+
+class CanonPrinter implements Printer{
+	public void print(){
+	
+	}
+	
+}
+
+```
+
+Dependency Inversion Principle
+------------------------------
+
+The Dependency Inversion principle states that our classes should depend upon interfaces or abstract classes instead of concrete classes and functions.
+
 
 
