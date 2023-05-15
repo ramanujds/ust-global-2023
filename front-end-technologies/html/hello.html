@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello World</title>
+    <style>
+        h1 {
+            color: darkcyan;
+        }
+
+        #d {
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>UST Global</h1>
+    <h2>Technopark Phase 2</h2>
+    <h4>Bhavani</h4>
+    <h5>Trivandrum</h5>
+    <h6 id="d"></h6>
+</body>
+<script>
+    function updateDate() {
+        let date = new Date();
+        document.getElementById("d").innerHTML = date;
+    }
+    setInterval(() => updateDate(), 1000);
+</script>
+
+</html>

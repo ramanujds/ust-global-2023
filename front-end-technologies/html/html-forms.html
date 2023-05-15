@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Employee Details</h2>
+    <form action="hello.html" method="post">
+        <table>
+        <tr>
+            <td><label for="employee-id">Employee ID</label></td>
+            <td>
+                <input type="number" name="employeeId" id="employee-id"
+                 placeholder="Input ID" required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" name="email" id="email" required></td>
+        </tr>
+        <tr>
+            <td><label for="employee-name">Employee Name</label></td>
+            <td>
+                <input type="text" pattern="[a-zA-Z ]+" name="employeeName" id="employee-name"
+                 required>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="location">Location</label></td>
+            <td><input type="text" name="location" id="location"></td>
+        </tr>
+        <tr>
+            <td><label for="dob">Birth Date</label></td>
+            <td><input type="date" name="dob" id="dob"></td>
+        </tr>
+       
+        <tr>
+            <td><label for="gender">Gender</label></td>
+            <td>
+                <input type="radio" name="gender" id="g-male" value="male" checked>Male
+                <input type="radio" name="gender" id="g-female" value="female">Female
+            </td>
+        </tr>
+        <tr>
+            <td><label for="languages">Languages known</label></td>
+            <td>
+                <input type="checkbox" name="languages" id="lang-eng" value="english" checked>English
+                <input type="checkbox" name="languages" id="lang-tam" value="tamil">Tamil
+                <input type="checkbox" name="languages" id="lang-mal" value="malayalam">Malayalam
+            </td>
+        </tr>
+        <tr>
+            <td><label for="country">Country</label></td>
+            <td>
+            <select name="country" id="country">
+                <option value="india">India</option>
+                <option value="srilanka">Srilanka</option>
+                <option value="usa" selected>USA</option>
+                <option value="england">England</option>
+            </select>
+            </td>
+        </tr>
+        </table>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </div>
+    </form>
+</body>
+
+</html>
