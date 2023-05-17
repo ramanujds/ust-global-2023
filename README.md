@@ -1533,3 +1533,72 @@ Steps:
 3. Create a statement
 4. Execute statement
 5. Display output
+
+HTML Basics
+---------------
+HTML Tags(elements) are of two types
+
+- container tag
+-- contains both opening and closing tags
+-- h1,p,html,body
+- empty tag
+-- no closing
+-- br,hr,img,input
+
+### Some important tags
+
+- <p></p> - paragraph
+- <div></div> - division
+- h1 to h6 are headings
+- <hr/> - horizontal line
+- <br/> - line break
+
+- HTML Lists
+------------
+Two types
+----------
+- unordered list
+- ordered list
+- description list
+
+- HTML Tables
+
+- HTML text formatting
+- <b> <i> <s> <u>
+
+- HTML links
+
+
+- Inline and Block elements
+-- Block - div, p, h1,..,h6
+-- Inline - span, img, input
+
+HTML Forms
+-------------
+
+
+CSS
+----
+How to use css?
+--------------
+{property:value;}
+
+Inline CSS
+Internal CSS
+External CSS
+
+CSS Displays
+------------
+
+HTML 5 new Tags
+---------------
+<header>
+<nav>
+<footer>
+<main>
+<section>
+<article>
+<aside>
+
+Bootstrap
+---------
