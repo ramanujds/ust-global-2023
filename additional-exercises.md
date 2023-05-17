@@ -150,3 +150,16 @@ D: 1 student (95)
 
 
 ```
+
+### Use HTML, CSS and Bootstrap to design the following pages
+
+#### Layout 1
+![image](https://onaircode.com/wp-content/uploads/2019/10/bootstrap-layout-example.jpg)
+
+#### Layout 2
+![image](https://css3menu.com/web-design/data/upload/2016/04/freelancer.jpg)
+
+#### Layout 3
+![image](https://colorlib.com/wp/wp-content/uploads/sites/2/free-registration-forms.jpg)
+
+
