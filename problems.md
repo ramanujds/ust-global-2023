@@ -101,7 +101,7 @@ class StudentMarksCalcImpl{
 
 5. Write a Java program to remove all the vowels of a given string. Return the new string
 
-6. 
+
 
 ## Exercises on Regular Expression
 
