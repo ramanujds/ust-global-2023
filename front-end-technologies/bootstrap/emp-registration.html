@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Registration Form</h2>
+        <form>
+            <div class="form-group">
+                <label for="employeeId">Employee ID:</label>
+                <input type="text" class="form-control" id="employeeId" placeholder="Enter Employee ID" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" class="form-control" id="employeeName" placeholder="Enter Employee Name" required>
+            </div>
+            <div class="form-group">
+                <label for="birthdate">Birth Date:</label>
+                <input type="date" class="form-control" id="birthdate" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" class="form-control" id="country" placeholder="Enter Country" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" id="gender" required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

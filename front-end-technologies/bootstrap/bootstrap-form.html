@@ -9,57 +9,96 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <style>
-    .container{
-        padding-top: 50px;
-    }
+   
 </style>
 <body>
 
     <div class="container">
-        <form>
-            <div class="row">
-                    <div class="col-md-3"><label for="employee-id" class="form-label">Employee Id</label></div>
-                    <div class="col-auto"><input type="text" name="employeeId" id="employee-id" class="form-control">
-                  
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="container">
+       
+                    <form>
+                        <div class="row">
+                                <div class="col-md-3"><label for="employee-id" class="form-label">Employee Id</label></div>
+                                <div class="col-auto"><input type="text" name="employeeId" id="employee-id" class="form-control">
+                              
+            
+                            </div>
+                        </div>
+                        <div class="row has-validation">
+                           
+                                <div class="col-md-3"><label for="employee-name" class="form-label">Employee Name</label></div>
+                                <div class="col-auto"><input type="text" name="employeeName" id="employee-name"
+                                        class="form-control" required>
+                                </div>
+                               
+                        </div>
+                        <div class="row">
+                            
+                                <div class="col-md-3"><label for="email" class="form-label">Email</label>
+                                </div>
+                                <div class="col-auto"> <input type="email" name="email" id="email" class="form-control">
+                                </div>
+                           
+                        </div>
+                        <div class="row">
+                            
+                                <div class="col-md-3">
+                                    <label for="dob" class="form-label">Birth Date</label>
+                                </div>
+                                <div class="col-auto">
+                                    <input type="date" name="dob" id="dob" class="form-control">
+                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                            <div class="col-auto">
+                                <button type="reset" class="btn btn-light">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12">
 
-                </div>
+                <table class="table table-hover table-primary table-striped">
+        <thead>
+            <tr>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1001</td>
+                <td>Harsh</td>
+                <td>Verma</td>
+                <td>Bangalore</td>
+            </tr>
+            <tr>
+                <td>1002</td>
+                <td>Priyanka</td>
+                <td>Chopra</td>
+                <td>Chennai</td>
+            </tr>
+            <tr>
+                <td>1003</td>
+                <td>Umesh</td>
+                <td>Dutta</td>
+                <td>Mumbai</td>
+            </tr>
+        </tbody>
+    </table>
             </div>
-            <div class="row has-validation">
-               
-                    <div class="col-md-3"><label for="employee-name" class="form-label">Employee Name</label></div>
-                    <div class="col-auto"><input type="text" name="employeeName" id="employee-name"
-                            class="form-control" required>
-                    </div>
-                   
-            </div>
-            <div class="row">
-                
-                    <div class="col-md-3"><label for="email" class="form-label">Email</label>
-                    </div>
-                    <div class="col-auto"> <input type="email" name="email" id="email" class="form-control">
-                    </div>
-               
-            </div>
-            <div class="row">
-                
-                    <div class="col-md-3">
-                        <label for="dob" class="form-label">Birth Date</label>
-                    </div>
-                    <div class="col-auto">
-                        <input type="date" name="dob" id="dob" class="form-control">
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                <div class="col-auto">
-                    <button type="reset" class="btn btn-light">Reset</button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
+   
 
 
 </body>
