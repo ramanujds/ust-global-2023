@@ -1609,3 +1609,88 @@ HTML 5 new Tags
 
 Bootstrap
 ---------
+
+
+JavaScript
+-------------
+How to include JS in your html?
+- Inline JS
+- Internal JS
+- External JS
+
+JavaScript variables and Data types
+-----------------------------------
+number - 5, 2.5, -3.65546
+string - 'hello', "rahul", """harsh""",`javed`
+boolean - true/false
+object - 
+
+let employee1 = {
+			employeeId : 1001,
+			employeeName: 'Rahul'
+			}
+
+let employee2 = {
+			employeeId : 1002,
+			email: 'gaurav@yahoo.com'
+			}
+
+Date - represents a date
+
+
+How to declare variables
+-------------------------
+
+x = 10 // global declaration
+var y = 20 // function level declaration
+let z = 30 // block level declaration
+
+
+JavaScript basic building blocks
+---------------------------------
+Control-Statements
+------------------
+- if-else
+- switch
+- conditional operator(?:)
+
+Looping
+-----------
+while
+do-while
+for
+
+Equals in JavaScript
+---------------------
+= 	- assignment
+==	- compares values irrespective of type
+===	- compares values and type
+
+Arrays
+--------
+
+let arr = [10,20,30,'Ramesh','Suresh'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
