@@ -1,5 +1,12 @@
 # Class Room Notes and Examples
 
+
+## MCQs Week - 5
+
+https://forms.gle/KqWbRR2ZUNsGj9tz5
+
+
+
 #### Maven Download
 
 https://dlcdn.apache.org/maven/maven-3/3.9.1/binaries/apache-maven-3.9.1-bin.zip
