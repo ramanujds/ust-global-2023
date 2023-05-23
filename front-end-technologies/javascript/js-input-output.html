@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <div hidden>
+    <input type="text" name="username" id="username" placeholder="Input your name">
+    <button onclick="readName()">Enter</button>
+    </div>
+
+    <div>
+        <input type="text" id="num1" placeholder="Input 1st number">
+        <input type="text" id="num2" placeholder="Input 2nd number">
+        <p id="output-value"> </p> 
+
+        <!-- <input type="text" id="output" placeholder="Output" readonly> -->
+        
+        <button onclick="add()">Add</button>
+    </div>
+</body>
+
+<script>
+    // Dialog boxes   
+    // Prompt
+    // Alert
+    // let name = prompt("Input your name :")
+    // document.write(`<h1>Hello ${name}</h1>`)
+
+    const readName = function(){
+        let name = document.getElementById("username").value;
+        document.write(`<h1>Hello ${name}</h1>`)
+    }
+
+    const add = function(){
+        let num1 = parseInt(document.getElementById("num1").value);
+        let num2 = parseInt(document.getElementById("num2").value);
+        let sum = num1+num2;
+       // document.getElementById("output").value=sum
+       document.getElementById("output-value").innerHTML=sum
+    }
+
+</script>
+
+</html>
