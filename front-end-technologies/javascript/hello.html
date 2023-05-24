@@ -5,17 +5,19 @@
 </head>
 <body>
     <h1>Hello</h1>
-    <!-- Inline JS -->
-    <button onclick="alert('Hello');">Click Me</button>
+   
+    <h2 id="myclock"></h2>
+
 </body>
 
 <!-- Internal JS -->
 <script>
-    let num = 10;
-    console.log(num);
-    document.write("Number = "+num);
+    document.getElementById("myclock").innerHTML=new Date().toLocaleTimeString()
+    setInterval(()=>{
+        document.getElementById("myclock").innerHTML=new Date().toLocaleTimeString()
+    },1000)
 </script>
 
-<script src="script.js" type="text/javascript"></script>
+
 
 </html>
