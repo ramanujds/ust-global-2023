@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        span{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="username" placeholder="Enter your GitHub Username">
+        <button onclick="searchUser()">Search</button>
+    </div>
+    <div>
+        <p>Login : <span id="login"></span></p>
+        <p>Name : <span id="name"></span></p>
+        <p>Total Repos : <span id="repos"></span></p>
+        <img id="avatar" height="200px" width="200px" alt="Loading Image">
+    </div>
+</body>
+<script>
+    const searchUser = ()=>{
+        let username = document.getElementById('username').value;
+        fetchUser(username).then(
+            user => {
+                document.getElementById("login").innerHTML=user.login
+                document.getElementById("name").innerHTML=user.name
+                document.getElementById("repos").innerHTML=user.public_repos
+                document.getElementById("avatar").src=user.avatar_url
+            }   
+        ).catch((error)=>{
+            console.error(error)
+        })
+    }
+</script>
+<script src="fetch-api.js"></script>
+</html>
