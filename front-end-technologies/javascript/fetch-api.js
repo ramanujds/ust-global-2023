@@ -6,14 +6,13 @@ async function fetchUser(username){
    if(response.status===200){
         let data = await response.json()
         console.log(data)
-        return data;
+        return Promise.resolve(data)
    }
    else{
-    console.log(response.status)
-    return {
-        status:response.status, 
-        error:response.statusText
-    }
+    console.log(response)
+    return Promise.reject({
+        message:`Error ${response.status}`
+    })
    }
 }
 
