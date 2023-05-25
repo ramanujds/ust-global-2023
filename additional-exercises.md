@@ -1,3 +1,89 @@
+## Exercises for Improvement Test
+
+```text
+
+Question 1)
+Given an integer, , print its first  multiples. Each multiple  (where ) should be printed on a new line in the form: N x i = result.
+Input Format
+A single integer, .
+Constraints
+Output Format
+Print  lines of output; each line  (where ) contains the  of  in the form:
+N x i = result.
+Sample Input
+2
+Sample Output
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+2 x 6 = 12
+2 x 7 = 14
+2 x 8 = 16
+2 x 9 = 18
+2 x 10 = 20
+--------------------------------------------------------------------
+Question 2:
+Task
+Given an integer, , perform the following conditional actions:
+If  is odd, print Weird
+If  is even and in the inclusive range of  to , print Not Weird
+If  is even and in the inclusive range of  to , print Weird
+If  is even and greater than , print Not Weird
+Complete the stub code provided in your editor to print whether or not  is weird.
+Input Format
+A single line containing a positive integer, .
+Constraints
+Output Format
+Print Weird if the number is weird; otherwise, print Not Weird.
+Sample Input 0
+3
+Sample Output 0
+Weird
+Sample Input 1
+24
+Sample Output 1
+Not Weird
+--------------------------------------------------------------------
+Question 3:
+A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward.
+Given a string , print Yes if it is a palindrome, print No otherwise.
+Constraints
+ will consist at most  lower case english letters.
+Sample Input
+madam
+Sample Output
+Yes
+--------------------------------------------------------------------
+Question 4:
+You are given a list of student information: ID, FirstName, and CGPA. Your task is to rearrange them according to their CGPA in decreasing order. If two student have the same CGPA, then arrange them according to their first name in alphabetical order. If those two students also have the same first name, then order them according to their ID. No two students have the same ID.
+Hint: You can use comparators to sort a list of objects. See the oracle docs to learn about comparators.
+Input Format
+The first line of input contains an integer , representing the total number of students. The next  lines contains a list of student information in the following structure:
+ID Name CGPA
+Sample Input
+5
+33 Rumpa 3.68
+85 Ashis 3.85
+56 Samiha 3.75
+19 Samara 3.75
+22 Fahim 3.76
+Sample Output
+Ashis
+Fahim
+Samara
+Samiha
+Rumpa
+--------------------------------------------------------------------
+
+```
+
+
+
+
+
+
 #### Basic exercises on arrays
 
 - Exercise 1: Create a method which accepts an integer array, reverse the numbers in the array and  returns the resulting array in sorted order 
