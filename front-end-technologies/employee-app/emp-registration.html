@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="fetch-api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Registration Form</h2>
+        <form onsubmit="addEmployee()">
+            <div class="form-group">
+                <label for="employeeId">Employee ID:</label>
+                <input type="text" class="form-control" id="employeeId" placeholder="Enter Employee ID" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeName">Employee Name:</label>
+                <input type="text" class="form-control" id="employeeName" placeholder="Enter Employee Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+            </div>
+           
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<script>
+    const addEmployee = ()=>{
+        let employee = {
+            id:document.getElementById("employeeId").value,
+            name:document.getElementById("employeeName").value,
+            email:document.getElementById("email").value
+        }
+        console.log(employee)
+        saveEmployee(employee).then(
+            response => console.log(response)
+        ).catch(response => console.log(response))
+
+    }
+</script>
+</html>
