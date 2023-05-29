@@ -2,7 +2,7 @@ package com.ust.springapp;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class InternetConnection {
 
 	public InternetConnection() {
