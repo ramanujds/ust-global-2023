@@ -1743,6 +1743,69 @@ fetch('https://jsonplaceholder.typicode.com/todos', {
 
 
 
+J2EE Programming
+-------------------
+
+
+
+Server :
+
+ - Tomcat Server
+
+Servlet: 
+
+	Java code that runs on server
+
+Spring Framework
+-----------------
+Java Framework :
+- Spring Core Dependency Injection
+- Spring MVC
+- Spring Boot
+- Spring Security
+- Spring Cloud
+
+What is a dependency?
+---------------------
+Phone{
+	Sim sim;
+	..
+	..
+}
+
+Sim{
+	....
+}
+
+
+Spring Bean
+------------
+
+IOC Container
+-------------
+
+Autowiring
+----------
+Injecting dependency automaticaly
+
+- By Type
+- By Name
+
+DI has 3 Types
+--------------
+Setter Injection
+Constructor Injection
+Field Injection
+
+
+
+
+
+
+
+
+
+
 
 
 
