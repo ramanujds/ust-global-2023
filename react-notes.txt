@@ -1,0 +1,27 @@
+
+React
+------
+
+Is a JavaScript library for developing Single Page Application(SPA)
+Developed and maintained by Facebook
+
+Angular vs React
+------------------
+Angular is a Framework while React is just a library
+Angular consists of almost everything we need to build an application but React focuses only on how to create components and work with components, all the remaining things can be added separately as required.
+
+React is JavaScript based(we can use TypeScript as well)
+Angular is based on typescript
+
+
+How to create a React App?
+--------------------------
+
+create-react-app [app-name]
+
+create-react-app hello-world
+
+
+
+
+

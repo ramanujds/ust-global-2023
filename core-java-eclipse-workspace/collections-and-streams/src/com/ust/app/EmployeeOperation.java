@@ -47,6 +47,7 @@ public class EmployeeOperation {
 		String city = "Bangalore";
 		
 		List<Employee> emps = employees.stream().filter(e->e.getCity().equalsIgnoreCase(city)).toList();
+		
 		System.out.println("Employees belong to "+city);
 		printEmployeeList(emps);
 		

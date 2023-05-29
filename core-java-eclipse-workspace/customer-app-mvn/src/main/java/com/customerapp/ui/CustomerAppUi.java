@@ -10,7 +10,7 @@ import com.customerapp.service.CustomerServiceImpl;
 public class CustomerAppUi {
 
 	static Scanner scan = new Scanner(System.in);
-	static CustomerService service = new CustomerServiceImpl();
+	static CustomerService service;
 
 	public static void addCustomer() {
 
