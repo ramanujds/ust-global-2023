@@ -1678,6 +1678,70 @@ let arr = [10,20,30,'Ramesh','Suresh'];
 
 
 
+REST APIs using AJAX
+----------------------
+
+
+```bash
+
+npm set strict-ssl false
+npm install g json-server
+json-server employees.json --port=3500
+
+```
+
+GET : 
+
+localhost:3500/employees
+
+localhost:3500/employees?name=Harsh
+
+localhost:3500/employees/1001
+
+POST :
+
+localhost:3500/employees
+
+Body :
+{
+    "id":1005,
+    "name":"Suraj",
+    "email":"suraj@yahoo.com"
+}
+
+DELETE:
+
+localhost:3500/employees/1002
+
+PUT:
+
+localhost:3500/employees/1005
+
+Body :
+{
+    "id":1005,
+    "name":"Suraj Sharma",
+    "email":"suraj@yahoo.com"
+}
+
+
+POST Request
+-------------
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/todos', {
+        method: 'POST',
+        body: JSON.stringify(todo),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
+    })
+
+```
+
+
+
+
 
 
 
