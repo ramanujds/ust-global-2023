@@ -1800,10 +1800,31 @@ Field Injection
 
 
 
+Important Annotations
+----------------------
+
+```java
+
+@Component
+@Service
+@Repository
+
+@ComponentScan
+
+@Autowired
+
+@Configuraion
+
+@Bean
+
+@Value
+
+@Qualifier
+
+@PropertySource
 
 
-
-
+```
 
 
 
