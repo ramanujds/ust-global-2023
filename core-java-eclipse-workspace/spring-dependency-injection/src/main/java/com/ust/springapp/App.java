@@ -13,11 +13,8 @@ public class App {
 		ApplicationContext context = 
 					new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		Laptop laptop = context.getBean(Laptop.class);
+		Laptop laptop = context.getBean("laptop1",Laptop.class);
 		
-		Scanner scan = context.getBean(Scanner.class);
-		System.out.println("Enter your name");
-		scan.nextLine();
 		laptop.browseInternet();
 	}
 	

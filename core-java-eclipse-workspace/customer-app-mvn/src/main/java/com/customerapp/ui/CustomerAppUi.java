@@ -3,6 +3,10 @@ package com.customerapp.ui;
 import java.util.List;
 import java.util.Scanner;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.customerapp.configuration.AppConfig;
 import com.customerapp.model.Customer;
 import com.customerapp.service.CustomerService;
 import com.customerapp.service.CustomerServiceImpl;
@@ -14,6 +18,9 @@ public class CustomerAppUi {
 
 	public static void addCustomer() {
 
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		service = context.getBean(CustomerServiceImpl.class);
+		
 		System.out.println("Enter customer details : ");
 		System.out.print("ID : ");
 		int id = scan.nextInt();
@@ -44,7 +51,7 @@ public class CustomerAppUi {
 		while (true) {
 			System.out.println("Enter your choice : ");
 			System.out.println("1 : Add Customer");
-			System.out.println("2 : Search Customer");
+			System.out.println("2 : Display Customer");
 			System.out.println("0 : Exit");
 			int choice = scan.nextInt();
 			switch (choice) {
@@ -52,7 +59,7 @@ public class CustomerAppUi {
 				addCustomer();
 				break;
 			case 2:
-				searchCustomer();
+				dispalyAllCustomer();
 				break;
 			case 5:
 				dispalyAllCustomer();
