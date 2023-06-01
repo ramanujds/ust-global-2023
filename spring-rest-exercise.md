@@ -13,7 +13,7 @@ MenuItem
 	- category: Enum(Veg/Nonveg)
 ```
 
-Implement the following operations:
+### Implement the following operations:
 
 * **Add a new item to the menu**
 * **Delete an item from the menu**
