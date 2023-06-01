@@ -15,13 +15,13 @@ MenuItem
 
 Implement the following operations:
 
-* Add a new item to the menu
-* Delete an item from the menu
-* Update the price of an item
-* Search an Item by Name
-* Display all the available items
-* Filter items category wise
-* Create exceptions ItemNotFoundException and InvalidCategoryException that should be thrown if you input invalid data
+* **Add a new item to the menu**
+* **Delete an item from the menu**
+* **Update the price of an item**
+* **Search an Item by Name**
+* **Display all the available items**
+* **Filter items category wise**
+* **Create exceptions ItemNotFoundException and InvalidCategoryException that should be thrown if you input invalid data**
 
 * **Maintain Java Coding Standard.**
 * **Use layered architecture**
