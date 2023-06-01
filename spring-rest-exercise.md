@@ -35,4 +35,5 @@ MenuItem
 * **Design with HTML CSS and Bootstrap**
 * **Implement From Validation**
 * **Use fetch to consume REST APIs**
-* **Display the output with suitable UI ** 
+* **Display the output with suitable UI** 
+* **Implement Error Handling** 
