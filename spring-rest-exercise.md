@@ -13,7 +13,9 @@ MenuItem
 	- category: Enum(Veg/Nonveg)
 ```
 
-### Implement the following operations:
+### Sprint 1
+
+#### Implement the following operations:
 
 * **Add a new item to the menu**
 * **Delete an item from the menu**
@@ -25,3 +27,12 @@ MenuItem
 
 * **Maintain Java Coding Standard.**
 * **Use layered architecture**
+
+### Sprint 2
+
+#### Create a suitable client application
+
+* **Design with HTML CSS and Bootstrap**
+* **Implement From Validation**
+* **Use fetch to consume REST APIs**
+* **Display the output with suitable UI ** 
