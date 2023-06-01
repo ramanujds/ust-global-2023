@@ -1,5 +1,6 @@
 package com.ust.customerapp.repository;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import com.ust.customerapp.model.Customer;
 
 @Repository
 public class CustomerRepoImpl implements CustomerRepo {
-	
+
 	List<Customer> customerList = new ArrayList<>();
 
 	@Override
@@ -20,18 +21,18 @@ public class CustomerRepoImpl implements CustomerRepo {
 
 	@Override
 	public Customer getCustomer(int id) {
-		Customer customer = customerList.stream().filter(c->c.getId()==id).findFirst().get();
+		Customer customer = customerList.stream().filter(c -> c.getId() == id).findFirst().get();
 		return customer;
 	}
 
 	@Override
 	public Customer updateCustomer(Customer customer) {
-		Customer oldCustomer = customerList.stream().filter(c->c.getId()==customer.getId()).findFirst().get();
+		Customer oldCustomer = customerList.stream().filter(c -> c.getId() == customer.getId()).findFirst().get();
 		oldCustomer.setCustomerName(customer.getCustomerName());
 		oldCustomer.setDob(customer.getDob());
 		oldCustomer.setEmail(customer.getEmail());
 		return customer;
-		
+
 	}
 
 	@Override
@@ -43,6 +44,12 @@ public class CustomerRepoImpl implements CustomerRepo {
 	@Override
 	public List<Customer> getAllCustomers() {
 		return customerList;
+	}
+
+	@Override
+	public Customer getCustomerByName(String customerName) {
+		Customer customer = customerList.stream().filter(c -> c.getCustomerName().equalsIgnoreCase(customerName)).findFirst().get();
+		return customer;
 	}
 
 }

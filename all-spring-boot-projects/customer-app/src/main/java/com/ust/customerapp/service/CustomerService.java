@@ -15,5 +15,7 @@ public Customer addCustomer(Customer customer);
 	public void deleteCustomer(int id);
 	
 	public List<Customer> getAllCustomers();
+
+	public Customer getCustomerByName(String customerName);
 	
 }
