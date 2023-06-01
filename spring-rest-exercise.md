@@ -15,7 +15,7 @@ MenuItem
 
 ### Sprint 1
 
-#### Implement the following operations:
+#### Implement the following operations: (REST Endpoints)
 
 * **Add a new item to the menu**
 * **Delete an item from the menu**
