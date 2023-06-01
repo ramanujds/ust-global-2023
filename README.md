@@ -1828,7 +1828,62 @@ Important Annotations
 
 
 
+Spring Boot
+-----------
+- spring project
+- production ready standalone spring-based application
+- focuses on convention over configuration
 
+How to create a spring boot app?
+----------------
+- create a spring starter project
+- select the dependencies you need
+- create the project
+
+Swagger UI
+---------
+localhost:8000/swagger-ui.html
+
+
+@SpringBootApplication
+ - declares a SpringBootApplication and do all the necessary configuration
+
+@RestController
+- creates a REST API(returns resources[json])
+
+@Controller
+- creates a Controller that returns a view(a page)
+
+@RequetBody
+- to map the data received from the body of the request to a java object
+
+@ResponseBody
+- creates a REST API inside a Controller (returns resources[json])
+
+@RequestMapping
+- maps a method to a request(any type of request)
+
+@GetMapping
+- maps a method to a GET request
+
+@PostMapping
+- maps a method to a POST request
+
+@DeleteMapping
+- maps a method to a DELETE request
+
+@PutMapping
+- maps a method to a PUT request
+
+@ResponseStatus
+- used to change the status code of the response
+
+
+@PathVariable
+- to read dynamic from the URI
+
+@RequestParam
+- to read the query parameter from the request
 
 
 
