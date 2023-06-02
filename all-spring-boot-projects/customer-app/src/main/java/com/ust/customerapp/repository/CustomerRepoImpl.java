@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.ust.customerapp.exception.CustomerNotFoundException;
 import com.ust.customerapp.model.Customer;
 
 @Repository
@@ -21,7 +22,13 @@ public class CustomerRepoImpl implements CustomerRepo {
 
 	@Override
 	public Customer getCustomer(int id) {
-		Customer customer = customerList.stream().filter(c -> c.getId() == id).findFirst().get();
+		Customer customer = customerList.stream()
+							.filter(c -> c.getId() == id).findFirst()
+							.orElseThrow(()->new CustomerNotFoundException("Customer with ID "+id+" Not Found"));
+		
+	//	.get() // returns the data
+	//	.orElse(null);
+		
 		return customer;
 	}
 
