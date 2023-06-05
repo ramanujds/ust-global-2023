@@ -379,10 +379,10 @@ rollback to p1;
 -- The End --
 
 
+create table customer(id int, customer_name varchar(50), email varchar(50));
 
 
-
-
+select * from customer;
 
 
 

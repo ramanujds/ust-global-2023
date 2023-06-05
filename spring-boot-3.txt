@@ -1,0 +1,16 @@
+Features of Spring Boot 3
+-------------------------
+- Video 1 - Java 17 and Jakarta EE Support * with Example
+- Video 2 - ProblemDetails *related to exception handling
+- Video 3 - Observability 
+- Video 4 - Http Interface HttpExchange 
+
+
+Java 17 important features
+--------------------------
+- Video 1 - Switch expression
+- Video 2 - Text Blocks 
+- Video 3 - Records
+- Video 4 - Sealed Classes
+- Video 5 - Stream.toList() Method 
+
