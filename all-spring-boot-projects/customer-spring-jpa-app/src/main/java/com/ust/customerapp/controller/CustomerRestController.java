@@ -1,8 +1,11 @@
 package com.ust.customerapp.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -59,6 +62,15 @@ public class CustomerRestController {
 	@ResponseStatus(code=HttpStatus.OK)
 	public void deleteCustomerById(@PathVariable int id) {
 		service.deleteCustomer(id);
+	}
+	
+	@GetMapping("/dob/from/{from}/to/{to}")
+	public List<Customer> searchCustomerByDobRange(@PathVariable
+			@DateTimeFormat(pattern ="yyyy-MM-dd" ) LocalDate from,
+			@PathVariable  @DateTimeFormat(pattern ="yyyy-MM-dd" )
+			LocalDate to){
+		
+		return service.findCustomerInDobRange(from ,to);
 	}
 	
 	

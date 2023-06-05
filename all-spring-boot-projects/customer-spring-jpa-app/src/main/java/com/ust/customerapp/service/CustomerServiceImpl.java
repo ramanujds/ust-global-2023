@@ -1,5 +1,6 @@
 package com.ust.customerapp.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -52,6 +53,11 @@ public class CustomerServiceImpl implements CustomerService{
 	
 	public Customer getCustomerByName(String customerName) {
 		return repo.findByCustomerName(customerName).get();
+	}
+	
+	@Override
+	public List<Customer> findCustomerInDobRange(LocalDate from, LocalDate to) {
+		return repo.findByDobRange(from, to);
 	}
 
 }

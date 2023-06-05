@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -24,4 +26,7 @@ public class Customer {
 	@Column(unique = true)
 	private String email;
 	private LocalDate dob;
+	
+	@Enumerated(EnumType.STRING)
+	private UserType type;
 }

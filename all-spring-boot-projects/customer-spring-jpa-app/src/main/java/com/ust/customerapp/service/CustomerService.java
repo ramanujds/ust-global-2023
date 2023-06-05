@@ -1,5 +1,6 @@
 package com.ust.customerapp.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import com.ust.customerapp.model.Customer;
@@ -17,5 +18,7 @@ public Customer addCustomer(Customer customer);
 	public List<Customer> getAllCustomers();
 
 	public Customer getCustomerByName(String customerName);
+	
+	public List<Customer> findCustomerInDobRange(LocalDate from, LocalDate to);
 	
 }
