@@ -385,10 +385,12 @@ create table customer(id int, customer_name varchar(50), email varchar(50));
 select * from customer;
 
 
+show tables;
+select * from customer_data;
 
+update customer_data set type=NULL;
 
-
-
+drop table customer_data;
 
 
 
