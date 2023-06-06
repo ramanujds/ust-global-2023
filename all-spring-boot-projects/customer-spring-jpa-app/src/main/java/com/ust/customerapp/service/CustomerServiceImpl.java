@@ -15,6 +15,7 @@ import org.springframework.http.codec.HttpMessageReader;
 import org.springframework.http.codec.HttpMessageWriter;
 import org.springframework.stereotype.Service;
 
+import com.ust.customerapp.exception.CustomerNotFoundException;
 import com.ust.customerapp.model.Customer;
 import com.ust.customerapp.repository.CustomerRepository;
 
@@ -31,7 +32,16 @@ public class CustomerServiceImpl implements CustomerService{
 
 
 	public Customer getCustomer(int id) {
+		
+		if(!repo.existsById(id)) {
+			throw new CustomerNotFoundException("Customer with ID : "+id+" Not found");
+		}
+		
+//		Customer customer = repo.findById(id)
+//							.orElseThrow(()->new CustomerNotFoundException("Customer with ID : "+id+" Not found")); 
+		
 		Customer customer = repo.findById(id).get();
+		
 		return customer;
 	}
 
