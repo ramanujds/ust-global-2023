@@ -40,4 +40,13 @@ https://gitlab-ust.stackroute.in/stack_java_cycle5_exercises/exercise-bt-lambdae
 
 
 
+## Spring Rest
+
+1.
+https://gitlab-ust.stackroute.in/stack_mccts007_java/maincourse_java_jfse_mc04_outcome03_01
+
+
+
+2.
+https://gitlab-ust.stackroute.in/stack_mccts007_java/maincourse_java_jfse_mc04_outcome05_01
 
