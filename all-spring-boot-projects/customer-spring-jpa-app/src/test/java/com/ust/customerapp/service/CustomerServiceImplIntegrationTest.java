@@ -15,7 +15,7 @@ import com.ust.customerapp.model.Customer;
 import com.ust.customerapp.model.UserType;
 
 @SpringBootTest
-class CustomerServiceImplTest {
+class CustomerServiceImplIntegrationTest {
 
 	@Autowired
 	private CustomerService service;

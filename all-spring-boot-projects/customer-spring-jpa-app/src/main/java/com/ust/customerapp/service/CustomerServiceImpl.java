@@ -19,13 +19,28 @@ import com.ust.customerapp.exception.CustomerNotFoundException;
 import com.ust.customerapp.model.Customer;
 import com.ust.customerapp.repository.CustomerRepository;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Service
+
 public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired
 	private CustomerRepository repo;
 	
 	
+	
+	public CustomerRepository getRepo() {
+		return repo;
+	}
+
+
+	public void setRepo(CustomerRepository repo) {
+		this.repo = repo;
+	}
+
+
 	public Customer addCustomer(Customer customer) {
 		return repo.save(customer);	
 	}
@@ -33,25 +48,32 @@ public class CustomerServiceImpl implements CustomerService{
 
 	public Customer getCustomer(int id) {
 		
-		if(!repo.existsById(id)) {
-			throw new CustomerNotFoundException("Customer with ID : "+id+" Not found");
-		}
+//		if(!repo.existsById(id)) {
+//			throw new CustomerNotFoundException("Customer with ID : "+id+" Not found");
+//		}
 		
-//		Customer customer = repo.findById(id)
-//							.orElseThrow(()->new CustomerNotFoundException("Customer with ID : "+id+" Not found")); 
+		Customer customer = repo.findById(id)
+							.orElseThrow(()->new CustomerNotFoundException("Customer with ID : "+id+" Not found")); 
 		
-		Customer customer = repo.findById(id).get();
+//		Customer customer = repo.findById(id).get();
 		
 		return customer;
 	}
 
 
 	public Customer updateCustomer(Customer customer) {
+		int id = customer.getId();
+		if(!repo.existsById(id)) {
+			throw new CustomerNotFoundException("Customer with ID : "+id+" Not found");
+		}
 		return repo.save(customer);	
 	}
 
 
 	public void deleteCustomer(int id) {
+		if(!repo.existsById(id)) {
+			throw new CustomerNotFoundException("Customer with ID : "+id+" Not found");
+		}
 		repo.deleteById(id);
 	}
 
@@ -62,7 +84,7 @@ public class CustomerServiceImpl implements CustomerService{
 
 	
 	public Customer getCustomerByName(String customerName) {
-		return repo.findByCustomerName(customerName).get();
+		return repo.findByCustomerName(customerName).orElseThrow(()->new CustomerNotFoundException("Customer with Name : "+customerName+" Not found"));
 	}
 	
 	@Override
