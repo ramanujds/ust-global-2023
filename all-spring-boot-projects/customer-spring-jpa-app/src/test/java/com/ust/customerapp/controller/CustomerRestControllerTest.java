@@ -9,7 +9,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.time.LocalDate;
 
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -20,7 +19,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.ust.customerapp.model.Customer;
 import com.ust.customerapp.model.UserType;
 import com.ust.customerapp.service.CustomerService;
@@ -100,10 +99,12 @@ class CustomerRestControllerTest {
 //		fail("Not yet implemented");
 //	}
 	
-	public String asJsonString(Customer c) throws Exception {
-		ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
-		String json = ow.writeValueAsString(c);
-		return json;
-	}
+	
+	// Helper Method for converting a Java Object to JSON String
+	private String asJsonString(Object object) throws Exception {
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule());
+        return objectMapper.writeValueAsString(object);
+    }
 
 }

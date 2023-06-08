@@ -31,9 +31,6 @@ public class Customer {
 	@Column(unique = true)
 	private String email;
 	
-	@JsonSerialize(using = LocalDateSerializer.class)
-	@JsonDeserialize(using = LocalDateDeserializer.class)
-//	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate dob;
 	
 	@Enumerated(EnumType.STRING)
