@@ -67,24 +67,38 @@ class CustomerServiceImplUnitTest {
 
 		// Then
 		assertEquals(c1, service.getCustomer(id1));
-		assertThrows(CustomerNotFoundException.class, 
-								() -> service.getCustomer(id2));
+		assertThrows(CustomerNotFoundException.class, () -> service.getCustomer(id2));
 
 		// Verify whether repo.save() method is called 1 time
 		verify(repo, times(1)).findById(id1);
 		verify(repo, times(1)).findById(id2);
 
 	}
+
 //
 //	@Test
 //	void testUpdateCustomer() {
 //		fail("Not yet implemented");
 //	}
 //
-//	@Test
-//	void testDeleteCustomer() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	void testDeleteCustomer() {
+		// Given
+		int id1 = 101;
+		int id2 = 100;
+
+		// When
+		when(repo.existsById(id1)).thenReturn(true);
+		when(repo.existsById(id2)).thenReturn(false);
+
+		// Then
+		assertDoesNotThrow(() -> service.deleteCustomer(id1));
+		assertThrows(CustomerNotFoundException.class, () -> service.deleteCustomer(id2));
+
+		// Verify
+		verify(repo, times(1)).deleteById(id1);
+		verify(repo, times(1)).existsById(id2);
+	}
 //
 //	@Test
 //	void testGetAllCustomers() {
