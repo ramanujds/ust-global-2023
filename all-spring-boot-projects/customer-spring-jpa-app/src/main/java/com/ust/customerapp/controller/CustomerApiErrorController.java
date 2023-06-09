@@ -3,8 +3,10 @@ package com.ust.customerapp.controller;
 import java.time.LocalDateTime;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolationException;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -27,6 +29,19 @@ public class CustomerApiErrorController {
 		return new ErrorResponse(timestamp, statusValue, error, message, path);
 	}
 	
+	
+	@ExceptionHandler(MethodArgumentNotValidException.class)
+	public ErrorResponse handleValidationException(MethodArgumentNotValidException ex, HttpServletRequest request) {
+		
+		var status = HttpStatus.BAD_REQUEST;
+		var statusValue = status.value();
+		var error = status.getReasonPhrase();
+		var timestamp = LocalDateTime.now();
+		var path = request.getRequestURI();
+		var message = ex.getFieldError().toString(); 
+		return new ErrorResponse(timestamp, statusValue, error, message, path);
+		
+	}
 	
 	
 	@ResponseStatus(code = HttpStatus.INTERNAL_SERVER_ERROR)

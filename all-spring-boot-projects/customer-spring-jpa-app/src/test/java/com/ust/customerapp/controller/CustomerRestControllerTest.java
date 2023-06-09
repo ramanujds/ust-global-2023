@@ -43,7 +43,8 @@ class CustomerRestControllerTest {
 		when(service.getCustomer(id)).thenReturn(c1);
 
 		// Then
-		mockMvc.perform(get("/api/customers/" + id)).andExpect(status().isOk())
+		mockMvc.perform(get("/api/customers/" + id))
+				.andExpect(status().isOk())
 				.andExpect(jsonPath("$.id", Matchers.is(105)))
 				.andExpect(jsonPath("$.customerName", Matchers.is("Steve")))
 				.andExpect(jsonPath("$.email", Matchers.is("steve@yahoo.com")))

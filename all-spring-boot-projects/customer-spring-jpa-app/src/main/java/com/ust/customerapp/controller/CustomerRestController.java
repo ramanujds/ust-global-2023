@@ -3,6 +3,8 @@ package com.ust.customerapp.controller;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
@@ -34,7 +36,7 @@ public class CustomerRestController {
 	
 	@ResponseStatus(code=HttpStatus.CREATED)
 	@PostMapping
-	public Customer addCustomer(@RequestBody Customer customer) {
+	public Customer addCustomer(@RequestBody @Valid Customer customer) {
 		return service.addCustomer(customer);
 	}
 	
