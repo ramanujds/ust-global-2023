@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -35,7 +36,7 @@ public class CustomerRestController {
 	private CustomerService service;
 	
 	@ResponseStatus(code=HttpStatus.CREATED)
-	@PostMapping
+	@RequestMapping(method = RequestMethod.POST)
 	public Customer addCustomer(@RequestBody @Valid Customer customer) {
 		return service.addCustomer(customer);
 	}
@@ -46,7 +47,8 @@ public class CustomerRestController {
 		return service.getAllCustomers();
 	}
 	
-	@GetMapping("/{id}")
+	// @GetMapping("/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	public Customer getCustomerById(@PathVariable int id) {
 		return service.getCustomer(id);
 	}

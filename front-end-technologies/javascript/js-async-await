@@ -13,7 +13,13 @@ let greet = async ()=>{
    
 }
 
-greet()
+
+let check = async ()=>{
+    await callMe(0).then((msg)=>
+                console.log(msg))
+    console.log('Checking..')
+
+}
 
 // callMe(0).then((msg)=>{
 //     console.log(msg)

@@ -1,0 +1,211 @@
+AWS Notes
+----------
+
+How to attach policies and permissions to users?
+
+Root User -> IAM -> Create a user group
+
+Add users to that group
+
+Permission -> Add Permission -> Attach Policies
+
+VPC -> Security Groups -> Inbound/Outbound roles
+
+How to launch an EC2 Instance?
+-----------------------------
+
+EC2 -> Instances -> Launch Instance ->
+Name : my-ec2-instance
+OS : Amazon Linux
+AMI : Amazon Linux 2023
+Architecture : 64
+Instance Type : t2-micro
+
+Create a new key-pair
+
+How to connect to the EC2 Instance?
+-----------------------------------
+Connect to AWS 
+Connect through SSH 
+
+Instance ID
+i-09fe023e1404bdfc3 (my-ec2-instance)
+
+Open an SSH client.
+
+Locate your private key file. The key used to launch this instance is my-aws-key.pem
+
+Run this command, if necessary, to ensure your key is not publicly viewable.
+ chmod 400 my-aws-key.pem
+
+Connect to your instance using its Public DNS:
+ ec2-3-92-206-198.compute-1.amazonaws.com
+
+Example:
+
+ ssh -i "my-aws-key.pem" ec2-user@ec2-3-92-206-198.compute-1.amazonaws.com
+
+
+
+IMP :
+Create a new Security Group 
+VPC -> Security Group
+Add Inbound Rule for SSH 
+
+Add the Security Group to EC2
+Action -> Security -> Change Security Groups
+Add Security Group
+
+
+How to install Git?
+-------------------
+
+sudo yum install git -y
+
+How to install Java?
+--------------------
+sudo yum install java-17-amazon-corretto-headless -y
+
+Running a Spring Boot Application on EC2
+-----------------------------------------
+Create the jar/war package
+Run As -> Maven Package
+Find the .jar/.war file on the target folder
+
+
+Transfer the file to the EC2 
+------------------------------
+- Approach 1 - 
+Using S3
+
+- Approach 2 - 
+Push the jar/war file to a github repo and clone it from ec2
+
+How to run a .jar/.war file?
+
+java -jar [file-name]
+
+How to access the app?
+
+[public ip address]:[port]
+
+** Use http rather than https
+
+IMP
+----
+Make sure to add an inbound role for TCP access
+
+[All TCP -- Anywhre]
+
+
+
+
+AWS Elastic Beanstalk
+-----------------------
+Managed Service for deploying apps
+
+**IMP Before we start
+---------------------
+Roles and Permissions
+----------------------
+create a role with name 
+
+aws-elasticbeanstalk-ec2-role
+
+Add the following permissions to the role
+-----------------------------------------
+AWSElasticBeanstalkWebTier
+AWSElasticBeanstalkMulticontainerDocker
+AdministratorAccess-AWSElasticBeanstalk
+
+Step 1 - Configure environment :
+* Create Environment -> Web server environment
+* Provide a name eg - "hello-spring-app"
+* Select managed platform - > Java
+
+* Application code -> Sample application
+
+* Presets -> Single instance
+
+Next : Configure service access
+
+* For the first time choose "Create and use new service role"
+* Next time onwards use the existing one
+* EC2 instance profile should be set to "aws-elasticbeanstalk-ec2-role"
+
+Next : Set up networking, database, and tags
+
+* Choose a VPC
+* Activate Public IP address
+* Select a subnet "us-east-1a"
+
+Next : Configure instance traffic and scaling 
+Next : Configure updates, monitoring, and logging 
+Next : Review and Submit
+
+* Wait for 5-8 Minutes
+
+* Visit the domain to browse your app
+
+Upload and deploy your code
+---------------------------
+* Deploy the code and wait for few minutes
+
+* Visit the domain to browse your app
+
+
+
+
+
+S3 : Simple Storage Service
+---------------------------
+1. Create a bucket
+2. Give public access and ACL Enabled
+3. Upload any files or folder
+
+How to copy file from s3 to EC2 instance
+----------------
+
+1. Copy the object url of the file
+2. In your ec2 terminal type command wget [object-url]
+
+How to host a static website
+--------------------------
+1. Upload all the html,css and js files
+2. Properties and enable static website hosting (scroll till the end)
+3. Add a policy
+4.
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::ust-s3-public/*"
+        }
+    ]
+}
+
+change "ust-s3-public" with your bucket name
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
