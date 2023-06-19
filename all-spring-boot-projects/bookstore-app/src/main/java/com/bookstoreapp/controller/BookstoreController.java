@@ -9,51 +9,39 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@RestController
+
 public class BookstoreController {
 
-    // create an object of BookstoreService
-    @Autowired
+    
     private BookstoreService bookstoreService;
 
-    // create a get request to get all books
-    // Return Response code of 200
-    @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/books")
+    
     public List<Book> getAllBooks() {
-        return bookstoreService.getAllBooks();
+        return null;
     }
 
 
-    // create a POST request to save a book
-    @PostMapping("/books")
+   
     public Book saveBook(@RequestBody Book book) {
-        return bookstoreService.saveBook(book);
+        return null;
     }
 
-    // create a PUT request to update a book
-    // Return Response code of 202
-    @ResponseStatus(code = HttpStatus.ACCEPTED)
-    @PutMapping("/books/{id}")
-    public Book updateBook(@PathVariable int id, @RequestBody Book book) {
-        return bookstoreService.updateBook(id,book);
+    
+    public Book updateBook(int id, Book book) {
+        return null;
     }
 
-    // create a DELETE request to delete a book
-    // Return Response code of 200
-    @ResponseStatus(code = HttpStatus.OK)
-    @DeleteMapping("/books/{id}")
-    public void deleteBook(@PathVariable int id) {
-        bookstoreService.deleteBook(id);
+   
+    public void deleteBook(int id) {
+        
     }
 
 
-    // create a GET request to get a book by id
-    // Return Response code of 200
-    @ResponseStatus(code = HttpStatus.OK)
-    @GetMapping("/books/{id}")
-    public Book getBookById(@PathVariable int id) {
-        return bookstoreService.getBookById(id);
+    
+   
+   
+    public Book getBookById(int id) {
+       return null;
     }
 
 
