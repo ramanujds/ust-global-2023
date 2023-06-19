@@ -24,6 +24,7 @@
            
             
             <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="fetchAllEmployees()">Get All Employees</button>
         </form>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -43,6 +44,11 @@
             response => console.log(response)
         ).catch(response => console.log(response))
 
+    }
+    const fetchAllEmployees= ()=>{
+        getAllEmployees().then(
+            response => console.log(response)
+        ).catch(response => console.log(response))
     }
 </script>
 </html>
