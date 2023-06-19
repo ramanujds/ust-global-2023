@@ -16,6 +16,7 @@
 	<name>customer-app</name>
 	<description>Customer Spring Boot App</description>
 	<properties>
+		
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
