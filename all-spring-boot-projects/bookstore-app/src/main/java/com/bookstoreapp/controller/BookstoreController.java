@@ -40,7 +40,7 @@ public class BookstoreController {
     }
 
     // create a DELETE request to delete a book
-    // Return Response code of 204
+    // Return Response code of 200
     @ResponseStatus(code = HttpStatus.OK)
     @DeleteMapping("/books/{id}")
     public void deleteBook(@PathVariable int id) {
