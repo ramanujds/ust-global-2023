@@ -1,0 +1,122 @@
+
+Docker MongoDB Command
+----------------------
+
+docker run -p 27017:27017 --name mongo -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password -e MONGO_INITDB_DATABASE=test -v /tmp/mongo-data:/data/db mongo
+
+
+How to start? 
+-------------
+mongo -u admin -p password --authenticationDatabase admin
+
+What is Mongo DB?
+------------------
+- Document Oriented Database
+- Object Oriented and hence ORM is not required
+- Non Relational
+- No SQL
+- Scalable
+- Java Script as the querry language
+- uses BSON (Binary JSON)
+
+
+Default Port?
+------------------ 
+27017
+
+Installation and Configuration
+-------------------------------
+Install MongoDB
+Create the following folders
+C:data/db
+C:data/log
+Add Mongo DB to path
+
+
+Collection and Documents
+-------------------------
+- Collections are equivalent of tables in MySQL
+- Documents are equivalent of rows in MySQL
+- _id is a default field of a document
+- it is a 24 digit numeric value, can be auto-generated, or manually provide
+
+
+Mongo DB Commands :
+--------------------
+- show all databases(non-empty)
+	show dbs
+ 
+- create or switch database
+	use book_db
+
+- create a collection
+	db.createCollection("book")
+
+- see all the collections
+	db.getCollectionNames()
+
+- Insert a new Document
+	db.book.insert({
+			title:"Angular Programming",
+			author:"Harsh Kumar",
+			price:545.0
+			})
+	- with auto generated id
+	
+	db.book.insert({
+			"_id" : 2,
+			"title" : "Java Programming",
+			"author" : "Gaurav Sharma",
+			"price" : 745
+			})
+	- manual id
+
+	db.book.insert({
+			"_id" : 3,
+			"title" : "Mongo DB",
+			"price" : 745,
+			"publishedYear":2020
+			})
+
+- View the documents
+	db.find()
+	db.find().pretty()
+	db.book.find({price:750})
+	db.book.find({$or:[{_id:2},{title:"Java Programming"}]})
+	db.book.find({price:{$gt:800}}).pretty()
+	
+- Delete
+
+	db.book.remove({_id:4})
+	db.book.remove({"title" : "React JS"})
+
+- how to update the data
+	db.book.update({title:"Python for Beginers"},{$set:{title:"Angular Programming", price:650}})
+
+db.book.save({_id:100101,title:'Java Programming', price:890})
+
+
+
+db.book.update({_id:3},{$set:{price:650}})
+
+
+- delete a database
+	db.dropDatabase()
+
+- delete a collection
+	db.book.drop()
+
+- get the document count
+	db.book.find().count()
+
+- using less than or greater then in find query
+
+	 db.book.find({price:{$gt:700}})
+
+
+
+
+
+
+
+

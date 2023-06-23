@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.function.Consumer;
 
-import javax.websocket.server.ServerEndpoint;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.codec.Decoder;
@@ -14,16 +14,16 @@ import org.springframework.http.codec.CodecConfigurer.DefaultCodecConfig;
 import org.springframework.http.codec.HttpMessageReader;
 import org.springframework.http.codec.HttpMessageWriter;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ust.customerapp.exception.CustomerNotFoundException;
 import com.ust.customerapp.model.Customer;
 import com.ust.customerapp.repository.CustomerRepository;
 
-import lombok.Getter;
-import lombok.Setter;
+
 
 @Service
-
+@Transactional
 public class CustomerServiceImpl implements CustomerService{
 
 	@Autowired
@@ -61,6 +61,7 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 
+	
 	public Customer updateCustomer(Customer customer) {
 		int id = customer.getId();
 		if(!repo.existsById(id)) {
