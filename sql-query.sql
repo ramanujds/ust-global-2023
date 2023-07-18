@@ -396,5 +396,56 @@ drop table customer_data;
 
 
 
+select e.*,d.* from employee e join department d using(dept);
+
+
+
+
+-- Retrieve a list of employees along with their corresponding department names
+
+select emp_id,emp_name,dept_name from employee e join department d on e.dept=d.dept;
+select emp_id,emp_name,dept_name from employee join department using(dept);
+select emp_id,emp_name,dept_name from employee join department where employee.dept=department.dept;
+
+-- Retrieve the total number of employees in each department
+
+select dept_name,count(e.dept) as "Total Employees" from department d left join employee e on e.dept=d.dept group by dept_name;
+
+
+-- Retrieve the highest salary in each department
+
+select dept_name,max(e.salary) as "Max Employee Salary" from department d left join employee e on e.dept=d.dept group by dept_name;
+
+
+-- Retrieve the average salary for employees in each department
+
+
+
+-- Retrieve the average salary for employees in Sales department
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

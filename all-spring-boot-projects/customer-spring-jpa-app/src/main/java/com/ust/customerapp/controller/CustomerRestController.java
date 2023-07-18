@@ -6,9 +6,11 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,20 +27,24 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ust.customerapp.model.Customer;
+import com.ust.customerapp.repository.CustomerRepository;
 import com.ust.customerapp.service.CustomerService;
 
 @RestController
 @RequestMapping("/api/customers")
 @CrossOrigin
 public class CustomerRestController {
+	
+	@Value("base-url")
+	private String baseUrl;
 
 	@Autowired
-	private CustomerService service;
+	private CustomerRepository repo;
 	
 	@ResponseStatus(code=HttpStatus.CREATED)
 	@RequestMapping(method = RequestMethod.POST)
 	public Customer addCustomer(@RequestBody @Valid Customer customer) {
-		return service.addCustomer(customer);
+		return repo.save(customer);
 	}
 	
 	@ResponseStatus(code=HttpStatus.OK)
@@ -49,16 +55,17 @@ public class CustomerRestController {
 	
 	// @GetMapping("/{id}")
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
-	public Customer getCustomerById(@PathVariable int id) {
-		return service.getCustomer(id);
+	public ResponseEntity<Customer> getCustomerById(@PathVariable("id") int customerId) {
+		Customer customer = repo.findById(customerId).get();
+		return ResponseEntity.ok(customer);
 	}
 	
-	@GetMapping("/search")
+	@GetMapping(value =  "/search")
 	public Customer getCustomerByName(@RequestParam("name") String name){
 		return service.getCustomerByName(name);
 	}
 	
-	@PutMapping
+	@PutMapping(produces = "application/json", consumes = "application/json")
 	@ResponseStatus(code = HttpStatus.ACCEPTED)
 	public Customer updateCustomer(@RequestBody Customer customer) {
 		return service.updateCustomer(customer);
