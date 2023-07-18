@@ -8,7 +8,6 @@ import lombok.Builder;
 import lombok.Data;
 
 @Data
-
 public class CartDetails {
 
 	private List<CartItem> itemsList;
