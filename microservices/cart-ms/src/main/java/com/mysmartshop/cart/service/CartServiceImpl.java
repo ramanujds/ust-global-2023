@@ -82,7 +82,7 @@ public class CartServiceImpl implements CartService {
 	
 	private float fetchPrice(String productId) {
 		
-		Product product = productServiceClient.getForObject("http://localhost:8100/api/product/"+productId, Product.class);
+		Product product = productServiceClient.getForObject("http://product-ms/api/product/"+productId, Product.class);
 		if(product != null)
 			return product.getPrice();
 		return 0;
