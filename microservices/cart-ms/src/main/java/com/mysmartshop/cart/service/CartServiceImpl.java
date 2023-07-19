@@ -11,6 +11,8 @@ import com.mysmartshop.cart.dto.Product;
 import com.mysmartshop.cart.model.CartItem;
 import com.mysmartshop.cart.repository.CartItemRepository;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 @Service
 public class CartServiceImpl implements CartService {
 	
@@ -60,8 +62,9 @@ public class CartServiceImpl implements CartService {
 		
 		if(checkItem.isPresent()) {
 			CartItem item = checkItem.get();
+			float unitPrice = item.getTotalPrice()/item.getQuantity();
 			item.setQuantity(quantity);
-			item.setTotalPrice(item.getTotalPrice()*quantity);
+			item.setTotalPrice(unitPrice*quantity);
 			itemRepository.save(item);
 		}
 		
@@ -79,13 +82,21 @@ public class CartServiceImpl implements CartService {
 		return itemRepository.findAll();
 	}
 	
-	
+	@CircuitBreaker(fallbackMethod = "fetchPriceFallback", name = "cb-product")
 	private float fetchPrice(String productId) {
 		
 		Product product = productServiceClient.getForObject("http://product-ms/api/product/"+productId, Product.class);
 		if(product != null)
 			return product.getPrice();
 		return 0;
+	}
+	
+	private float fetchPriceFallback(String productId, Throwable t) {
+		Product product = new Product(productId,"Dummy Product",0,"A dummy product");
+		System.err.println(t.getMessage());
+		System.out.println("Response from Fallback");
+		System.out.println(product);
+		return product.getPrice();
 	}
 	
 	

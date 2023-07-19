@@ -1,5 +1,6 @@
 package com.mysmartshop.cart.api;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.web.client.RestTemplate;
 import com.mysmartshop.cart.dto.CartDetails;
 import com.mysmartshop.cart.model.CartItem;
 import com.mysmartshop.cart.service.CartService;
+
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @RestController
 @RequestMapping("/api/cart")
@@ -40,9 +43,17 @@ public class CartController {
 	}
 	
 	@PostMapping("/items/product/{productId}")
+	@CircuitBreaker(fallbackMethod = "addNewItemFallback", name = "cb-product")
 	public List<CartItem> addNewItem(@PathVariable String productId){
 		return cartService.addToCart(productId);
 	}
+	
+	
+	public List<CartItem> addNewItemFallback(@PathVariable String productId, Throwable t){
+		System.err.println(t.getMessage());
+		return new ArrayList<CartItem>();
+	}
+	
 	
 	@DeleteMapping("/items/product/{productId}")
 	public List<CartItem> deleteItem(@PathVariable String productId){
