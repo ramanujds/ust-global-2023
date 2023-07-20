@@ -12,6 +12,15 @@ resilience4j:
         waitDurationInOpenState: 2s
         slidingWindowType: COUNT_BASED
         
+  retry:
+    metrics:
+      enabled: true
+    instances:
+      retry-fetch-product:
+        max-attempts: 3
+        wait-duration: 2000
+        
+      
         
 management:
   health:
@@ -26,3 +35,4 @@ management:
       show-details: always
     httptrace:
       enabled: true
+      

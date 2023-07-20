@@ -17,6 +17,7 @@ import com.mysmartshop.cart.model.CartItem;
 import com.mysmartshop.cart.service.CartService;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.retry.annotation.Retry;
 
 @RestController
 @RequestMapping("/api/cart")
@@ -44,6 +45,7 @@ public class CartController {
 	
 	@PostMapping("/items/product/{productId}")
 	@CircuitBreaker(fallbackMethod = "addNewItemFallback", name = "cb-product")
+//	@Retry(name = "retry-fetch-product", fallbackMethod = "addNewItemFallback")
 	public List<CartItem> addNewItem(@PathVariable String productId){
 		return cartService.addToCart(productId);
 	}

@@ -82,22 +82,22 @@ public class CartServiceImpl implements CartService {
 		return itemRepository.findAll();
 	}
 	
-	@CircuitBreaker(fallbackMethod = "fetchPriceFallback", name = "cb-product")
+	
 	private float fetchPrice(String productId) {
-		
+		System.out.println("Trying to fetch price from product service");
 		Product product = productServiceClient.getForObject("http://product-ms/api/product/"+productId, Product.class);
 		if(product != null)
 			return product.getPrice();
 		return 0;
 	}
 	
-	private float fetchPriceFallback(String productId, Throwable t) {
-		Product product = new Product(productId,"Dummy Product",0,"A dummy product");
-		System.err.println(t.getMessage());
-		System.out.println("Response from Fallback");
-		System.out.println(product);
-		return product.getPrice();
-	}
+//	private float fetchPriceFallback(String productId, Throwable t) {
+//		Product product = new Product(productId,"Dummy Product",0,"A dummy product");
+//		System.err.println(t.getMessage());
+//		System.out.println("Response from Fallback");
+//		System.out.println(product);
+//		return product.getPrice();
+//	}
 	
 	
 
