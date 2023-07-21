@@ -1,6 +1,5 @@
 package com.mysmartshop.authserver.util;
 
-
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -16,20 +15,20 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 @Component
 public class JwtUtil {
-	
-	public static final long JWT_TOKEN_VALIDITY = 5*60;
+
+	public static final long JWT_TOKEN_VALIDITY = 5 * 60;
 
 	@Value("${jwt.secret}")
 	private String secret;
 
 //retrieve username from jwt token
-	
+
 	public String getUsernameFromToken(String token) {
 		return getClaimFromToken(token, Claims::getSubject);
 	}
 
 //retrieve expiration date from jwt token
-	
+
 	public Date getExpirationDateFromToken(String token) {
 		return getClaimFromToken(token, Claims::getExpiration);
 	}
@@ -40,20 +39,20 @@ public class JwtUtil {
 	}
 
 	// for retrieveing any information from token we will need the secret key
-	
+
 	private Claims getAllClaimsFromToken(String token) {
 		return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
 	}
 
 //check if the token has expired
-	
+
 	private Boolean isTokenExpired(String token) {
 		final Date expiration = getExpirationDateFromToken(token);
 		return expiration.before(new Date());
 	}
 
 //generate token for user
-	
+
 	public String generateToken(String username) {
 		Map<String, Object> claims = new HashMap<>();
 		return doGenerateToken(claims, username);
@@ -75,7 +74,6 @@ public class JwtUtil {
 	public Boolean validateToken(String token, UserDetails userDetails) {
 		final String username = getUsernameFromToken(token);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
-	}	
-
+	}
 
 }

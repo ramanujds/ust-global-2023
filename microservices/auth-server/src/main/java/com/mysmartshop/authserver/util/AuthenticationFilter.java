@@ -25,6 +25,8 @@ public class AuthenticationFilter extends OncePerRequestFilter  {
 	
 	@Autowired
 	UserDetailsService userDetailsService;
+	
+	
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)

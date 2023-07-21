@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
@@ -27,6 +28,7 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	private AuthenticationFilter filter;
+	
 	
 	// Authentication 
 	// Creating in-memory users with roles
@@ -49,6 +51,7 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		
 		auth.userDetailsService(userDetailsService);
+		
 		
 	}
 	
@@ -82,15 +85,15 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter{
 	
 	
 	
-	@Bean
-	PasswordEncoder passwordEncoder() {
-		return NoOpPasswordEncoder.getInstance();
-	}
-	
 //	@Bean
-//	PasswordEncoder getPasswordEncoder() {
-//		return new BCryptPasswordEncoder();
+//	PasswordEncoder passwordEncoder() {
+//		return NoOpPasswordEncoder.getInstance();
 //	}
+	
+	@Bean
+	PasswordEncoder getPasswordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 	
 	@Bean
 	public AuthenticationManager getAuthenticationManager() throws Exception {

@@ -5,14 +5,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.mysmartshop.authserver.model.User;
 
 public class UserDetailsModel implements UserDetails{
 	
+	@Autowired
+	PasswordEncoder passwordEncoder;
 	
 	private String username;
 	private String password;
@@ -22,6 +26,9 @@ public class UserDetailsModel implements UserDetails{
 	public UserDetailsModel(User user) {
 		this.username=user.getUsername();
 		this.password=user.getPassword();
+				
+				//passwordEncoder.encode(user.getPassword());
+		
 		this.auths=Arrays.stream(user.getRole().split(","))
 					 		.map(role->"ROLE_"+role)
 					 		.map(role->new SimpleGrantedAuthority(role))
