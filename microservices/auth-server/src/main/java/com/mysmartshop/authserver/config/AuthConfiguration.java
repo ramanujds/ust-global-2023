@@ -3,6 +3,7 @@ package com.mysmartshop.authserver.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -52,12 +53,15 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter{
 	// Authorization
 	// Role based API Level
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeHttpRequests()
+		http.csrf().disable().
+			authorizeHttpRequests()
 			.antMatchers("/admin/**")
 			.hasRole("ADMIN")
 			.antMatchers("/user/**")
 			.hasAnyRole("USER","ADMIN")
-			.antMatchers("/**")
+//			.antMatchers("/**")
+//			.permitAll()
+			.antMatchers(HttpMethod.POST,"/**")
 			.permitAll()
 //			.and()
 //			.formLogin() // to add a default login form
