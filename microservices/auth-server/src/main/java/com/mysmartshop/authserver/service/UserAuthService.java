@@ -34,7 +34,7 @@ public class UserAuthService {
 
 		}
 
-		String jwt = jwtUtil.generateJwt(username);
+		String jwt = jwtUtil.generateToken(username);
 		return jwt;
 
 	}

@@ -3,6 +3,8 @@ package com.mysmartshop.authserver.api;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,6 +25,9 @@ public class UseController {
 	@Autowired
 	private UserAuthService authService;
 	
+	@Autowired
+	AuthenticationManager authMgr;
+	
 //	@GetMapping("/users")
 //	public List<User> getAllUsers(){
 //		return repo.findAll();
@@ -36,6 +41,7 @@ public class UseController {
 	
 	@PostMapping("/login")
 	public JwtToken authenticate(@RequestBody UserCredentials user) {
+		authMgr.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 		String jwt = authService.validateUserCredentials(user);
 		
 		return new JwtToken(jwt);
