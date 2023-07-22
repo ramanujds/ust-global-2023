@@ -116,15 +116,14 @@ db.book.update({_id:3},{$set:{price:650}})
 
 ## Create database order_db
 
-```bash
+
 
 use order_db
 
-```
+
 
 ## Creating a new user to access the order_db database
 
-```bash
 
 db.createUser(
     {
@@ -139,7 +138,7 @@ db.createUser(
     }
 )
 
-```
+
 
 
 
