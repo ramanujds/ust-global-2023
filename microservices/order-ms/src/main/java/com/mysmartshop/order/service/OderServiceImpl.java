@@ -1,5 +1,6 @@
 package com.mysmartshop.order.service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Random;
 
@@ -26,9 +27,10 @@ public class OderServiceImpl  implements OrderService{
 		Order orderDetails = new Order();
 		orderDetails.setOrderItems(cartItems);
 		orderDetails.setStatus("Order Placed");
-		Random rnd = new Random(100000);
-		String str = "n"+System.currentTimeMillis()+Math.abs(rnd.nextLong());
-		orderDetails.set_id(Math.abs(rnd.nextInt()));
+		Random rnd = new Random();
+		int num = Math.abs((int)(rnd.nextDouble()*100000));
+		String str = "n"+LocalDate.now().getMonthValue()+""+LocalDate.now().getDayOfMonth()+num;
+		orderDetails.set_id(num);
 		orderDetails.setOrderId(str);
 		return repo.save(orderDetails);
 	}
