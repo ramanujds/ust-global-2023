@@ -1,0 +1,74 @@
+Docker
+-------
+Containerization Platform
+
+"It works on my machine"
+
+How to install docker on EC2?
+-------------
+sudo yum install docker -y
+sudo su
+sudo service docker start
+
+How to pull an image?
+-----------------
+docker pull [image-name]
+
+docker pull mysql
+
+Check all the images
+--------------------
+docker images
+
+docker ps
+show all running container
+docker ps -a
+show all containers
+
+Pulling an Image: docker pull mysql
+Run an image : docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
+
+docker stop [container-name]
+
+docker start [container-name]
+
+docker pull ram1uj/covid-info
+
+docker run -p 80:80 ram1uj/covid-info
+
+docker stop [container-name]
+
+How to remove a container?
+-------------------------
+docker rm [container-name]
+
+How to delete an Image?
+----------------------
+docker rmi [image-name]
+docker rmi mysql
+
+
+How to Run Spring boot application on Docker?
+------------------------
+Step 1 : Build the jar/war file
+Step 2 : Create a Dockerfile
+
+FROM adoptopenjdk/openjdk11
+WORKDIR /
+ADD [app-name].war app.war
+CMD java -jar app.war
+
+Step 3 : Bring the Dockerfile and the jar/war files to AWS EC2
+
+Step 4 : docker build -t [image-name] .
+
+Step 5 : Check images by docker images command
+
+Step 6 : Run the application by docker run command
+
+
+Done....
+
+
+
+

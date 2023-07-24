@@ -1,0 +1,23 @@
+Microservices so far...
+------------------------
+- Distributed System
+
+- Product, Cart and Order Microservices
+
+- RestTemplate (Synchronous Communication)
+- Messaging Queues (Rabbit MQ/Kafka)
+
+- Advantages
+- Scaling and Load Balancing
+	- Service Registration and Service discovery
+	- Eureka Server
+	- Eureka Client 
+- Fault tolerant 
+	- Circuit Breaker
+- Easy routing and managing cross-cutting concerns
+	- Cloud Gateway (API Gateway)
+- Easy to Test
+- Easy to Deploy
+	- Using Docker
+
+
