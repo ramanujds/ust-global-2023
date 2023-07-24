@@ -1,4 +1,3 @@
-
 Docker MongoDB Command
 ----------------------
 
@@ -111,10 +110,33 @@ db.book.update({_id:3},{$set:{price:650}})
 
 - using less than or greater then in find query
 
+
 	 db.book.find({price:{$gt:700}})
 
 
+## Create database order_db
 
+
+
+use order_db
+
+
+
+## Creating a new user to access the order_db database
+
+
+db.createUser(
+    {
+        user: "ramanuj",
+        pwd: "password",
+        roles: [
+            {
+                role: "readWrite",
+                db: "order_db"
+            }
+        ]
+    }
+)
 
 
 
