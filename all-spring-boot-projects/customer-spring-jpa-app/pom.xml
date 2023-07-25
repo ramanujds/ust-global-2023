@@ -86,9 +86,13 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<image>
+						<name>${project.artifactId}</name>
+					</image>
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>customer-app</finalName>
 	</build>
 
 </project>

@@ -71,4 +71,28 @@ Done....
 
 
 
+How to build image using Spring Boot Docker Plugin?
+-----------------------------------------
+Install Maven:
+sudo yum install maven -y
+
+Run the following command:
+mvn spring-boot:build-image
+
+docker run -d -p 8080:8080 --name customer-app customer-spring-jpa-app:0.0.1-SNAPSHOT
+
+
+How to Run Mysql and Spring Boot App on docker?
+-------------------
+
+1. Create a docker network
+
+docker network create springboot-mysql-network
+
+2. Run mysql container on that network
+
+docker run -d -p 3306:3306 --name mysql --network springboot-mysql-network -e MYSQL_ROOT_PASSWORD=password mysql
+
+
+
 

@@ -35,16 +35,15 @@ import com.ust.customerapp.service.CustomerService;
 @CrossOrigin
 public class CustomerRestController {
 	
-	@Value("base-url")
-	private String baseUrl;
+	
 
 	@Autowired
-	private CustomerRepository repo;
+	private CustomerService service;
 	
 	@ResponseStatus(code=HttpStatus.CREATED)
 	@RequestMapping(method = RequestMethod.POST)
 	public Customer addCustomer(@RequestBody @Valid Customer customer) {
-		return repo.save(customer);
+		return service.addCustomer(customer);
 	}
 	
 	@ResponseStatus(code=HttpStatus.OK)
@@ -56,7 +55,7 @@ public class CustomerRestController {
 	// @GetMapping("/{id}")
 	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
 	public ResponseEntity<Customer> getCustomerById(@PathVariable("id") int customerId) {
-		Customer customer = repo.findById(customerId).get();
+		Customer customer = service.getCustomer(customerId);
 		return ResponseEntity.ok(customer);
 	}
 	
