@@ -116,3 +116,13 @@ mvn clean spring-boot:build-image
 
 docker run -d -p 8080:8080 --network springboot-mysql-network -e MYSQL_HOST=mysql -e MYSQL_DATABASE=ust_db -e MYSQL_PORT=3306 -e MYSQL_USER=root -e MYSQL_PASSWORD=password --name customer-app customer-app
 
+
+docker-compose installation
+------------------------
+
+sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+Verify success:  docker-compose version
+
