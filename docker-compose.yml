@@ -1,0 +1,46 @@
+version: '3.7'
+services: 
+    eureka-server:
+        image: eureka-server
+        ports: 
+            - "8761:8761"
+        networks: 
+            - app-network
+    
+    product-ms:
+        image: product-ms
+        ports:
+          -  "8100:8100"
+        restart: always
+        environment: 
+            EUREKA_HOST: eureka-server
+        depends_on: 
+            - eureka-server
+        networks: 
+            - app-network
+
+    cart-ms:
+        image: cart-ms
+        ports:
+          -  "8200:8200"
+        restart: always
+        environment: 
+            EUREKA_HOST: eureka-server
+        depends_on: 
+            - eureka-server
+        networks: 
+            - app-network
+        
+    api-gateway-server:
+        image: api-gateway-server
+        ports: 
+            - "8888:8888"
+        environment: 
+            EUREKA_HOST: eureka-server
+        depends_on: 
+            - eureka-server
+        networks: 
+            - app-network
+
+networks: 
+    app-network:
