@@ -126,3 +126,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 Verify success:  docker-compose version
 
+
+Steps to run all microservices using docker compose
+---------------------------
+1. Make all the necessary changes on the application.properties of microservices
+
+2. Build all the images
+
+3. Create a docker-compose.yml file
+
+4. To start all the services
+
+docker-compose up
+
+5. To stop all the services
+
+docker-compose down
+
+
