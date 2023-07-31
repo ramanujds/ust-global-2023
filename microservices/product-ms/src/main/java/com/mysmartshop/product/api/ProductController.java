@@ -1,5 +1,7 @@
 package com.mysmartshop.product.api;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,16 +14,16 @@ import com.mysmartshop.product.model.Product;
 import com.mysmartshop.product.service.ProductService;
 
 @RestController
-@RequestMapping("/api/product")
+@RequestMapping("/api/products")
 public class ProductController {
 	
 	@Autowired
 	private ProductService productService;
 	
-	@GetMapping
-	public String greet() {
-		return "Message from Product Service";
-	}
+//	@GetMapping
+//	public String greet() {
+//		return "Message from Product Service";
+//	}
 	
 	@PostMapping
 	public Product addProduct(@RequestBody Product product) {
@@ -31,6 +33,11 @@ public class ProductController {
 	@GetMapping("/{id}")
 	public Product getProductDeatils(@PathVariable String id) {
 		return productService.getProductDetails(id);
+	}
+	
+	@GetMapping
+	public List<Product> getAllProducts(){
+		return productService.getAvailableProducts();
 	}
 
 }

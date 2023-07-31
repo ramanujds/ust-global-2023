@@ -18,11 +18,21 @@ spring:
         uri:
           lb://product-ms  
         predicates:
-        - Path=/api/product/**
+        #- Path=/api/product/**
+        - Path=/api/products/**
       
       - id: order-ms
         uri:
           lb://order-ms  
         predicates:
         - Path=/api/order/**
+        
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      globalcors:
+          cors-configurations: 
+            '[/**]':
+              allowed-origins: "*"
+              allowed-methods: "*"
+              allowed-headers: "*"
     

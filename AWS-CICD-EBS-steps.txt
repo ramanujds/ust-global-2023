@@ -1,0 +1,29 @@
+AWS CICD with Github and Code Pipeline
+--------------------------------------
+
+Step 1: Create a Github repository and clone it on your local machine
+Step 2: Create an Elastic Beanstalk Environment for running a java application
+	 (Follow the instructions available on AWS-Notes)
+Step 3: (Optional) Build the jar file and deploy it to elastic beanstalk environment
+Step 4: Create a buildspec.yml file and keep it on your project's root folder
+Step 5: Commit and Push changes to github
+
+Step 6: Browse AWS Code Pipeline Service 
+Step 7: Create Pipeline (Select New Service Role)
+Step 8: Add Source Provider
+	  - Github(Version 1)
+	  - Connect to Github
+	  - Select Repository and Branch
+
+Step 9: Add build stage
+	  - Build provider : AWS CodeBuild
+	  - Create Project
+	  - Input required details (platform, image, vpc, security group etc)
+
+Step 10: Add Deploy Stage
+	  - Select Elastic Beanstalk
+	  - Select Application
+	  - Select Environment
+
+	 
+

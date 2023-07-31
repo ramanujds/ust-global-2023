@@ -11,8 +11,8 @@ public class Product {
 
 	@Id
 	private String productId;
-	private String name;
-	private float price;
-	private String description;
+	private String productName;
+	private float productPrice;
+	private String productDescription;
 
 }
