@@ -1,9 +1,12 @@
+What is React?
+----------------
+- A javascript library for building Single Page Application
+- Component-Oriented
+- Developed and Maintained by Meta
+- React native to build IOS and Android apps
 
-React
-------
+Alternatives : Angular, Vue JS, Flutter
 
-Is a JavaScript library for developing Single Page Application(SPA)
-Developed and maintained by Facebook
 
 Angular vs React
 ------------------
@@ -14,12 +17,35 @@ React is JavaScript based(we can use TypeScript as well)
 Angular is based on typescript
 
 
-How to create a React App?
---------------------------
 
-create-react-app [app-name]
+
+Dev Setup:
+----------
+- Install node js
+- Install create-react-app (optional)
+ 	- npm install create-react-app
+
+
+Creating our first React Application
+------------------------------------
+npx create-react-app [app-name]
+
+npx create-react-app hello-world
 
 create-react-app hello-world
+
+
+React Styling with Bootstrap
+----------------------------
+Add bootstrap : npm install bootstrap
+
+Import bootstrap module on index.js
+
+ - import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+
 
 
 

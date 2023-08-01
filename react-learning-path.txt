@@ -1,0 +1,26 @@
+React Learning Path
+
+1. React Intro
+2. Project/Folder Structure
+3. First React App
+4. React Components
+5. Types of Components
+    5.1 Class Components
+    5.2 Functional Components
+6. React JSX
+7. React Styling with Bootstrap
+8. React State with Class Component
+9. React State with Functional Components
+10. React Props
+11. Event Handling in React
+12. Conditional Rendering in React
+13. List Rendering
+14. React Form Handling and Form Validation
+15. React Hooks (useState, useEffect, useContext)
+16. Consuming REST API in React
+17. Spring Boot and React Integration
+18. Making GET, POST, PUT, DELETE requests
+19. Implementing Routing in React
+20. Implementing Authentication
+    20.1 JWT-based Authentication (Spring Security + React)
+21. Unit testing React Components
