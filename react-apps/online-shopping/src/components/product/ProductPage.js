@@ -12,6 +12,16 @@ const ProductPage = () => {
   }
   let [productList, updateProductList] = useState([[product]]);
 
+
+  let products = [
+    {
+      productId:101,
+      productName:'Laptop',
+      productPrice:45000,
+      productDescription:'Good'
+    },
+  ]
+
   return (
     <div>
       <div className='container'>

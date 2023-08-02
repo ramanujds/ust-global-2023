@@ -1,3 +1,12 @@
 .card-style{
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
+
+
+.card:hover{
+    background-color: lightsalmon;
+}
+
+/* 
+
+*/

@@ -1,5 +1,6 @@
 import React from 'react'
 import ShowPerson from './ShowPerson';
+import PersonDetailsRow from './PersonDetailsRow';
 
 const ListRendering = () => {
     const names = ['John', 'Peter', 'Mark', 'James', 'Mary'];
@@ -35,7 +36,7 @@ const ListRendering = () => {
     }]
 
     return (
-        <div>
+        <div className='container'>
             {/* <h2>List of names</h2>
             <ol>
                 {names.map((uname, index) => <li key={index}>{uname}</li>)}
@@ -48,6 +49,23 @@ const ListRendering = () => {
                 {persons.map(person=><ShowPerson key={person.id} person={person}/>)}
             </div>
         </div>
+
+        <table className='table'>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Skill</th>
+                </tr>
+            </thead>
+            <tbody>
+            {persons.map(person=><PersonDetailsRow key={person.id} person={person}/>)}
+            </tbody>
+
+        </table>
+
+
         </div>
     )
 }
