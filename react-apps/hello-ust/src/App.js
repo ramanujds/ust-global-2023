@@ -33,8 +33,10 @@ function App() {
   return (
     <div className="App">
     <h1>UST Global</h1>
-    <Message />
-    <UserDetails />
+    <Message msg ='Hello Everyone' sender='Tony'/>
+    <Message msg = 'Welcome to React' sender='Facebook'/>
+    <UserDetails username='Rahul' age='20' />
+    <UserDetails username = 'Karan' age='25' />
     </div>
   );
 }

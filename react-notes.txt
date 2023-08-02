@@ -44,6 +44,53 @@ Import bootstrap module on index.js
  - import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+React Render
+-------------
+
+Conditional Rendering
+---------------------
+if-else
+ternary operator
+short-circuit operator
+
+
+
+
+Online Shopping App
+-------------------
+1. Add Bootstrap
+2. Create components
+-components
+ -home
+  -HomePage
+ -header
+  -HeaderPage
+  -NavBarPage
+ -footer
+  -FooterPage
+ -error
+  -ErrorPage
+ -product
+  -AddProductPage
+  -ViewProductPage
+ -cart
+  -AddCartItemsPage
+  -ViewCartPage
+ -order
+  -PlaceOrderPage
+  -CancelOrderPage
+  -ViewOrdersPage
+  
+
+
+
+
+
+
+
+
+
+
 
 
 

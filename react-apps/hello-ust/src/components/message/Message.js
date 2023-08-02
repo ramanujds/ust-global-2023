@@ -1,18 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Message.css'
 
-const Message = () => {
 
-  let today = new Date().toISOString();
 
+const Message = ({msg,sender}) => {
+
+   let [today, setToday] = useState(new Date().toISOString());
+  // let [msg, setMsg] = useState('Hello from UST Global');
+useEffect(() => {
   setInterval(() => {
-    today = new Date().toISOString();
-  }, 1000);
+    setToday(new Date().toISOString());
+  }, 1000);},[])
+  
+
+  // setTimeout(() => { 
+  //   setMsg('Hello from TR4 Room');
+  // }, 5000);
 
   return (
     <div>
-      <h2>Hello from UST Global</h2>
-      <h2>We are in TR4 Room</h2>
+      <h2>{msg}, from : {sender}</h2>
       <button className='btn btn-primary'>Click Me</button>
       <p className="style1">Today is {today}</p>
     </div>
