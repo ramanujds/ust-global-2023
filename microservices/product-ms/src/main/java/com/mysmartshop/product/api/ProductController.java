@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mysmartshop.product.model.Product;
 import com.mysmartshop.product.service.ProductService;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("/api/products")
@@ -29,6 +30,14 @@ public class ProductController {
 	public Product addProduct(@RequestBody Product product) {
 		return productService.addProduct(product);
 	}
+
+	// create an api to return a Mono<Product> by id
+	public Mono<Product> getProductById(String id) {
+		Product p = productService.getProductDetails(id);
+		return Mono.just(p);
+	}
+
+
 	
 	@GetMapping("/{id}")
 	public Product getProductDeatils(@PathVariable String id) {

@@ -15,4 +15,6 @@ public class Product {
 	private float productPrice;
 	private String productDescription;
 
+	private String imageUrl;
+
 }

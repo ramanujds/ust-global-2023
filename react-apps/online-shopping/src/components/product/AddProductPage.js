@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { updateFor } from 'typescript';
+
 
 const AddProductPage = ({productList, updateProductList}) => {
  
@@ -18,55 +18,43 @@ const AddProductPage = ({productList, updateProductList}) => {
   let [productPriceValidMessage, updateProductPriceValidMessage] = useState('');
   let [productDescriptionValidMessage, updateProductDescriptionValidMessage] = useState('');
 
-  // useEffect(()=>{
-  //   updateValidForm(true);
-  // }, []);
+  useEffect(()=>{
+    let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
+    updateValidForm(isValidForm);
+  },[validProductId, validProductName, validProductPrice, validProductDescription]);
+
+
 
 
   const addProduct = (e) => {
     e.preventDefault();
-    
-
-    // let numbers = [1,2,3,4,5];
-    // let newNumbers = [...numbers, 6];
-
+    console.log(product);
     let newProductList = [...productList, product];
     updateProductList(newProductList);
-    
   }
 
   
   const handleInputChange = (e) => {
     let inputName = e.target.name;
     let inputValue = e.target.value;
+   
     let productIdValid=false, productNameValid=false, productPriceValid=false, productDescriptionValid=false;
     switch(inputName){
       case 'productId':
-        productIdValid = e.target.validity.valid;
-        updateValidProductId(productIdValid);
-        // @ts-ignore
-        updateProductIdValidMessage(!productIdValid && <p className='text-danger'>'Product Id should be a number and minimum 10'</p>);
+        updateValidProductId(e.target.validity.valid);
+        updateProductIdValidMessage('Product Id should be minimum 10');
         break;
       case 'productName':
-        productNameValid = e.target.validity.valid;
-        updateValidProductName(productNameValid);
-        // @ts-ignore
-        updateProductNameValidMessage(!productNameValid && <p className='text-danger'>Product Name should be minimum 5 characters</p>);
+        updateValidProductName(e.target.validity.valid);
+        updateProductNameValidMessage('Product Name should be minimum 5 characters');
         break;
       case 'productPrice':
-        productPriceValid = e.target.validity.valid;
-        updateValidProductPrice(productPriceValid);
-        // @ts-ignore
-        updateProductPriceValidMessage(!productPriceValid && <p className='text-danger'>Product Price should be minimum 1</p>);
+        updateValidProductPrice(e.target.validity.valid);
+        updateProductPriceValidMessage('Product Price should be minimum 1');
         break;
       case 'productDescription':
-        productDescriptionValid = e.target.validity.valid;
-        updateValidProductDescription(productDescriptionValid);
-        // if(productIdValid && productNameValid && productPriceValid && productDescriptionValid){
-        //   updateValidForm(true);
-        // }
-        // @ts-ignore
-        updateProductDescriptionValidMessage(!productDescriptionValid && <p className='text-danger'>Product Description should be minimum 10 characters</p>);
+        updateValidProductDescription(e.target.validity.valid);
+        updateProductDescriptionValidMessage('Product Description should be minimum 10 characters');
         break;
     }
     
@@ -87,7 +75,11 @@ const AddProductPage = ({productList, updateProductList}) => {
 
   const resetForm = () => {
     updateProduct({});
-    // clear all the validation messages
+    updateValidForm(false);
+    updateValidProductId(false);
+    updateValidProductName(false);
+    updateValidProductPrice(false);
+    updateValidProductDescription(false);
     updateProductIdValidMessage('');
     updateProductNameValidMessage('');
     updateProductPriceValidMessage('');
@@ -108,25 +100,25 @@ const AddProductPage = ({productList, updateProductList}) => {
       <form onSubmit={(e)=>{addProduct(e)}} onReset={()=>resetForm()} className='form'>
         <div className='form-group'>
           <label>Product Id</label>
-          <input type='number' name='productId' className='form-control' required min={10}  
+          <input type='number' name='productId' className='form-control' required min={1}  
             onChange={(e)=>{handleInputChange(e)}}/>
-            {prodctIdValidMessage}
+            {!validProductId?<p className='text-danger'>{prodctIdValidMessage}</p>:<p></p>}
           </div>
           <div className='form-group'>
           <label>Product Name</label>
           <input type='text' name='productName' required pattern='[a-zA-Z0-9 ]{5,}' className='form-control' 
             onChange={(e)=>{handleInputChange(e)}}/>
-            {productNameValidMessage}
+            {!validProductName?<p className='text-danger'>{productNameValidMessage}</p>:<p></p>}
           </div>
           <div className='form-group'>
           <label>Product Price</label>
           <input type='number' name='productPrice' required min={1} className='form-control' onChange={(e)=>{handleInputChange(e)}}/>
-          {productPriceValidMessage}
+          {!validProductPrice?<p className='text-danger'>{productPriceValidMessage}</p>:<p></p>}
           </div>
           <div className='form-group'>
           <label>Product Description</label>
           <input type='text' name='productDescription' required minLength={10} className='form-control' onChange={(e)=>{handleInputChange(e)}}/>
-          {productDescriptionValidMessage}
+          {!validProductDescription?<p className='text-danger'>{productDescriptionValidMessage}</p>:<p></p>}
           </div>
           <div className='form-group'>
           <input type='submit' disabled={!validForm} className='btn btn-primary' value='Add Product'/>
