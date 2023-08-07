@@ -83,12 +83,27 @@ Online Shopping App
   
 
 
+React Component Lifecycle
+-------------------------
+Mounting
+Update
+Un-mounting
+Error-Handling
 
 
+Hooks
+----------
+Alternative to React Lifecycle Methods and other React Class Components concepts such as state for Functional Components
 
 
+useState()
+useEffect()
+useContext()
+useReducer()
 
 
+useEffect Hook
+----------------
 
 
 

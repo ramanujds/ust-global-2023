@@ -38,7 +38,6 @@ const AddProductPage = ({productList, updateProductList}) => {
     let inputName = e.target.name;
     let inputValue = e.target.value;
    
-    let productIdValid=false, productNameValid=false, productPriceValid=false, productDescriptionValid=false;
     switch(inputName){
       case 'productId':
         updateValidProductId(e.target.validity.valid);
@@ -57,17 +56,8 @@ const AddProductPage = ({productList, updateProductList}) => {
         updateProductDescriptionValidMessage('Product Description should be minimum 10 characters');
         break;
     }
-    
-   // let isFormValid = productIdValid && productNameValid && productPriceValid && productDescriptionValid;
-    console.log(productIdValid, productNameValid, productPriceValid, productDescriptionValid);  
-    let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
     updateProduct({...product, [inputName]:inputValue});
-    updateValidForm(isValidForm);
 
-    // console.log(validProductId, validProductName, validProductPrice, validProductDescription);
-    // console.log(validForm);
-
-   
   
   }
 
