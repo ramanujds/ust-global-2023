@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 
 const AddProductPage = ({productList, updateProductList}) => {
@@ -18,6 +19,13 @@ const AddProductPage = ({productList, updateProductList}) => {
   let [productPriceValidMessage, updateProductPriceValidMessage] = useState('');
   let [productDescriptionValidMessage, updateProductDescriptionValidMessage] = useState('');
 
+
+  const navigate = useNavigate();
+
+    const navigateToViewProducts = () => {
+        navigate('/view-products');
+    }
+
   useEffect(()=>{
     let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
     updateValidForm(isValidForm);
@@ -31,6 +39,7 @@ const AddProductPage = ({productList, updateProductList}) => {
     console.log(product);
     let newProductList = [...productList, product];
     updateProductList(newProductList);
+    navigateToViewProducts();
   }
 
   
