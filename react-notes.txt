@@ -105,6 +105,34 @@ useReducer()
 useEffect Hook
 ----------------
 
+useContext
+------------
+
+Step 1 : Create a context
+
+export const UserContext = React.createContext('');
+
+Step 2: Provide the context to child components
+
+<UserContext.Provider value='Harsh'>
+	.... components
+</UserContext.Provider>
+
+Step 3 : Fetching the context value using useContext hook
+
+let username = useContext(UserContext);
+
+
+ProductContext
+list
+functionToUpdateProducts
+
+CartContext
+list
+functionToUpdateCart
+
+
+
 
 
 
