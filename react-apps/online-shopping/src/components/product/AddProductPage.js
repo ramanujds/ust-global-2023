@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ProductListContext } from '../../ProductListContext';
+import { addProdctApi } from '../../apis/ProductApi';
 
 
 const AddProductPage = () => {
 
-  let {productList, updateProductList} = useContext(ProductListContext);
+  // let {productList, updateProductList} = useContext(ProductListContext);
  
  
 
@@ -40,10 +41,18 @@ const AddProductPage = () => {
   const addProduct = (e) => {
     e.preventDefault();
     console.log(product);
-    let newProductList = [...productList, product];
-    updateProductList(newProductList);
-    navigateToViewProducts();
+   // let newProductList = [...productList, product];
+    addProdctApi(product).then((response)=>{
+      console.log(response);
+      navigateToViewProducts();
+    }
+    );
   }
+
+    // updateProductList(newProductList);
+    //updateProductList(newProductList);
+    
+  
 
   
   const handleInputChange = (e) => {

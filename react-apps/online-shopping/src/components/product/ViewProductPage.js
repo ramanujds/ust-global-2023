@@ -11,17 +11,10 @@ const ViewProductPage = () => {
 const [productList,updateProductList] = useState([{productId:1,productName:'Product 1',productPrice:100,productDescription:'Product 1 description'}])
 
 useEffect(()=>{
-  fetch('http://localhost:8888/api/products')
-  .then(response => response.json())
-  .then(data => {
-    updateProductList(data);
+  fetchProductsFromApi().then((response)=>{
+    updateProductList(response);
   })
-  .catch(error => {
-      console.log(error);
-  }
-  );
 },[]);
-
   return (
 
     <div className='container'>
