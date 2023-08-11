@@ -1,5 +1,7 @@
 package com.mysmartshop.order.api;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,15 +14,20 @@ import com.mysmartshop.order.model.Order;
 import com.mysmartshop.order.service.OrderService;
 
 @RestController
-@RequestMapping("/api/order")
+@RequestMapping("/api/orders")
 public class OrderController {
 	
 	@Autowired
 	private OrderService orderService;
 	
+//	@GetMapping
+//	public String greet() {
+//		return "Message from Order Service";
+//	}
+	
 	@GetMapping
-	public String greet() {
-		return "Message from Order Service";
+	public List<Order> getAllOrders(){
+		return orderService.getAllOrders();
 	}
 	
 	@PostMapping
@@ -32,5 +39,6 @@ public class OrderController {
 	public Order getOrderDetails(@PathVariable String orderId) {
 		return orderService.getOrderDetails(orderId);
 	}
+	
 
 }

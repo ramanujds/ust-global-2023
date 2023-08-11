@@ -5,8 +5,10 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
+import com.mysmartshop.cart.dto.CartDetails;
 import com.mysmartshop.cart.dto.Product;
 import com.mysmartshop.cart.model.CartItem;
 import com.mysmartshop.cart.repository.CartItemRepository;
@@ -14,6 +16,7 @@ import com.mysmartshop.cart.repository.CartItemRepository;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 
 @Service
+@Transactional
 public class CartServiceImpl implements CartService {
 	
 	@Autowired
@@ -31,7 +34,9 @@ public class CartServiceImpl implements CartService {
 			CartItem item = new CartItem();
 			item.setProductId(productId);
 			item.setQuantity(1);
-			item.setTotalPrice(fetchPrice(productId));
+			Product product = fetchProduct(productId);
+			item.setTotalPrice(product.getProductPrice());
+			item.setProductName(product.getProductName());
 			itemRepository.save(item);
 		}
 		else {
@@ -40,6 +45,10 @@ public class CartServiceImpl implements CartService {
 		}
 		
 		return getAllItems();
+	}
+
+	private List<CartItem> getAllItems() {
+		return itemRepository.findAll();
 	}
 
 	@Override
@@ -78,17 +87,31 @@ public class CartServiceImpl implements CartService {
 		
 	}
 	
-	public List<CartItem> getAllItems(){
-		return itemRepository.findAll();
+	public CartDetails getCartDetails(){
+		
+		List<CartItem> items = itemRepository.findAll();
+		if(items == null || items.isEmpty()) {
+			return null;
+		}
+		float totalCartVlue = calculateTotalCost();
+		CartDetails cartDetails = new CartDetails();
+		cartDetails.setCartItems(items);
+		cartDetails.setTotalCartValue(totalCartVlue);
+		return cartDetails;
 	}
 	
 	
-	private float fetchPrice(String productId) {
+	private Product fetchProduct(String productId) {
 		System.out.println("Trying to fetch price from product service");
-		Product product = productServiceClient.getForObject("http://product-ms/api/product/"+productId, Product.class);
+		Product product = productServiceClient.getForObject("http://product-ms/api/products/"+productId, Product.class);
 		if(product != null)
-			return product.getPrice();
-		return 0;
+			return product;
+		return null;
+	}
+	
+	@Override
+	public void clearCart() {
+		itemRepository.clearCartItems();
 	}
 	
 //	private float fetchPriceFallback(String productId, Throwable t) {

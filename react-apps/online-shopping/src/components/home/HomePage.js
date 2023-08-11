@@ -44,10 +44,6 @@ const HomePage = () => {
    
 
     </div>
-    {/* 
-    display a get satrted button that links to the product page aligned to the center of the page
-
-     */}
     <div className='row'>
         <div className='col-12'>
         <div className='text-center'>

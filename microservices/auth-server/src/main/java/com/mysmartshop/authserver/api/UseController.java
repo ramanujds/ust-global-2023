@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mysmartshop.authserver.dto.JwtToken;
@@ -18,6 +19,7 @@ import com.mysmartshop.authserver.repository.UserRepository;
 import com.mysmartshop.authserver.service.UserAuthService;
 
 @RestController
+@RequestMapping("/api/auth")
 public class UseController {
 
 	@Autowired

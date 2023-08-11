@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 public class CartDetails {
 
-	private List<CartItem> itemsList;
+	private List<CartItem> cartItems;
 	private float totalCartValue;
 	
 }

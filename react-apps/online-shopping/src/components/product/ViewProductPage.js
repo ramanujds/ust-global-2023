@@ -8,7 +8,9 @@ const ViewProductPage = () => {
 
 // const {productList,updateProductList} = useContext(ProductListContext);
 
-const [productList,updateProductList] = useState([{productId:1,productName:'Product 1',productPrice:100,productDescription:'Product 1 description'}])
+
+
+const [productList,updateProductList] = useState([])
 
 useEffect(()=>{
   fetchProductsFromApi().then((response)=>{
@@ -27,11 +29,13 @@ useEffect(()=>{
           </div>
         </div>
       </div>
-
+{!productList || productList.length==0 && <h2>No products available. Please add some products to your cart.</h2>}
+{productList && productList.length>0 && 
     <div className='row'>
       {productList.map((product)=><ProductCard key={product.productId} product={product}/>
       )}
     </div>
+}
     </div>
   )
 }

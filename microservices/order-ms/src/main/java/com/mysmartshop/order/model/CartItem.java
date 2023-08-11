@@ -10,6 +10,7 @@ public class CartItem {
 
 	private int cartId;
 	private String productId;
+	private String productName;
 	private int quantity;
 	private float totalPrice;
 	

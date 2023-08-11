@@ -16,6 +16,7 @@ public class CartItem {
 	@GeneratedValue
 	private int cartId;
 	private String productId;
+	private String productName;
 	private int quantity;
 	private float totalPrice;
 	

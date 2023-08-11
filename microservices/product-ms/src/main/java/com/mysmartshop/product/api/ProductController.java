@@ -28,14 +28,15 @@ public class ProductController {
 	
 	@PostMapping
 	public Product addProduct(@RequestBody Product product) {
+		
 		return productService.addProduct(product);
 	}
 
 	// create an api to return a Mono<Product> by id
-	public Mono<Product> getProductById(String id) {
-		Product p = productService.getProductDetails(id);
-		return Mono.just(p);
-	}
+//	public Mono<Product> getProductById(String id) {
+//		Product p = productService.getProductDetails(id);
+//		return Mono.just(p);
+//	}
 
 
 	

@@ -8,7 +8,7 @@ React Learning Path
     5.1 Class Components
     5.2 Functional Components
 6. React JSX
-7. React Styling with Bootstrap
+7. Styling with React-Bootstrap
 8. React State with Class Component
 9. React State with Functional Components
 10. React Props
@@ -16,7 +16,7 @@ React Learning Path
 12. Conditional Rendering in React
 13. List Rendering
 14. React Form Handling and Form Validation
-15. React Hooks (useState, useEffect, useContext)
+15. React Hooks (useState, useEffect, useContext etc)
 16. Consuming REST API in React
 17. Spring Boot and React Integration
 18. Making GET, POST, PUT, DELETE requests
@@ -24,3 +24,4 @@ React Learning Path
 20. Implementing Authentication
     20.1 JWT-based Authentication (Spring Security + React)
 21. Unit testing React Components
+

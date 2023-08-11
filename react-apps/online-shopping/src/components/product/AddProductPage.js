@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { ProductListContext } from '../../ProductListContext';
 import { addProdctApi } from '../../apis/ProductApi';
+import  Toast  from 'react-bootstrap/Toast';
+import ToastContainer from 'react-bootstrap/ToastContainer';
+import { UserContext } from '../../UserContext';
 
 
 const AddProductPage = () => {
@@ -16,6 +19,8 @@ const AddProductPage = () => {
   let [validProductName, updateValidProductName] = useState(false);
   let [validProductPrice, updateValidProductPrice] = useState(false);
   let [validProductDescription, updateValidProductDescription] = useState(false);
+  let [showToast, updateShowToast] = useState(false);
+
 
 
   let [prodctIdValidMessage, updateProductIdValidMessage] = useState('');
@@ -30,12 +35,22 @@ const AddProductPage = () => {
         navigate('/view-products');
     }
 
+    const navigateToLogin = () => {
+      navigate('/login');
+  }
+
+  const user = useContext(UserContext);
+ 
+
   useEffect(()=>{
+    if(user==null || user==''){
+      navigateToLogin();
+    }
     let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
     updateValidForm(isValidForm);
   },[validProductId, validProductName, validProductPrice, validProductDescription]);
 
-
+ 
 
 
   const addProduct = (e) => {
@@ -44,13 +59,13 @@ const AddProductPage = () => {
    // let newProductList = [...productList, product];
     addProdctApi(product).then((response)=>{
       console.log(response);
-      navigateToViewProducts();
+      updateShowToast(true);
+     
     }
     );
   }
 
-    // updateProductList(newProductList);
-    //updateProductList(newProductList);
+    
     
   
 
@@ -91,6 +106,7 @@ const AddProductPage = () => {
     updateValidProductName(false);
     updateValidProductPrice(false);
     updateValidProductDescription(false);
+    updateShowToast(false);
     updateProductIdValidMessage('');
     updateProductNameValidMessage('');
     updateProductPriceValidMessage('');
@@ -107,9 +123,7 @@ const AddProductPage = () => {
  
 
   return (
-    // create an inline form with 4 input fields with validation and error messages and 2 buttons
-    // 1. Add Product button should be disabled until all the fields are valid
-    // 2. Reset button should clear all the fields
+   
     <div className='container'>
       <div className='row'>
         <div className='col-12'>
@@ -148,6 +162,26 @@ const AddProductPage = () => {
           <button type='reset' className='btn btn-warning'>Reset</button>
           </div>
       </form>
+      {/*  display a big toast message at the middle of the page conditionally when when addProduct() is called, toast should have a button to navigate to the view-products */}
+      <ToastContainer position='middle-center'>
+        <Toast show={showToast} onClose={()=>{updateShowToast(false)}}>
+          <Toast.Header>
+            <strong className='mr-auto'>Product Added</strong>
+          </Toast.Header>
+          <Toast.Body>
+            Product has been added successfully
+          </Toast.Body>
+          <Toast.Body>
+            <button className='btn btn-primary' onClick={()=>{navigateToViewProducts()}}>View Products</button>
+          </Toast.Body>
+        </Toast>
+      </ToastContainer>
+
+
+      
+      
+
+
     </div>
 
  )
@@ -158,32 +192,4 @@ export default AddProductPage
           
 
 
-      {/* <form onSubmit={(e)=>{addProduct(e)}} onReset={()=>resetForm()} className='form'>
-        <div className='form-group'>
-          <label>Product Id</label>
-          <input type='number' name='productId' className='form-control' required min={1}  
-            onChange={(e)=>{handleInputChange(e)}}/>
-            {!validProductId?<p className='text-danger'>{prodctIdValidMessage}</p>:<p></p>}
-          </div>
-          <div className='form-group'>
-          <label>Product Name</label>
-          <input type='text' name='productName' required pattern='[a-zA-Z0-9 ]{5,}' className='form-control' 
-            onChange={(e)=>{handleInputChange(e)}}/>
-            {!validProductName?<p className='text-danger'>{productNameValidMessage}</p>:<p></p>}
-          </div>
-          <div className='form-group'>
-          <label>Product Price</label>
-          <input type='number' name='productPrice' required min={1} className='form-control' onChange={(e)=>{handleInputChange(e)}}/>
-          {!validProductPrice?<p className='text-danger'>{productPriceValidMessage}</p>:<p></p>}
-          </div>
-          <div className='form-group'>
-          <label>Product Description</label>
-          <input type='text' name='productDescription' required minLength={10} className='form-control' onChange={(e)=>{handleInputChange(e)}}/>
-          {!validProductDescription?<p className='text-danger'>{productDescriptionValidMessage}</p>:<p></p>}
-          </div>
-          <div className='form-group'>
-          <input type='submit' disabled={!validForm} className='btn btn-primary' value='Add Product'/>
-          <input type='reset' className='btn btn-dark' value='Reset'/>
-          </div>
-          </form> */}
-
+  

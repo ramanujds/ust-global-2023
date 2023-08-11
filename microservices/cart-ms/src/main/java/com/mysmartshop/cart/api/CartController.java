@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,17 +35,12 @@ public class CartController {
 	
 	@GetMapping("/items")
 	public CartDetails getCartDetails() {
-		List<CartItem> items = cartService.getAllItems();
-		float totalCartVlue = cartService.calculateTotalCost();
-		CartDetails cartDetails = new CartDetails();
-		cartDetails.setItemsList(items);
-		cartDetails.setTotalCartValue(totalCartVlue);
-		return cartDetails;
+		return cartService.getCartDetails();
 		
 	}
 	
 	@PostMapping("/items/product/{productId}")
-	@CircuitBreaker(fallbackMethod = "addNewItemFallback", name = "cb-product")
+//	@CircuitBreaker(fallbackMethod = "addNewItemFallback", name = "cb-product")
 //	@Retry(name = "retry-fetch-product", fallbackMethod = "addNewItemFallback")
 	public List<CartItem> addNewItem(@PathVariable String productId){
 		return cartService.addToCart(productId);
@@ -60,6 +56,11 @@ public class CartController {
 	@DeleteMapping("/items/product/{productId}")
 	public List<CartItem> deleteItem(@PathVariable String productId){
 		return cartService.removeFromCart(productId);
+	}
+	
+	@DeleteMapping("/items")
+	public void clearCart() {
+		cartService.clearCart();
 	}
 
 }

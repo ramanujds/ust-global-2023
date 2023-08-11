@@ -25,7 +25,13 @@ spring:
         uri:
           lb://order-ms  
         predicates:
-        - Path=/api/order/**
+        - Path=/api/orders/**
+        
+      - id: auth-server
+        uri:
+          lb://auth-server
+        predicates:
+        - Path=/api/auth/**
         
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE

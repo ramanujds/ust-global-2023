@@ -7,24 +7,13 @@ import com.mysmartshop.order.model.Order;
 
 public interface OrderService {
 
-	/*
-	 * 
-	 *  +placeOrder(cartItems: List<CartItem>): Order
-  		+getOrderDetails(orderId: String): Order
-  		+updateOrderStatus(orderId: String, status: String): void
-  		+cancelOrder(orderId: String): void
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 * 
-	 */
+	
 	
 	public Order placeOrder(List<CartItem> cartItems);
 	
 	public Order getOrderDetails(String orderId);
 	
+	public List<Order> getAllOrders();
 	
 	
 	
