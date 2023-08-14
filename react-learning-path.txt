@@ -25,3 +25,11 @@ React Learning Path
     20.1 JWT-based Authentication (Spring Security + React)
 21. Unit testing React Components
 
+Additional Learnings
+---------------------
+22. React-Bootstrap Library (Toast, Modal)
+23. React Material Design
+24. More React hooks (useCallback, useReducer, useMemo)
+25. State Management with Redux
+
+

@@ -30,13 +30,27 @@ function App() {
   // const timer = setInterval(() => {
   //   updateRemainingTime();
   // }, 1000);
+
+  const [msg, setMsg] = useState('Hello Everyone');
+  const [count, setCount] = useState(0);
+
+  const changeValues = () => {
+    setMsg('Hello UST');
+    setCount(count + 1);
+  };
   return (
     <div className="App">
-    <h1>UST Global</h1>
-    <Message msg ='Hello Everyone' sender='Tony'/>
+    <h1>{msg}</h1>
+    <h2>Welcome to React JS</h2>
+    <h3>Good Morning</h3>
+    <h3>Count: {count}</h3>
+    <button onClick={() => changeValues()}>Change Text</button>
+
+
+    {/* <Message msg ='Hello Everyone' sender='Tony'/>
     <Message msg = 'Welcome to React' sender='Facebook'/>
     <UserDetails username='Rahul' age='20' />
-    <UserDetails username = 'Karan' age='25' />
+    <UserDetails username = 'Karan' age='25' /> */}
     </div>
   );
 }

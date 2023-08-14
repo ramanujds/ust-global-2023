@@ -132,6 +132,24 @@ list
 functionToUpdateCart
 
 
+React Testing
+-------------
+
+Jest - Test Runner
+RTL - React Testing Library
+Enzyme (Old React Testing Library)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

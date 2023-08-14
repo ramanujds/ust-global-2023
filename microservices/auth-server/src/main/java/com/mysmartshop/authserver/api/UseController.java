@@ -2,10 +2,13 @@ package com.mysmartshop.authserver.api;
 
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,6 +30,23 @@ public class UseController {
 	
 	@Autowired
 	private UserAuthService authService;
+	
+	
+	@Autowired
+	PasswordEncoder encoder;
+	
+	@PostConstruct
+	@Transactional
+	public void initSomeUsers() {
+		User user = new User();
+		user.setId(1);
+		user.setUsername("amdin");
+		user.setRole("ADMIN");
+		String password = "password";
+		String encryptedPass =  encoder.encode(password);
+		user.setPassword(encryptedPass);
+		repo.save(user);
+	}
 	
 	@Autowired
 	AuthenticationManager authMgr;

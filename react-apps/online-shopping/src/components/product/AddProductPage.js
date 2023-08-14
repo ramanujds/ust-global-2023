@@ -39,16 +39,16 @@ const AddProductPage = () => {
       navigate('/login');
   }
 
-  const user = useContext(UserContext);
+  const {username,updateUsername} = useContext(UserContext);
  
 
   useEffect(()=>{
-    if(user==null || user==''){
+    if(!username){
       navigateToLogin();
     }
     let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
     updateValidForm(isValidForm);
-  },[validProductId, validProductName, validProductPrice, validProductDescription]);
+  },[validProductId, validProductName, validProductPrice, validProductDescription, username]);
 
  
 
@@ -122,8 +122,9 @@ const AddProductPage = () => {
 
  
 
+
   return (
-   
+
     <div className='container'>
       <div className='row'>
         <div className='col-12'>
@@ -183,9 +184,12 @@ const AddProductPage = () => {
 
 
     </div>
-
- )
+    
+  )
 }
+
+
+
 
 export default AddProductPage
 
