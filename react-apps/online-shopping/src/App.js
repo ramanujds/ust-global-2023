@@ -31,7 +31,7 @@ function App() {
   // const [productList, updateProductList] = useState(products);
 
 
-  const [login, setLogin] = useState(null);
+  const [login, setLogin] = useState('Not Logged In');
   
   
   return (

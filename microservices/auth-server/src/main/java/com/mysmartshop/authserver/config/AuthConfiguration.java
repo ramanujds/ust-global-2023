@@ -1,5 +1,7 @@
 package com.mysmartshop.authserver.config;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,7 +15,9 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.mysmartshop.authserver.model.User;
 import com.mysmartshop.authserver.repository.UserRepository;
 import com.mysmartshop.authserver.util.AuthenticationFilter;
 
@@ -30,6 +34,7 @@ public class AuthConfiguration extends WebSecurityConfigurerAdapter{
 	private AuthenticationFilter filter;
 	
 	
+
 	// Authentication 
 	// Creating in-memory users with roles
 //	protected void configure(AuthenticationManagerBuilder auth) throws Exception {

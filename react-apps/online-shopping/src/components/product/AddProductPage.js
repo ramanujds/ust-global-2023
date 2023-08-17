@@ -39,16 +39,16 @@ const AddProductPage = () => {
       navigate('/login');
   }
 
-  const {username,updateUsername} = useContext(UserContext);
+  const {login} = useContext(UserContext);
  
 
   useEffect(()=>{
-    if(!username){
+    if(!login || login==='Not Logged In'){
       navigateToLogin();
     }
     let isValidForm = validProductId && validProductName && validProductPrice && validProductDescription;
     updateValidForm(isValidForm);
-  },[validProductId, validProductName, validProductPrice, validProductDescription, username]);
+  },[validProductId, validProductName, validProductPrice, validProductDescription]);
 
  
 

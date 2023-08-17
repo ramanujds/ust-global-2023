@@ -33,26 +33,35 @@ public class UseController {
 	
 	
 	@Autowired
-	PasswordEncoder encoder;
-	
-	@PostConstruct
-	@Transactional
-	public void initSomeUsers() {
-		User user = new User();
-		user.setId(1);
-		user.setUsername("amdin");
-		user.setRole("ADMIN");
-		String password = "password";
-		String encryptedPass =  encoder.encode(password);
-		user.setPassword(encryptedPass);
-		repo.save(user);
-	}
+	PasswordEncoder passwordEncoder;
 	
 	@Autowired
 	AuthenticationManager authMgr;
 	
-	@Autowired
-	PasswordEncoder passwordEncoder;
+	@PostConstruct
+	@Transactional
+	public void initFewUsers() {
+		
+		User admin = new User();
+		admin.setUsername("admin");
+		String adminPass = passwordEncoder.encode("admin1234");
+		admin.setPassword(adminPass);
+		admin.setRole("ADMIN");
+		
+		User user = new User();
+		user.setUsername("ramanuj");
+		String userPass = passwordEncoder.encode("pass1234");
+		user.setPassword(userPass);
+		user.setRole("USER");
+		
+		repo.save(admin);
+		repo.save(user);
+	}
+	
+	
+
+	
+	
 	
 	@GetMapping("/users")
 	public List<User> getAllUsers(){
@@ -75,6 +84,9 @@ public class UseController {
 		
 		return new JwtToken(jwt);
 	}
+	
+	
+	
 	
 	
 }

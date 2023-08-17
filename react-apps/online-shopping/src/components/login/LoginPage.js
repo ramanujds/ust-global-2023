@@ -24,6 +24,7 @@ const LoginPage = () => {
               navigateToHome('/home');
 
          }).catch((error)=>{ 
+                console.error(error);
                 alert('Invalid credentials');
             });
 

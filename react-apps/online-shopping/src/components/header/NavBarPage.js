@@ -6,9 +6,9 @@ import { UserContext } from '../../UserContext';
 
 
 const NavBarPage = () => {
-  //  let username = useContext(UserContext);
+  let {login} = useContext(UserContext);
 
-  let username = sessionStorage.getItem('user');
+  // let username = sessionStorage.getItem('user');
 
   return (
     <div>
@@ -35,7 +35,7 @@ const NavBarPage = () => {
     <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
     <li className="nav-item">
-    <NavLink className="nav-link" to="/login">Logged in as : {username}</NavLink>
+    <NavLink className="nav-link" to="/login">Logged in as : {login}</NavLink>
     </li>
     <li className="nav-item">
     <NavLink className="nav-link" to="/view-orders">View Orders</NavLink>

@@ -11,13 +11,13 @@ export const userLoginApi = async (user) => {
         body: JSON.stringify(user)
     });
 
-    if(response.status === 200){
+    if(response.status>=200 && response.status<300){
         const data = await response.json();
         return data;
     }
-    else{
-        throw new Error('Invalid credentials');
-    }
+    // else{
+    //     throw new Error('Invalid credentials');
+    // }
 
 }
 
