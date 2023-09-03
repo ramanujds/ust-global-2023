@@ -1,0 +1,45 @@
+KPI Measures
+-------------
+Key Performance Indicator
+Actuator 
+(Health Monitoring Tool)
+
+Asynchronous Communication between Services
+-------------------------------------------
+
+Product
+
+Cart
+
+RestTemplate/FeignClient - Synchronous
+
+Messaging Queues 
+
+Cart		------->		Product
+
+Cart 	----> MQ ----> Product
+
+
+Kafka/Rabbit MQ
+
+Docker
+------
+Volume - Docker volume is used to separate the storage from the container
+
+Kubernetes
+----------
+
+AWS
+-------
+SNS - Simple Notification Service
+SQS - Simple Queuing Service
+Lambda
+Api Gateway
+Cloud Formation
+
+
+
+
+
+
+
